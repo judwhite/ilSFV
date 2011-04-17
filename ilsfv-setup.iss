@@ -15,9 +15,9 @@ AppUpdatesURL=http://www.cdtag.com/ilsfv
 DefaultDirName={pf}\ilSFV
 DefaultGroupName=ilSFV
 AllowNoIcons=yes
-OutputDir=C:\Projects\CDTag\bin-ilSFV\setup\output
+OutputDir=.\setup
 OutputBaseFilename=ilSFVsetup
-SetupIconFile=C:\Projects\CDTag\ilSFV\ilSFV\MiniDisc Check.ico
+SetupIconFile=.\ilSFV\MiniDisc Check.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -28,19 +28,19 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\ilSFV.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\cache.sdf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\settings.sdf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlceca35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlcecompact35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlceer35EN.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlceme35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlceoledb35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlceqp35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\sqlcese35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\complete_ok.wav"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\complete_error.wav"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Projects\CDTag\bin-ilSFV\setup\System.Data.SqlServerCe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\ilSFV.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\cache.sdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\settings.sdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceca35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlcecompact35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceer35EN.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceme35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceoledb35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceqp35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlcese35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\complete_ok.wav"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\complete_error.wav"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\System.Data.SqlServerCe.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

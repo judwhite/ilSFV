@@ -3,3 +3,4 @@
 *.ReSharper.user
 bin/
 obj/
+setup/
