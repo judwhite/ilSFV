@@ -1,0 +1,45 @@
+drop table CRC32FileCache
+drop table MD5FileCache
+
+create table CRC32FileCache
+(
+	ID bigint identity,
+	FileName nvarchar(1024) not null,
+	LastWriteUtc datetime not null,
+	FileLength bigint not null,
+	CRC32 nvarchar(8) not null
+);
+go
+
+alter table CRC32FileCache
+add constraint PK_CRC32FileCache_ID primary key (ID)
+
+create index IX_CRC32FileCache_FileName
+on CRC32FileCache (FileName)
+go
+
+create table MD5FileCache
+(
+	ID bigint identity,
+	FileName nvarchar(1024) not null,
+	LastWriteUtc datetime not null,
+	FileLength bigint not null,
+	MD5 nvarchar(32) not null
+);
+go
+
+alter table MD5FileCache
+add constraint PK_MD5FileCache_ID primary key (ID)
+
+create index IX_MD5FileCache_FileName
+on MD5FileCache (FileName)
+go
+
+create table DatabaseSetting
+(
+	Version int not null
+)
+go
+
+alter table DatabaseSetting
+add constraint PK_DatabaseSetting_Version primary key (Version)

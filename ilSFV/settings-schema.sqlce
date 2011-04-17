@@ -1,0 +1,117 @@
+create table DatabaseSetting
+(
+	Version int not null
+)
+go
+
+alter table DatabaseSetting
+add constraint PK_DatabaseSetting_Version primary key (Version)
+
+create table UsageStatistics
+(
+FilesChecked bigint not null,
+SetsChecked bigint not null,
+MBChecked bigint not null,
+GoodFiles bigint not null,
+TimeSpent bigint not null
+)
+go
+
+insert into UsageStatistics (FilesChecked, SetsChecked, MBChecked, GoodFiles, TimeSpent) values(0,0,0,0,0)
+
+
+create table General
+(
+Language nvarchar(50) not null,
+CacheSize bigint not null,
+AlwaysOnTop bit not null,
+RememberWindowPlacement bit not null,
+ReuseWindow bit not null,
+FlashWindowWhenDone bit not null,
+AutoScrollFileList bit not null,
+Recursive bit not null,
+HideGoodFiles bit not null,
+ShowCommentsPane bit not null,
+UseCachedResults bit not null,
+WindowHeight bigint not null,
+WindowWidth bigint not null,
+WindowLeft bigint not null,
+WindowTop bigint not null,
+FormWindowState nvarchar(50) not null
+)
+
+insert into General
+(
+Language,
+CacheSize,
+AlwaysOnTop,
+RememberWindowPlacement,
+ReuseWindow,
+FlashWindowWhenDone,
+AutoScrollFileList,
+Recursive,
+HideGoodFiles,
+ShowCommentsPane,
+UseCachedResults,
+WindowHeight,
+WindowWidth,
+WindowLeft,
+WindowTop,
+FormWindowState
+)
+values('English', 5000, 0, 1, 1, 1, 1, 1, 0, 1, 1, 770, 1200, 0, 0, 'Normal') 
+
+create table Checking
+(
+AutoFindRenames bit not null,
+UseRecyleBin bit not null,
+RenameBadFiles bit not null,
+CreateMissingMarkers bit not null,
+CleanupBadMissing bit not null,
+DeleteFailedFiles bit not null,
+AutoCloseWhenDoneChecking bit not null,
+AutoCloseWhenDoneCheckingOnlyIfAllOK bit not null,
+Renaming nvarchar(50) not null
+)
+
+insert into Checking
+(
+AutoFindRenames,
+UseRecyleBin,
+RenameBadFiles,
+CreateMissingMarkers,
+CleanupBadMissing,
+DeleteFailedFiles,
+AutoCloseWhenDoneChecking,
+AutoCloseWhenDoneCheckingOnlyIfAllOK,
+Renaming
+)
+values(1, 1, 1, 0, 1, 0, 0, 1, 'None')
+
+
+
+create table Creating
+(
+ExcludeFilesOfType nvarchar(512) not null,
+SortFiles bit not null,
+SFV32Compatibility bit not null,
+MD5SumCompatibility bit not null,
+PromptForFileName bit not null,
+AutoCloseWhenDoneCreating bit not null
+)
+
+insert into Creating
+(
+ExcludeFilesOfType,
+SortFiles,
+SFV32Compatibility,
+MD5SumCompatibility,
+PromptForFileName,
+AutoCloseWhenDoneCreating
+)
+values('.sfv;.par;.md5;.nfo;.m3u;.pls;.jpg;.jpeg;.gif;.avi;.divx;.mpg;.mpeg;.ini;.bad;.missing', 1, 0, 1, 0, 0)
+
+select * from Creating
+select * from General
+select * from Checking
+select * from UsageStatistics

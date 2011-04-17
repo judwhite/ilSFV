@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtReleaseNotes.Text" xml:space="preserve">
+    <value>ilSFV 1.0.8 released 2011-02-26
+
+BUF FIXES:
+- Fixed to work with Windows 7 SP1
+
+ilSFV 1.0.7 released 2009-12-07
+
+NEW:
+- Drag &amp; Drop directory onto list view (recursively find checksum files)
+- Find/Delete Duplicates Files Using Checksum File (Tools)
+- Truncate file names (Tools)
+- Perf increases in list view update
+- Message box on "Find Renamed Files" click
+- More status bar updates
+- Support reading 0xABCDEF01 checksum format in SFV
+- Ignore empty lines in checksum files
+- Add no-extension to list of extensions to check in Find renamed files (will now search original extension and no extension)
+- System tray balloon tip on complete
+
+BUG FIXES:
+- Fix bug when directory does not exist in Find renamed files
+- Fix bug in Find renamed files using wrong FileInfo object
+- Fix bug in set count/position when creating multiple checksum files
+
+NOTES:
+- No Shell integration yet, sorry.
+
+=====
+
+ilSFV 1.0.6 released 2009-11-01
+
+NEW:
+- Custom comments header, file list, footer; or disable comments completely
+- Option to create hash file for each subdirectory
+- User specified update check frequency
+- Sound options
+
+BUG FIXES:
+- None
+
+=====
+
+ilSFV 1.0.5 released 2009-10-29
+
+NEW:
+- Add context menus to list view. Right click file - Copy filename(s), Copy path + filename(s), Copy current checksum (##), Copy original checksum (##)
+- On Hide set Thread.CurrentThread.Priority = ThreadPriority.Lowest
+- Add keyboard shortcuts
+- Add checksum file grouping to the list view so you can see which checksum file an item belongs to
+- Update comments pane depending on which checksum file the selected item belongs to
+- Show number of checksum sets loaded (.sfv/.md5/.sha1 files) in status bar
+- Option to turn off Auto Verify
+- Option to Clear Cache
+- Show finished status in statusbar, ex. "100% checked in 55 seconds (12.5MB/s)"
+- Show time remaining, time elapsed in status bar
+- Play a sound when done and not foreground window, or on verification error (if you don't want the sound delete the WAV from the AppDir)
+- Support reading format with file name first, MD5/SHA1 hash last
+- Support reading BSD style checksum files: "MD5 (filename) = hash", "SHA1 (filename) = hash"
+- Support reading SFV format with $ in front of checksum value
+- Verify 0 bytes files do not cause a crash
+
+BUG FIXES:
+- Fix bug with too many database connections when processing a lot of small files quickly
+
+=====
+
+ilSFV 1.0.4 released 2009-10-28
+
+NEW:
+- None
+
+BUG FIXES:
+- Fix bug with upgrading if .sha1 file type couldn't register 
+
+=====
+
+ilSFV 1.0.3 released 2009-10-28
+
+NEW:
+- SHA1 support
+- Manual check for updates
+- Manual register file types
+- Add percent complete to status bar and system tray icon
+
+BUG FIXES:
+- None
+
+=====
+
+ilSFV 1.0.2 released 2009-10-27 
+
+NEW:
+- Check for updates (Preferences, General - default is check once every 7 days, this value will be exposed in the UI later)
+
+BUG FIXES:
+- Fixed bug with drop &amp; drop and double click from explorer
+
+NOTES:
+- If you get a message "Could not load file or assembly 'System.Core, Version=3.5.0.0...'" try installing .NET 3.5
+
+=====
+
+ilSFV 1.0.1 released 2009-10-26
+
+ilSFV is a tribute to the simple hkSFV. hkSFV was last updated in 2002 and many users have been experiencing crashes on newer computers. ilSFV aims to duplicate the functionality and not crash. :)</value>
+  </data>
+</root>
