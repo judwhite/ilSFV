@@ -17,6 +17,12 @@ namespace ilSFV.Model.Settings
 		private List<string> _recentFiles;
 		public IEnumerable<string> GetRecentFiles()
 		{
+            if (!General.IsRecentFilesSaved)
+            {
+                _recentFiles = null;
+                return new List<string>();
+            }
+
 			if (_recentFiles == null)
 			{
 				_recentFiles = new List<string>();
@@ -41,6 +47,9 @@ namespace ilSFV.Model.Settings
 		public void AddRecentFile(string path)
 		{
 			GetRecentFiles();
+
+            if (!General.IsRecentFilesSaved)
+                return;
 
 			List<string> found = _recentFiles.Where(p => p.ToLower() == path.ToLower()).ToList();
 			if (found.Count >= 1)
@@ -242,6 +251,16 @@ namespace ilSFV.Model.Settings
 					cmd.ExecuteNonQuery();
 				version++;
 			}
+
+            if (version == 8)
+            {
+                using (SqlCeCommand cmd = new SqlCeCommand("alter table General add IsRecentFilesSaved bit not null default(1)", Program.GetOpenSettingsConnection()))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+
+                version++;
+            }
 
 			// Update DatabaseSetting Version
 			if (initialVersion != version)

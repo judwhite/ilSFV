@@ -16,6 +16,7 @@ namespace ilSFV.Model.Settings
 		public bool AutoScrollFileList { get; set; }
 		public bool Recursive { get; set; }
 		public bool UseLowPriorityOnHide { get; set; }
+        public bool IsRecentFilesSaved { get; set; }
 
 		public bool HideGoodFiles { get; set; }
 		public bool ShowCommentsPane { get; set; }
@@ -52,7 +53,8 @@ WindowWidth = @WindowWidth,
 WindowLeft = @WindowLeft,
 WindowTop = @WindowTop,
 FormWindowState = @FormWindowState,
-UseLowPriorityOnHide = @UseLowPriorityOnHide
+UseLowPriorityOnHide = @UseLowPriorityOnHide,
+IsRecentFilesSaved = @IsRecentFilesSaved
 ";
 
 			using (SqlCeCommand cmd = new SqlCeCommand(updateSql, Program.GetOpenSettingsConnection()))
@@ -77,9 +79,18 @@ UseLowPriorityOnHide = @UseLowPriorityOnHide
 				cmd.Parameters.AddWithValue("@WindowTop", WindowTop);
 				cmd.Parameters.AddWithValue("@FormWindowState", FormWindowState);
 				cmd.Parameters.AddWithValue("@UseLowPriorityOnHide", UseLowPriorityOnHide);
+                cmd.Parameters.AddWithValue("@IsRecentFilesSaved", IsRecentFilesSaved);
 
 				cmd.ExecuteNonQuery();
 			}
+
+            if (!IsRecentFilesSaved)
+            {
+                using (SqlCeCommand cmd = new SqlCeCommand("delete from RecentFile", Program.GetOpenSettingsConnection()))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
 		}
 
 		public void Load()
@@ -105,6 +116,7 @@ UseLowPriorityOnHide = @UseLowPriorityOnHide
 			CheckForUpdates = Convert.ToBoolean(dr["CheckForUpdates"]);
 			UpdateCheckFrequency = Convert.ToInt32(dr["UpdateCheckFrequency"]);
 			UseLowPriorityOnHide = Convert.ToBoolean(dr["UseLowPriorityOnHide"]);
+            IsRecentFilesSaved = Convert.ToBoolean(dr["IsRecentFilesSaved"]);
 
 			object lastUpdateCheck = dr["LastUpdateCheck"];
 			LastUpdateCheck = DBNull.Value.Equals(lastUpdateCheck) ? (DateTime?)null : Convert.ToDateTime(lastUpdateCheck);

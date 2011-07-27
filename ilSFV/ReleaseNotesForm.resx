@@ -118,7 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="txtReleaseNotes.Text" xml:space="preserve">
-    <value>ilSFV 1.0.8 released 2011-02-26
+    <value>ilSFV 1.0.8 released 2011-07-26
+
+NEW:
+- Option to disable recent files list
+
+ilSFV 1.0.8 released 2011-02-26
 
 BUF FIXES:
 - Fixed to work with Windows 7 SP1

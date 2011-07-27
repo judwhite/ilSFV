@@ -44,6 +44,7 @@ namespace ilSFV
 			chkAutoScrollFileList.Checked = Program.Settings.General.AutoScrollFileList;
 			chkRecursive.Checked = Program.Settings.General.Recursive;
 			chkUseLowPriorityOnHide.Checked = Program.Settings.General.UseLowPriorityOnHide;
+            chkIsRecentFilesSaved.Checked = Program.Settings.General.IsRecentFilesSaved;
 
 			// Checking
 			chkAutoFindRenames.Checked = Program.Settings.Check.AutoFindRenames;
@@ -146,6 +147,7 @@ namespace ilSFV
 			Program.Settings.General.AutoScrollFileList = chkAutoScrollFileList.Checked;
 			Program.Settings.General.Recursive = chkRecursive.Checked;
 			Program.Settings.General.UseLowPriorityOnHide = chkUseLowPriorityOnHide.Checked;
+            Program.Settings.General.IsRecentFilesSaved = chkIsRecentFilesSaved.Checked;
 
 			int days;
 			if (int.TryParse(txtCheckForUpdatesDays.Text, out days) && days > 0)

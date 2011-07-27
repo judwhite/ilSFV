@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlServerCe;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -670,6 +671,14 @@ export results to text file
             {
                 Cursor.Current = Cursors.Default;
                 form.ShowDialog();
+            }
+
+            if (!Program.Settings.General.IsRecentFilesSaved)
+            {
+                using (SqlCeCommand cmd = new SqlCeCommand("delete from RecentFile", Program.GetOpenSettingsConnection()))
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
 
             SetAlwaysOnTop();
