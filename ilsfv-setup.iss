@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{D463AB63-D949-4FB1-B586-968FBBE529D2}
 AppName=ilSFV
-AppVerName=ilSFV 1.0.8
+AppVerName=ilSFV 1.0.9
 AppPublisher=Jud White
 AppPublisherURL=http://www.cdtag.com/ilsfv
 AppSupportURL=http://www.cdtag.com/ilsfv
