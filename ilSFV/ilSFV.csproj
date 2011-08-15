@@ -84,6 +84,14 @@
       <DependentUpon>GetInputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Hash\SHA1.cs" />
+    <Compile Include="Localization\ExceptionForm.Generated.cs" />
+    <Compile Include="Localization\General.Generated.cs" />
+    <Compile Include="Localization\Language.Generated.cs" />
+    <Compile Include="Localization\MainForm.Generated.cs" />
+    <Compile Include="Localization\PreferencesForm.Generated.cs" />
+    <Compile Include="Localization\ReleaseNotesForm.Generated.cs" />
+    <Compile Include="Localization\RemoveDuplicatesForm.Generated.cs" />
+    <Compile Include="Localization\Startup.Generated.cs" />
     <Compile Include="Model\Settings\CommentSettings.cs" />
     <Compile Include="ReleaseNotesForm.cs">
       <SubType>Form</SubType>
@@ -217,6 +225,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="complete_ok.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="languages\deutsch.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="languages\english.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MiniDisc Check.ico" />

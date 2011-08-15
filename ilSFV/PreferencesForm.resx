@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tabControl1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <metadata name="tpGeneral.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="chkIsRecentFilesSaved.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="chkIsRecentFilesSaved.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -153,6 +162,9 @@
   <data name="&gt;&gt;chkIsRecentFilesSaved.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="chkUseLowPriorityOnHide.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkUseLowPriorityOnHide.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -180,6 +192,9 @@
   <data name="&gt;&gt;chkUseLowPriorityOnHide.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="txtCheckForUpdatesDays.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtCheckForUpdatesDays.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 181</value>
   </data>
@@ -201,6 +216,9 @@
   <data name="&gt;&gt;txtCheckForUpdatesDays.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -228,6 +246,9 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="btnClearCache.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnClearCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>294, 85</value>
   </data>
@@ -252,6 +273,9 @@
   <data name="&gt;&gt;btnClearCache.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="chkCheckForUpdates.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkCheckForUpdates.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -282,6 +306,9 @@
   <data name="&gt;&gt;chkCheckForUpdates.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="chkRecursive.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkRecursive.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -312,6 +339,9 @@
   <data name="&gt;&gt;chkRecursive.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="chkAutoScrollFileList.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutoScrollFileList.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -342,6 +372,9 @@
   <data name="&gt;&gt;chkAutoScrollFileList.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="chkFlashWindowWhenDone.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkFlashWindowWhenDone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -372,6 +405,9 @@
   <data name="&gt;&gt;chkFlashWindowWhenDone.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="chkReuseWindow.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkReuseWindow.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -402,6 +438,9 @@
   <data name="&gt;&gt;chkReuseWindow.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="chkRememberWindowPlacement.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkRememberWindowPlacement.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -432,6 +471,9 @@
   <data name="&gt;&gt;chkRememberWindowPlacement.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="chkAlwaysOnTop.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAlwaysOnTop.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -459,6 +501,9 @@
   <data name="&gt;&gt;chkAlwaysOnTop.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="trkCacheSize.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="trkCacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -486,6 +531,9 @@
   <data name="&gt;&gt;trkCacheSize.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="lblCacheRecords.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblCacheRecords.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -516,6 +564,9 @@
   <data name="&gt;&gt;lblCacheRecords.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -546,6 +597,9 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="lblCacheSizeLabel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblCacheSizeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -576,6 +630,9 @@
   <data name="&gt;&gt;lblCacheSizeLabel.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="cboLanguage.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="cboLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -603,6 +660,9 @@
   <data name="&gt;&gt;cboLanguage.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="lblLanguage.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -657,6 +717,12 @@
   <data name="&gt;&gt;tpGeneral.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="tpChecking.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="chkPlaySoundOnError.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkPlaySoundOnError.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -687,6 +753,9 @@
   <data name="&gt;&gt;chkPlaySoundOnError.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="chkAutomaticallyVerify.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutomaticallyVerify.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -714,9 +783,15 @@
   <data name="&gt;&gt;chkAutomaticallyVerify.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="grpRenaming.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="grpRenaming.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
+  <metadata name="rbRenameNone.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="rbRenameNone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -744,6 +819,9 @@
   <data name="&gt;&gt;rbRenameNone.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="rbRenameToLowercase.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="rbRenameToLowercase.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -771,6 +849,9 @@
   <data name="&gt;&gt;rbRenameToLowercase.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="rbRenameToMatchSet.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="rbRenameToMatchSet.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -822,6 +903,9 @@
   <data name="&gt;&gt;grpRenaming.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="chkPlaySoundOnAllOK.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkPlaySoundOnAllOK.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -852,6 +936,9 @@
   <data name="&gt;&gt;chkPlaySoundOnAllOK.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="chkPlaySoundOnAllOK_OnlyIfInactive.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkPlaySoundOnAllOK_OnlyIfInactive.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -882,6 +969,9 @@
   <data name="&gt;&gt;chkPlaySoundOnAllOK_OnlyIfInactive.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="chkAutoCloseWhenDoneCheckingOnlyAllOK.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutoCloseWhenDoneCheckingOnlyAllOK.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -912,6 +1002,9 @@
   <data name="&gt;&gt;chkAutoCloseWhenDoneCheckingOnlyAllOK.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="chkAutoCloseWhenDoneChecking.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutoCloseWhenDoneChecking.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -942,6 +1035,9 @@
   <data name="&gt;&gt;chkAutoCloseWhenDoneChecking.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="chkDeleteFailedFiles.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkDeleteFailedFiles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -972,6 +1068,9 @@
   <data name="&gt;&gt;chkDeleteFailedFiles.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="chkCleanupBadMissing.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkCleanupBadMissing.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1002,6 +1101,9 @@
   <data name="&gt;&gt;chkCleanupBadMissing.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="chkCreateMissingMarkers.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkCreateMissingMarkers.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1032,6 +1134,9 @@
   <data name="&gt;&gt;chkCreateMissingMarkers.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="chkRenameBadFiles.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkRenameBadFiles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1062,6 +1167,9 @@
   <data name="&gt;&gt;chkRenameBadFiles.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="chkUseRecycleBin.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkUseRecycleBin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1092,6 +1200,9 @@
   <data name="&gt;&gt;chkUseRecycleBin.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="chkAutoFindRenames.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutoFindRenames.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1146,6 +1257,12 @@
   <data name="&gt;&gt;tpChecking.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="tpCreating.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="chkCreateForEachSubDir.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkCreateForEachSubDir.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1176,6 +1293,9 @@
   <data name="&gt;&gt;chkCreateForEachSubDir.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="txtExcludeFilesOfType.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtExcludeFilesOfType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1203,6 +1323,9 @@
   <data name="&gt;&gt;txtExcludeFilesOfType.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="label13.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1230,6 +1353,9 @@
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="chkAutoCloseWhenDoneCreating.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkAutoCloseWhenDoneCreating.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1260,6 +1386,9 @@
   <data name="&gt;&gt;chkAutoCloseWhenDoneCreating.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="chkPromptForFileName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkPromptForFileName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1290,6 +1419,9 @@
   <data name="&gt;&gt;chkPromptForFileName.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="chkMD5SumCompatibility.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkMD5SumCompatibility.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1320,6 +1452,9 @@
   <data name="&gt;&gt;chkMD5SumCompatibility.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="chkSFV32Compatibility.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkSFV32Compatibility.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1350,6 +1485,9 @@
   <data name="&gt;&gt;chkSFV32Compatibility.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="chkSortFiles.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkSortFiles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1404,6 +1542,12 @@
   <data name="&gt;&gt;tpCreating.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="tpComments.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnCommentShowVariables.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCommentShowVariables.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1431,6 +1575,9 @@
   <data name="&gt;&gt;btnCommentShowVariables.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="txtCommentsFooter.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtCommentsFooter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1464,6 +1611,9 @@
   <data name="&gt;&gt;txtCommentsFooter.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="txtCommentsFileList.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtCommentsFileList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1497,6 +1647,9 @@
   <data name="&gt;&gt;txtCommentsFileList.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="txtCommentsHeader.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtCommentsHeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1530,6 +1683,9 @@
   <data name="&gt;&gt;txtCommentsHeader.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="label15.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1557,6 +1713,9 @@
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1584,6 +1743,9 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1611,6 +1773,9 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="chkWriteComments.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkWriteComments.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1668,6 +1833,12 @@
   <data name="&gt;&gt;tpComments.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="tpAbout.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnReleaseNotes.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnReleaseNotes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -1698,6 +1869,9 @@
   <data name="&gt;&gt;btnReleaseNotes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1812,6 +1986,9 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="btnWeb.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnWeb.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 40</value>
   </data>
@@ -1842,6 +2019,9 @@
   <data name="&gt;&gt;btnWeb.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="label14.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1869,6 +2049,9 @@
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="label12.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1896,6 +2079,9 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="lblReleaseDate.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblReleaseDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1923,6 +2109,9 @@
   <data name="&gt;&gt;lblReleaseDate.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="lblVersion.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblVersion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1950,9 +2139,15 @@
   <data name="&gt;&gt;lblVersion.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="grpUsageStatistics.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="grpUsageStatistics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
+  <metadata name="btnResetUsageStats.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnResetUsageStats.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1980,6 +2175,9 @@
   <data name="&gt;&gt;btnResetUsageStats.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="txtTimeSpent.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtTimeSpent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2007,6 +2205,9 @@
   <data name="&gt;&gt;txtTimeSpent.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="txtGoodFiles.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtGoodFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2034,6 +2235,9 @@
   <data name="&gt;&gt;txtGoodFiles.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2067,6 +2271,9 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2100,6 +2307,9 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="txtMBChecked.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtMBChecked.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 73</value>
   </data>
@@ -2124,6 +2334,9 @@
   <data name="&gt;&gt;txtMBChecked.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="txtSetsChecked.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtSetsChecked.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 47</value>
   </data>
@@ -2148,6 +2361,9 @@
   <data name="&gt;&gt;txtSetsChecked.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="txtFilesChecked.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtFilesChecked.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 21</value>
   </data>
@@ -2172,6 +2388,9 @@
   <data name="&gt;&gt;txtFilesChecked.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2199,6 +2418,9 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2226,6 +2448,9 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2322,6 +2547,9 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="btnOK.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -2349,6 +2577,9 @@
   <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -2384,7 +2615,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABU
-        CQAAAk1TRnQBSQFMAwEBAAE8AQABPAEAARgBAAEYAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CQAAAk1TRnQBSQFMAwEBAAFEAQABRAEAARgBAAEYAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AWADAAEYAwABAQEAAQgGAAEJGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -2427,6 +2658,9 @@
 </value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">

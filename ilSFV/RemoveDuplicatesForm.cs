@@ -160,9 +160,6 @@ namespace ilSFV
 								{
 									dirRemoveCount += startsWithCount;
 								}
-								else
-								{
-								}
 							}
 						}
 						badDirItem.SubItems.Add(string.Format("{0:#,0}", dirRemoveCount));
@@ -258,7 +255,7 @@ namespace ilSFV
 				if (deleteFiles.Count > 0)
 				{
 					StringBuilder sb = new StringBuilder();
-					sb.AppendLine(string.Format("Are you sure want to delete all {0} duplicate(s) in '{1}'?", deleteFiles.Count, dir));
+					sb.AppendLine(string.Format("Are you sure want to delete all {0:#,0} duplicate(s) in '{1}'?", deleteFiles.Count, dir));
 					if (deleteFiles.Count <= 50)
 					{
 						sb.AppendLine();

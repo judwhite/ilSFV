@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using ilSFV.Hash;
+using ilSFV.Localization;
 using ilSFV.Model.Settings;
 using ilSFV.Model.Workset;
 using ilSFV.Tools;
@@ -285,7 +286,7 @@ export results to text file
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, Language.General.Error, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -378,8 +379,12 @@ export results to text file
                 (major == parts[0] && minor == parts[1] && build < parts[2]))
             {
                 DialogResult res = MessageBox.Show(
-                    string.Format("A new version of ilSFV ({0}.{1}.{2}) is available.{3}{3}Would you like to download it now?", parts[0], parts[1], parts[2], Environment.NewLine),
-                    "Update Available", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    string.Format(Language.MainForm.UpdateAvailable_Message, parts[0], parts[1], parts[2]),
+                    Language.MainForm.UpdateAvailable_Title,
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
                 if (res == DialogResult.Yes)
                 {
                     Process.Start(strparts[3]);
@@ -389,7 +394,7 @@ export results to text file
             {
                 if (verbose)
                 {
-                    MessageBox.Show("You have the latest version.", "Check For Updates", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Language.MainForm.NoUpdateAvailable_Message, Language.MainForm.NoUpdateAvailable_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -419,7 +424,7 @@ export results to text file
         private long _totalSizeOfSets;
         private void GetWorkset(string fileName, string directoryName, ChecksumType setType, List<string> filesAndFolders, out int overwriteCount)
         {
-            SetStatusText("Getting file list...");
+            SetStatusText(Language.MainForm.Status_GettingFileList);
             Application.DoEvents();
 
             IDictionary<string, List<string>> files;
@@ -470,7 +475,7 @@ export results to text file
 
             if (Program.Settings.Create.SortFiles)
             {
-                SetStatusText("Pre-sorting...");
+                SetStatusText(Language.MainForm.Status_PreSorting);
                 Application.DoEvents();
 
                 files = new SortedDictionary<string, List<string>>(files, StringComparer.InvariantCultureIgnoreCase);
@@ -480,7 +485,7 @@ export results to text file
                 }
             }
 
-            SetStatusText("Getting file info...");
+            SetStatusText(Language.MainForm.Status_GettingFileInfo);
             Application.DoEvents();
 
             List<string> excludeExt = new List<string>();
@@ -551,7 +556,7 @@ export results to text file
 
                     if (percent / 5 > lastPercent / 5)
                     {
-                        SetStatusText(string.Format("Getting file info ({0}%)...", (percent / 5) * 5));
+                        SetStatusText(string.Format(Language.MainForm.Status_GettingFileInfoPercentage, (percent / 5) * 5));
                         Application.DoEvents();
 
                         lastPercent = percent;
@@ -620,7 +625,7 @@ export results to text file
 
         private void GetFilesAllDirectories(string directoryName, IDictionary<string, List<string>> dictionary)
         {
-            SetStatusText(string.Format("Getting file list for {0}...", directoryName));
+            SetStatusText(string.Format(Language.MainForm.Status_GettingFileListForDirectory, directoryName));
             Application.DoEvents();
 
             // Files
@@ -799,7 +804,7 @@ export results to text file
 
             if (!File.Exists(fileName))
             {
-                MessageBox.Show(string.Format("File '{0}' does not exist.", fileName), "File not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(Language.MainForm.FileNotFound_Message, fileName), Language.MainForm.FileNotFound_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -818,7 +823,7 @@ export results to text file
 
             ChecksumSet set = new ChecksumSet(fileName, baseDirectory, setType);
 
-            SetStatusText(string.Format("Loading {0}...", set.VerificationFileName));
+            SetStatusText(string.Format(Language.MainForm.Status_LoadingFile, set.VerificationFileName));
             Application.DoEvents();
 
             Program.Settings.AddRecentFile(fileName);
@@ -866,7 +871,7 @@ export results to text file
                                 if (chkMD5.Length != 32)
                                 {
                                     string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                    throw new Exception(string.Format("File '{0}' contents not recognized as MD5 verification file.{1}{1}{2}", fileName, Environment.NewLine, allText));
+                                    throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "MD5", allText));
                                 }
                             }
                             else
@@ -886,7 +891,7 @@ export results to text file
                                     if (chkMD5.Length != 32)
                                     {
                                         string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                        throw new Exception(string.Format("File '{0}' contents not recognized as MD5 verification file.{1}{1}{2}", fileName, Environment.NewLine, allText));
+                                        throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "MD5", allText));
                                     }
                                 }
                             }
@@ -910,7 +915,7 @@ export results to text file
                                 if (chkSHA1.Length != 40)
                                 {
                                     string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                    throw new Exception(string.Format("File '{0}' contents not recognized as SHA-1 verification file.{1}{1}{2}", fileName, Environment.NewLine, allText));
+                                    throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SHA-1", allText));
                                 }
                             }
                             else
@@ -930,7 +935,7 @@ export results to text file
                                     if (chkSHA1.Length != 40)
                                     {
                                         string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                        throw new Exception(string.Format("File '{0}' contents not recognized as SHA-1 verification file.{1}{1}{2}", fileName, Environment.NewLine, allText));
+                                        throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SHA-1", allText));
                                     }
                                 }
                             }
@@ -955,7 +960,7 @@ export results to text file
                             if (chkSFV.Length != 8)
                             {
                                 string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                throw new Exception(string.Format("File '{0}' contents not recognized as SFV verification file.{1}{1}{2}", fileName, Environment.NewLine, allText));
+                                throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SFV", allText));
                             }
 
                             file.FileName = chkFileName;
@@ -1007,7 +1012,7 @@ export results to text file
 
                     if (percent / 5 > lastPercent / 5)
                     {
-                        SetStatusText(string.Format("Loading {0} ({1}%)...", set.VerificationFileName, (percent / 5) * 5));
+                        SetStatusText(string.Format(Language.MainForm.Status_LoadingFilePercentage, set.VerificationFileName, (percent / 5) * 5));
                         Application.DoEvents();
 
                         lastPercent = percent;
@@ -1151,13 +1156,13 @@ export results to text file
             _workingOnList = true;
             try
             {
-                SetStatusText("Working...");
+                SetStatusText(Language.MainForm.Status_Working);
                 btnPause.Enabled = true;
                 btnHide.Enabled = true;
 
                 ToggleMenuItemsEnabled(false, false);
 
-                btnGo.Text = "&Stop";
+                btnGo.Text = Language.MainForm.StopButton;
                 _queueStop = false;
                 _pause = false;
 
@@ -1205,7 +1210,7 @@ export results to text file
                                 Unpause();
 
                             int pauseTotalPercent = _totalSizeOfSets == 0 ? 100 : (int)((bytesProcessed * 100) / _totalSizeOfSets);
-                            SetStatusText(string.Format("Working... ({0}%)", pauseTotalPercent));
+                            SetStatusText(string.Format(Language.MainForm.Status_WorkingPercentage, pauseTotalPercent));
                             Application.DoEvents();
                         }
 
@@ -1461,7 +1466,7 @@ export results to text file
                     LoadNewSets();
                 }
 
-                SetStatusText("Updating cache...");
+                SetStatusText(Language.MainForm.Status_UpdatingCache);
                 Application.DoEvents();
                 TimeSpan timeSpent = DateTime.Now - start;
                 Program.Settings.Statistics.AddStats(_files_ok + _files_bad + _files_missing, _set_index, bytesProcessed / 1024 / 1024, _files_ok, timeSpent);
@@ -1486,12 +1491,12 @@ export results to text file
                 decimal mbPerSecond = totalTime.TotalSeconds > 0 ? totalMB / (decimal)totalTime.TotalSeconds : totalMB;
                 string statusText;
                 if (totalTime.TotalSeconds < 600)
-                    statusText = string.Format("Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).", percentGood, totalMB, totalTime.TotalSeconds, mbPerSecond);
+                    statusText = string.Format(Language.MainForm.Status_FinishedUnder10Minutes, percentGood, totalMB, totalTime.TotalSeconds, mbPerSecond);
                 else
-                    statusText = string.Format("Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).", percentGood, totalMB, totalTime.Hours, totalTime.Minutes, totalTime.Seconds, mbPerSecond);
+                    statusText = string.Format(Language.MainForm.Status_Finished10MinutesOrMore, percentGood, totalMB, totalTime.Hours, totalTime.Minutes, totalTime.Seconds, mbPerSecond);
 
                 ToolTipIcon icon = percentGood == 100 ? ToolTipIcon.Info : ToolTipIcon.Warning;
-                notifyIcon1.ShowBalloonTip(3000, "ilSFV", string.Format("Done verifying ({0}% OK).", percentGood), icon);
+                notifyIcon1.ShowBalloonTip(3000, "ilSFV", string.Format(Language.MainForm.SystemTray_DoneVerifying, percentGood), icon);
 
                 btnPause.Enabled = false;
                 btnHide.Enabled = false;
@@ -1501,7 +1506,7 @@ export results to text file
                 ToggleMenuItemsEnabled(true, (_files_missing != 0));
 
                 _workingOnList = false;
-                btnGo.Text = "&Go";
+                btnGo.Text = Language.MainForm.GoButton;
                 _queueStop = false;
             }
         }
@@ -1523,7 +1528,7 @@ export results to text file
                 eta += TimeSpan.FromSeconds(0.1 * filesLeft);
             string strETA = string.Format("{0:0}:{1:00}:{2:00}", eta.Hours, eta.Minutes, eta.Seconds);
 
-            string statusText = string.Format("{0}% | ETA: {1} | Elapsed: {2}", (int)totalPercent, strETA, strElapsed);
+            string statusText = string.Format(Language.MainForm.Status_ETA, (int)totalPercent, strETA, strElapsed);
             SetStatusText(statusText);
             Application.DoEvents();
         }
@@ -1660,11 +1665,11 @@ export results to text file
             if (currentSet > _sets.Count)
                 currentSet = _sets.Count;
 
-            lblSets.Text = string.Format("Sets: {0:#,0}/{1:#,0}", currentSet, _sets.Count);
-            lblParts.Text = string.Format("Parts: {0:#,0}/{1:#,0}", _files_ok + _files_missing + _files_bad, _files_parts);
-            lblGood.Text = string.Format("Good: {0:#,0}", _files_ok);
-            lblMissing.Text = string.Format("Missing: {0:#,0}", _files_missing);
-            lblBad.Text = string.Format("Bad: {0:#,0}", _files_bad);
+            lblSets.Text = string.Format(Language.MainForm.SetsLabel + " {0:#,0}/{1:#,0}", currentSet, _sets.Count);
+            lblParts.Text = string.Format(Language.MainForm.PartsLabel + " {0:#,0}/{1:#,0}", _files_ok + _files_missing + _files_bad, _files_parts);
+            lblGood.Text = string.Format(Language.MainForm.GoodLabel + " {0:#,0}", _files_ok);
+            lblMissing.Text = string.Format(Language.MainForm.MissingLabel + " {0:#,0}", _files_missing);
+            lblBad.Text = string.Format(Language.MainForm.BadLabel + " {0:#,0}", _files_bad);
         }
 
         private void miUseCachedResults_Click(object sender, EventArgs e)
@@ -1692,9 +1697,9 @@ export results to text file
                     }
                 }
 
-                SetStatusText("Ready.");
+                SetStatusText(Language.MainForm.Status_Ready);
 
-                MessageBox.Show(string.Format("{0} renamed file(s) found.", totalNewOK), "Find Renamed Files", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Language.MainForm.FindRenamedFiles_Message, totalNewOK), Language.MainForm.FindRenamedFiles_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -1706,7 +1711,7 @@ export results to text file
         {
             Guard.ArgumentNotNull(set, "set");
 
-            SetStatusText(string.Format("Finding renames in {0}...", set.VerificationFileName));
+            SetStatusText(string.Format(Language.MainForm.Status_FindingRenamesInFile, set.VerificationFileName));
             Application.DoEvents();
 
             newOK = 0;
@@ -1883,8 +1888,8 @@ export results to text file
 
                 if (checkExists && File.Exists(fileName))
                 {
-                    string message = string.Format("The file already exists, would you like to overwrite it?{0}{0}{1}", Environment.NewLine, fileName);
-                    if (MessageBox.Show(message, "Confirmation Needed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                    string message = string.Format(Language.MainForm.OverwriteFile_Message, fileName);
+                    if (MessageBox.Show(message, Language.MainForm.OverwriteFile_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                         return false;
                 }
             }
@@ -1904,10 +1909,10 @@ export results to text file
 
             if (!checkExists && overwriteCount != 0)
             {
-                string message = string.Format("{0} existing checksum file(s) will be overwritten. Continue?", overwriteCount);
-                if (MessageBox.Show(message, "Confirmation Needed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                string message = string.Format(Language.MainForm.OverwriteMultipleFiles_Message, overwriteCount);
+                if (MessageBox.Show(message, Language.MainForm.OverwriteMultipleFiles_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
-                    SetStatusText("Ready.");
+                    SetStatusText(Language.MainForm.Status_Ready);
                     _sets.Clear();
                     return false;
                 }
@@ -1947,13 +1952,13 @@ export results to text file
             _workingOnList = true;
             try
             {
-                SetStatusText("Working...");
+                SetStatusText(Language.MainForm.Status_Working);
                 btnPause.Enabled = true;
                 btnHide.Enabled = true;
 
                 ToggleMenuItemsEnabled(false, false);
 
-                btnGo.Text = "&Stop";
+                btnGo.Text = Language.MainForm.StopButton;
                 _queueStop = false;
                 _pause = false;
 
@@ -2033,7 +2038,7 @@ export results to text file
                                 Unpause();
 
                             int pauseTotalPercent = _totalSizeOfSets == 0 ? 100 : (int)((bytesProcessed * 100) / _totalSizeOfSets);
-                            SetStatusText(string.Format("Working... ({0}%)", pauseTotalPercent));
+                            SetStatusText(string.Format(Language.MainForm.Status_WorkingPercentage, pauseTotalPercent));
                             Application.DoEvents();
                         }
 
@@ -2208,11 +2213,11 @@ export results to text file
 
                 string statusText;
                 if (totalTime.TotalSeconds < 600)
-                    statusText = string.Format("Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).", percentGood, totalMB, totalTime.TotalSeconds, mbPerSecond);
+                    statusText = string.Format(Language.MainForm.Status_FinishedUnder10Minutes, percentGood, totalMB, totalTime.TotalSeconds, mbPerSecond);
                 else
-                    statusText = string.Format("Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).", percentGood, totalMB, totalTime.Hours, totalTime.Minutes, totalTime.Seconds, mbPerSecond);
+                    statusText = string.Format(Language.MainForm.Status_Finished10MinutesOrMore, percentGood, totalMB, totalTime.Hours, totalTime.Minutes, totalTime.Seconds, mbPerSecond);
 
-                notifyIcon1.ShowBalloonTip(3000, "ilSFV", "Done creating checksum files.", ToolTipIcon.Info);
+                notifyIcon1.ShowBalloonTip(3000, "ilSFV", Language.MainForm.SystemTray_DoneCreating, ToolTipIcon.Info);
 
                 btnPause.Enabled = false;
                 btnHide.Enabled = false;
@@ -2222,7 +2227,7 @@ export results to text file
                 ToggleMenuItemsEnabled(true, false);
 
                 _workingOnList = false;
-                btnGo.Text = "&Go";
+                btnGo.Text = Language.MainForm.GoButton;
                 _queueStop = false;
             }
         }
@@ -2263,15 +2268,15 @@ export results to text file
 
         private void Pause()
         {
-            btnPause.Text = "&Resume";
+            btnPause.Text = Language.MainForm.ResumeButton;
             _pause = true;
-            SetStatusText("Paused.");
+            SetStatusText(Language.MainForm.Status_Paused);
             btnHide.Enabled = false;
         }
 
         private void Unpause()
         {
-            btnPause.Text = "&Pause";
+            btnPause.Text = Language.MainForm.PauseButton;
             _pause = false;
             btnHide.Enabled = true;
         }
@@ -2476,7 +2481,8 @@ export results to text file
             catch (UnauthorizedAccessException ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show(string.Format("{0}{1}{1}Try running as Administrator.", ex.Message, Environment.NewLine), "Register File Types", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                MessageBox.Show(string.Format(Language.MainForm.RegisterFileTypesError_Message, ex.Message), Language.MainForm.RegisterFileTypesError_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -2567,14 +2573,14 @@ export results to text file
 
                 if (!string.IsNullOrEmpty(file.CurrentChecksum))
                 {
-                    miCopyCurrentChecksum.Text = string.Format("Copy Current Checksum ({0})", file.CurrentChecksum);
+                    miCopyCurrentChecksum.Text = string.Format(Language.MainForm.CopyCurrentChecksumContextMenu, file.CurrentChecksum);
                     miCopyCurrentChecksum.Visible = true;
                     showSep = true;
                 }
 
                 if (!string.IsNullOrEmpty(file.OriginalChecksum))
                 {
-                    miCopyOriginalChecksum.Text = string.Format("Copy Original Checksum ({0})", file.OriginalChecksum);
+                    miCopyOriginalChecksum.Text = string.Format(Language.MainForm.CopyOriginalChecksumContextMenu, file.OriginalChecksum);
                     miCopyOriginalChecksum.Visible = true;
                     showSep = true;
                 }
@@ -2673,7 +2679,7 @@ export results to text file
                     }
                     Cursor.Current = Cursors.Default;
                 }
-                SetStatusText("Ready.");
+                SetStatusText(Language.MainForm.Status_Ready);
             }
 
             Cursor.Current = Cursors.WaitCursor;
@@ -2701,7 +2707,7 @@ export results to text file
         private void miTruncateFileNames_Click(object sender, EventArgs e)
         {
             string strMaxLength;
-            if (!GetInputForm.ShowForm("Max Length", "Max Length", out strMaxLength))
+            if (!GetInputForm.ShowForm(Language.MainForm.TruncateFileNames_MaxLength, Language.MainForm.TruncateFileNames_MaxLength, out strMaxLength))
                 return;
 
             int maxLength;
@@ -2710,10 +2716,7 @@ export results to text file
 
             if (maxLength < 12)
             {
-                if (maxLength <= 0)
-                    MessageBox.Show("Very funny.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Minimum length is 12.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Language.MainForm.TruncateFileNames_MinimumLengthIs12, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -2724,7 +2727,7 @@ export results to text file
 
             Dictionary<string, List<string>> dict = GetFilesAllDirectories(path);
 
-            SetStatusText("Looking for long file names...");
+            SetStatusText(Language.MainForm.Status_LookingForLongFileNames);
 
             int count = 0;
             foreach (KeyValuePair<string, List<string>> kvp in dict)
@@ -2741,7 +2744,7 @@ export results to text file
                         string newName = nameWithoutExt + ext;
                         string newFullPath = Path.Combine(kvp.Key, newName);
 
-                        SetStatusText(string.Format("Renaming '{0}' to '{1}'...", fileName, newName));
+                        SetStatusText(string.Format(Language.MainForm.Status_Renaming, fileName, newName));
 
                         File.Move(fullPath, newFullPath);
                         count++;
@@ -2749,9 +2752,14 @@ export results to text file
                 }
             }
 
-            SetStatusText("Ready.");
+            SetStatusText(Language.MainForm.Status_Ready);
 
-            MessageBox.Show(string.Format("{0:#,0} file(s) renamed.", count), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(string.Format(Language.MainForm.TruncateFileNames_FilesRenamed_Message, count), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void SetLanguage()
+        {
+            // TODO
         }
     }
 }

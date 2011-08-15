@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreferencesForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpGeneral = new System.Windows.Forms.TabPage();
+            this.chkIsRecentFilesSaved = new System.Windows.Forms.CheckBox();
             this.chkUseLowPriorityOnHide = new System.Windows.Forms.CheckBox();
             this.txtCheckForUpdatesDays = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -108,7 +109,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.chkIsRecentFilesSaved = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tpGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkCacheSize)).BeginInit();
@@ -155,6 +155,12 @@
             resources.ApplyResources(this.tpGeneral, "tpGeneral");
             this.tpGeneral.Name = "tpGeneral";
             this.tpGeneral.UseVisualStyleBackColor = true;
+            // 
+            // chkIsRecentFilesSaved
+            // 
+            resources.ApplyResources(this.chkIsRecentFilesSaved, "chkIsRecentFilesSaved");
+            this.chkIsRecentFilesSaved.Name = "chkIsRecentFilesSaved";
+            this.chkIsRecentFilesSaved.UseVisualStyleBackColor = true;
             // 
             // chkUseLowPriorityOnHide
             // 
@@ -663,12 +669,6 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Analyze.png");
-            // 
-            // chkIsRecentFilesSaved
-            // 
-            resources.ApplyResources(this.chkIsRecentFilesSaved, "chkIsRecentFilesSaved");
-            this.chkIsRecentFilesSaved.Name = "chkIsRecentFilesSaved";
-            this.chkIsRecentFilesSaved.UseVisualStyleBackColor = true;
             // 
             // PreferencesForm
             // 
