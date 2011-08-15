@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using ilSFV.FileAssociation;
+using ilSFV.Localization;
 using ilSFV.Model.Settings;
 using Microsoft.Win32;
 
@@ -62,6 +63,8 @@ namespace ilSFV
                 Settings.Check.Load();
                 Settings.Create.Load();
                 Settings.Comments.Load();
+
+                Language.Load(Settings.General.Language);
 
                 Mutex createMutex = null;
                 bool anotherCreateInstance = false;

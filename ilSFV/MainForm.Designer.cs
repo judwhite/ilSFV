@@ -74,8 +74,6 @@
             this.lblBad = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblMissing = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lvwFiles = new ilSFV.FastListView();
-            this.colFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.miCopyFileNames = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyPathAndFileNames = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,11 +90,13 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tpComments = new System.Windows.Forms.TabPage();
             this.txtComments = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.lvwFiles = new ilSFV.FastListView();
+            this.colFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -105,11 +105,12 @@
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tpComments.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFile,
             this.mnuLegend,
@@ -142,7 +143,7 @@
             this.toolStripSeparator2,
             this.miExit});
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(37, 20);
+            this.mnuFile.Size = new System.Drawing.Size(39, 20);
             this.mnuFile.Text = "&File";
             this.mnuFile.DropDownOpening += new System.EventHandler(this.mnuFile_DropDownOpening);
             // 
@@ -150,7 +151,7 @@
             // 
             this.miNewSFV.Name = "miNewSFV";
             this.miNewSFV.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.miNewSFV.Size = new System.Drawing.Size(208, 22);
+            this.miNewSFV.Size = new System.Drawing.Size(210, 22);
             this.miNewSFV.Text = "New &SFV File...";
             this.miNewSFV.Click += new System.EventHandler(this.miNewSFV_Click);
             // 
@@ -158,7 +159,7 @@
             // 
             this.miNewMD5.Name = "miNewMD5";
             this.miNewMD5.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.miNewMD5.Size = new System.Drawing.Size(208, 22);
+            this.miNewMD5.Size = new System.Drawing.Size(210, 22);
             this.miNewMD5.Text = "New &MD5 File...";
             this.miNewMD5.Click += new System.EventHandler(this.miNewMD5_Click);
             // 
@@ -166,58 +167,58 @@
             // 
             this.miNewSHA1.Name = "miNewSHA1";
             this.miNewSHA1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.miNewSHA1.Size = new System.Drawing.Size(208, 22);
+            this.miNewSHA1.Size = new System.Drawing.Size(210, 22);
             this.miNewSHA1.Text = "New SH&A-1 File...";
             this.miNewSHA1.Click += new System.EventHandler(this.miNewSHA1_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(207, 6);
             // 
             // miOpen
             // 
             this.miOpen.Name = "miOpen";
             this.miOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.miOpen.Size = new System.Drawing.Size(208, 22);
+            this.miOpen.Size = new System.Drawing.Size(210, 22);
             this.miOpen.Text = "&Open...";
             this.miOpen.Click += new System.EventHandler(this.miOpen_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(207, 6);
             // 
             // miPreferences
             // 
             this.miPreferences.Name = "miPreferences";
             this.miPreferences.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.miPreferences.Size = new System.Drawing.Size(208, 22);
+            this.miPreferences.Size = new System.Drawing.Size(210, 22);
             this.miPreferences.Text = "&Preferences...";
             this.miPreferences.Click += new System.EventHandler(this.miPreferences_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
             // 
             // miCheckForUpdates
             // 
             this.miCheckForUpdates.Name = "miCheckForUpdates";
-            this.miCheckForUpdates.Size = new System.Drawing.Size(208, 22);
+            this.miCheckForUpdates.Size = new System.Drawing.Size(210, 22);
             this.miCheckForUpdates.Text = "Check For &Updates";
             this.miCheckForUpdates.Click += new System.EventHandler(this.miCheckForUpdates_Click);
             // 
             // miDocumentSeparator
             // 
             this.miDocumentSeparator.Name = "miDocumentSeparator";
-            this.miDocumentSeparator.Size = new System.Drawing.Size(205, 6);
+            this.miDocumentSeparator.Size = new System.Drawing.Size(207, 6);
             this.miDocumentSeparator.Visible = false;
             // 
             // miDocument1
             // 
             this.miDocument1.Name = "miDocument1";
-            this.miDocument1.Size = new System.Drawing.Size(208, 22);
+            this.miDocument1.Size = new System.Drawing.Size(210, 22);
             this.miDocument1.Text = "document1";
             this.miDocument1.Visible = false;
             this.miDocument1.Click += new System.EventHandler(this.miDocument1_Click);
@@ -225,7 +226,7 @@
             // miDocument2
             // 
             this.miDocument2.Name = "miDocument2";
-            this.miDocument2.Size = new System.Drawing.Size(208, 22);
+            this.miDocument2.Size = new System.Drawing.Size(210, 22);
             this.miDocument2.Text = "document2";
             this.miDocument2.Visible = false;
             this.miDocument2.Click += new System.EventHandler(this.miDocument1_Click);
@@ -233,7 +234,7 @@
             // miDocument3
             // 
             this.miDocument3.Name = "miDocument3";
-            this.miDocument3.Size = new System.Drawing.Size(208, 22);
+            this.miDocument3.Size = new System.Drawing.Size(210, 22);
             this.miDocument3.Text = "document3";
             this.miDocument3.Visible = false;
             this.miDocument3.Click += new System.EventHandler(this.miDocument1_Click);
@@ -241,7 +242,7 @@
             // miDocument4
             // 
             this.miDocument4.Name = "miDocument4";
-            this.miDocument4.Size = new System.Drawing.Size(208, 22);
+            this.miDocument4.Size = new System.Drawing.Size(210, 22);
             this.miDocument4.Text = "document4";
             this.miDocument4.Visible = false;
             this.miDocument4.Click += new System.EventHandler(this.miDocument1_Click);
@@ -249,12 +250,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
             // 
             // miExit
             // 
             this.miExit.Name = "miExit";
-            this.miExit.Size = new System.Drawing.Size(208, 22);
+            this.miExit.Size = new System.Drawing.Size(210, 22);
             this.miExit.Text = "E&xit";
             this.miExit.Click += new System.EventHandler(this.miExit_Click);
             // 
@@ -266,35 +267,35 @@
             this.miFileNotFound,
             this.miFileUntested});
             this.mnuLegend.Name = "mnuLegend";
-            this.mnuLegend.Size = new System.Drawing.Size(58, 20);
+            this.mnuLegend.Size = new System.Drawing.Size(61, 20);
             this.mnuLegend.Text = "&Legend";
             // 
             // miFileOK
             // 
             this.miFileOK.Image = global::ilSFV.Properties.Resources.Bullet_10;
             this.miFileOK.Name = "miFileOK";
-            this.miFileOK.Size = new System.Drawing.Size(177, 22);
+            this.miFileOK.Size = new System.Drawing.Size(179, 22);
             this.miFileOK.Text = "File OK";
             // 
             // miFileBad
             // 
             this.miFileBad.Image = global::ilSFV.Properties.Resources.Bullet_9;
             this.miFileBad.Name = "miFileBad";
-            this.miFileBad.Size = new System.Drawing.Size(177, 22);
+            this.miFileBad.Size = new System.Drawing.Size(179, 22);
             this.miFileBad.Text = "File Bad";
             // 
             // miFileNotFound
             // 
             this.miFileNotFound.Image = global::ilSFV.Properties.Resources.Bullet_8;
             this.miFileNotFound.Name = "miFileNotFound";
-            this.miFileNotFound.Size = new System.Drawing.Size(177, 22);
+            this.miFileNotFound.Size = new System.Drawing.Size(179, 22);
             this.miFileNotFound.Text = "File Not Found";
             // 
             // miFileUntested
             // 
             this.miFileUntested.Image = global::ilSFV.Properties.Resources.Bullet_6;
             this.miFileUntested.Name = "miFileUntested";
-            this.miFileUntested.Size = new System.Drawing.Size(177, 22);
+            this.miFileUntested.Size = new System.Drawing.Size(179, 22);
             this.miFileUntested.Text = "Untested-Unknown";
             // 
             // mnuTools
@@ -308,52 +309,52 @@
             this.toolStripSeparator6,
             this.miRegisterFileTypes});
             this.mnuTools.Name = "mnuTools";
-            this.mnuTools.Size = new System.Drawing.Size(48, 20);
+            this.mnuTools.Size = new System.Drawing.Size(49, 20);
             this.mnuTools.Text = "&Tools";
             // 
             // miFindRenamedFiles
             // 
             this.miFindRenamedFiles.Name = "miFindRenamedFiles";
             this.miFindRenamedFiles.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.miFindRenamedFiles.Size = new System.Drawing.Size(315, 22);
+            this.miFindRenamedFiles.Size = new System.Drawing.Size(326, 22);
             this.miFindRenamedFiles.Text = "Find &Renamed Files";
             this.miFindRenamedFiles.Click += new System.EventHandler(this.miFindRenamedFiles_Click);
             // 
             // miUseCachedResults
             // 
             this.miUseCachedResults.Name = "miUseCachedResults";
-            this.miUseCachedResults.Size = new System.Drawing.Size(315, 22);
+            this.miUseCachedResults.Size = new System.Drawing.Size(326, 22);
             this.miUseCachedResults.Text = "Use &Cached Results";
             this.miUseCachedResults.Click += new System.EventHandler(this.miUseCachedResults_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(312, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(323, 6);
             // 
             // miFindDuplicateFiles
             // 
             this.miFindDuplicateFiles.Name = "miFindDuplicateFiles";
-            this.miFindDuplicateFiles.Size = new System.Drawing.Size(315, 22);
+            this.miFindDuplicateFiles.Size = new System.Drawing.Size(326, 22);
             this.miFindDuplicateFiles.Text = "Find/Delete Duplicate Files Using Checksum...";
             this.miFindDuplicateFiles.Click += new System.EventHandler(this.miFindDuplicateFiles_Click);
             // 
             // miTruncateFileNames
             // 
             this.miTruncateFileNames.Name = "miTruncateFileNames";
-            this.miTruncateFileNames.Size = new System.Drawing.Size(315, 22);
+            this.miTruncateFileNames.Size = new System.Drawing.Size(326, 22);
             this.miTruncateFileNames.Text = "&Truncate File Names...";
             this.miTruncateFileNames.Click += new System.EventHandler(this.miTruncateFileNames_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(312, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(323, 6);
             // 
             // miRegisterFileTypes
             // 
             this.miRegisterFileTypes.Name = "miRegisterFileTypes";
-            this.miRegisterFileTypes.Size = new System.Drawing.Size(315, 22);
+            this.miRegisterFileTypes.Size = new System.Drawing.Size(326, 22);
             this.miRegisterFileTypes.Text = "Register File &Types";
             this.miRegisterFileTypes.Click += new System.EventHandler(this.miRegisterFileTypes_Click);
             // 
@@ -363,20 +364,20 @@
             this.miHideGood,
             this.miCommentResultPane});
             this.mnuView.Name = "mnuView";
-            this.mnuView.Size = new System.Drawing.Size(44, 20);
+            this.mnuView.Size = new System.Drawing.Size(45, 20);
             this.mnuView.Text = "&View";
             // 
             // miHideGood
             // 
             this.miHideGood.Name = "miHideGood";
-            this.miHideGood.Size = new System.Drawing.Size(194, 22);
+            this.miHideGood.Size = new System.Drawing.Size(198, 22);
             this.miHideGood.Text = "&Hide Good";
             this.miHideGood.Click += new System.EventHandler(this.miHideGood_Click);
             // 
             // miCommentResultPane
             // 
             this.miCommentResultPane.Name = "miCommentResultPane";
-            this.miCommentResultPane.Size = new System.Drawing.Size(194, 22);
+            this.miCommentResultPane.Size = new System.Drawing.Size(198, 22);
             this.miCommentResultPane.Text = "&Comment/Result Pane";
             this.miCommentResultPane.Click += new System.EventHandler(this.miCommentResultPane_Click);
             // 
@@ -385,7 +386,7 @@
             this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miAbout});
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(44, 20);
+            this.mnuHelp.Size = new System.Drawing.Size(45, 20);
             this.mnuHelp.Text = "&Help";
             // 
             // miAbout
@@ -405,7 +406,7 @@
             this.lblGood,
             this.lblBad,
             this.lblMissing});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 708);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 584);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1184, 24);
             this.statusStrip1.SizingGrip = false;
@@ -482,6 +483,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -492,36 +494,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1184, 684);
+            this.splitContainer1.Size = new System.Drawing.Size(1184, 560);
             this.splitContainer1.SplitterDistance = 590;
             this.splitContainer1.TabIndex = 2;
-            // 
-            // lvwFiles
-            // 
-            this.lvwFiles.AllowDrop = true;
-            this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colFilename});
-            this.lvwFiles.ContextMenuStrip = this.contextMenuStrip1;
-            this.lvwFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwFiles.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvwFiles.FullRowSelect = true;
-            this.lvwFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwFiles.HideSelection = false;
-            this.lvwFiles.Location = new System.Drawing.Point(0, 0);
-            this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(590, 622);
-            this.lvwFiles.StateImageList = this.imageList1;
-            this.lvwFiles.TabIndex = 0;
-            this.lvwFiles.UseCompatibleStateImageBehavior = false;
-            this.lvwFiles.View = System.Windows.Forms.View.Details;
-            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
-            this.lvwFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvwFiles_DragDrop);
-            this.lvwFiles.DragOver += new System.Windows.Forms.DragEventHandler(this.lvwFiles_DragOver);
-            // 
-            // colFilename
-            // 
-            this.colFilename.Text = "File name";
-            this.colFilename.Width = 409;
             // 
             // contextMenuStrip1
             // 
@@ -587,7 +562,8 @@
             this.panel1.Controls.Add(this.progressBar2);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 622);
+            this.panel1.Location = new System.Drawing.Point(0, 498);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(590, 62);
             this.panel1.TabIndex = 0;
@@ -596,8 +572,9 @@
             // 
             this.btnGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGo.Location = new System.Drawing.Point(536, 32);
+            this.btnGo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(51, 20);
+            this.btnGo.Size = new System.Drawing.Size(50, 20);
             this.btnGo.TabIndex = 25;
             this.btnGo.Text = "&Go";
             this.btnGo.UseVisualStyleBackColor = true;
@@ -606,7 +583,8 @@
             // btnRightPane
             // 
             this.btnRightPane.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRightPane.Location = new System.Drawing.Point(556, 6);
+            this.btnRightPane.Location = new System.Drawing.Point(555, 6);
+            this.btnRightPane.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRightPane.Name = "btnRightPane";
             this.btnRightPane.Size = new System.Drawing.Size(31, 20);
             this.btnRightPane.TabIndex = 20;
@@ -618,7 +596,8 @@
             // 
             this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPause.Enabled = false;
-            this.btnPause.Location = new System.Drawing.Point(436, 6);
+            this.btnPause.Location = new System.Drawing.Point(435, 6);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(54, 20);
             this.btnPause.TabIndex = 10;
@@ -632,6 +611,7 @@
             this.chkHideGood.AutoSize = true;
             this.chkHideGood.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkHideGood.Location = new System.Drawing.Point(353, 9);
+            this.chkHideGood.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chkHideGood.Name = "chkHideGood";
             this.chkHideGood.Size = new System.Drawing.Size(77, 17);
             this.chkHideGood.TabIndex = 5;
@@ -643,7 +623,8 @@
             // 
             this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHide.Enabled = false;
-            this.btnHide.Location = new System.Drawing.Point(496, 6);
+            this.btnHide.Location = new System.Drawing.Point(495, 6);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(54, 20);
             this.btnHide.TabIndex = 15;
@@ -656,6 +637,7 @@
             this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar2.Location = new System.Drawing.Point(8, 32);
+            this.progressBar2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(522, 20);
             this.progressBar2.TabIndex = 1;
@@ -665,43 +647,47 @@
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(8, 6);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(339, 20);
+            this.progressBar1.Size = new System.Drawing.Size(338, 20);
             this.progressBar1.TabIndex = 0;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tpComments);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(590, 684);
+            this.tabControl1.Size = new System.Drawing.Size(590, 560);
             this.tabControl1.TabIndex = 30;
             // 
-            // tabPage1
+            // tpComments
             // 
-            this.tabPage1.Controls.Add(this.txtComments);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(582, 655);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Comments";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpComments.Controls.Add(this.txtComments);
+            this.tpComments.Location = new System.Drawing.Point(4, 25);
+            this.tpComments.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tpComments.Name = "tpComments";
+            this.tpComments.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tpComments.Size = new System.Drawing.Size(582, 531);
+            this.tpComments.TabIndex = 0;
+            this.tpComments.Text = "Comments";
+            this.tpComments.UseVisualStyleBackColor = true;
             // 
             // txtComments
             // 
             this.txtComments.BackColor = System.Drawing.SystemColors.Window;
             this.txtComments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtComments.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComments.Location = new System.Drawing.Point(3, 3);
+            this.txtComments.Location = new System.Drawing.Point(2, 3);
+            this.txtComments.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
             this.txtComments.ReadOnly = true;
             this.txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtComments.Size = new System.Drawing.Size(576, 649);
+            this.txtComments.Size = new System.Drawing.Size(578, 525);
             this.txtComments.TabIndex = 0;
             this.txtComments.WordWrap = false;
             // 
@@ -719,16 +705,46 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // lvwFiles
+            // 
+            this.lvwFiles.AllowDrop = true;
+            this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colFilename});
+            this.lvwFiles.ContextMenuStrip = this.contextMenuStrip1;
+            this.lvwFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwFiles.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwFiles.FullRowSelect = true;
+            this.lvwFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwFiles.HideSelection = false;
+            this.lvwFiles.Location = new System.Drawing.Point(0, 0);
+            this.lvwFiles.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.lvwFiles.Name = "lvwFiles";
+            this.lvwFiles.Size = new System.Drawing.Size(590, 498);
+            this.lvwFiles.StateImageList = this.imageList1;
+            this.lvwFiles.TabIndex = 0;
+            this.lvwFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwFiles.View = System.Windows.Forms.View.Details;
+            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
+            this.lvwFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvwFiles_DragDrop);
+            this.lvwFiles.DragOver += new System.Windows.Forms.DragEventHandler(this.lvwFiles_DragOver);
+            // 
+            // colFilename
+            // 
+            this.colFilename.Text = "File name";
+            this.colFilename.Width = 409;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 732);
+            this.ClientSize = new System.Drawing.Size(1184, 608);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -747,8 +763,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tpComments.ResumeLayout(false);
+            this.tpComments.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,7 +801,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tpComments;
         private System.Windows.Forms.TextBox txtComments;
         private System.Windows.Forms.CheckBox chkHideGood;
         private System.Windows.Forms.ProgressBar progressBar2;

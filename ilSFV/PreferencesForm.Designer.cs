@@ -261,8 +261,6 @@
             resources.ApplyResources(this.cboLanguage, "cboLanguage");
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.FormattingEnabled = true;
-            this.cboLanguage.Items.AddRange(new object[] {
-            resources.GetString("cboLanguage.Items")});
             this.cboLanguage.Name = "cboLanguage";
             // 
             // lblLanguage

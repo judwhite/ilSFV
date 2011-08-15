@@ -127,6 +127,9 @@ export results to text file
         {
             InitializeComponent();
 
+            Language.Changed += delegate { SetLanguage(); };
+            SetLanguage();
+
             //miFindRenamedFiles.Visible = false;
             //miTruncateFileNames.Visible = false;
             //toolStripSeparator6.Visible = false;
@@ -677,6 +680,8 @@ export results to text file
                 Cursor.Current = Cursors.Default;
                 form.ShowDialog();
             }
+
+            Language.Load(Program.Settings.General.Language);
 
             if (!Program.Settings.General.IsRecentFilesSaved)
             {
@@ -2759,7 +2764,40 @@ export results to text file
 
         private void SetLanguage()
         {
+            var p = Language.MainForm;
+
+            mnuFile.Text = p.Menu_File;
+            miNewSFV.Text = p.Menu_File_NewSFVFile;
+            miNewMD5.Text = p.Menu_File_NewMD5File;
+            miNewSHA1.Text = p.Menu_File_NewSHA1File;
+            miOpen.Text = p.Menu_File_Open;
+            miPreferences.Text = p.Menu_File_Preferences;
+            miCheckForUpdates.Text = p.Menu_File_CheckForUpdates;
+            miExit.Text = p.Menu_File_Exit;
+
+            mnuLegend.Text = p.Menu_Legend;
+            miFileOK.Text = p.Menu_Legend_FileOK;
+            miFileBad.Text = p.Menu_Legend_FileBad;
+            miFileNotFound.Text = p.Menu_Legend_FileNotFound;
+            miFileUntested.Text = p.Menu_Legend_FileUntestedUnknown;
+
             // TODO
+
+            colFilename.Text = p.FileNameColumnHeader;
+            tpComments.Text = p.CommentsTabHeader;
+
+            lblSets.Text = p.SetsLabel;
+            lblParts.Text = p.PartsLabel;
+            lblGood.Text = p.GoodLabel;
+            lblBad.Text = Language.MainForm.BadLabel;
+            lblMissing.Text = p.MissingLabel;
+
+            chkHideGood.Text = p.HideGoodCheckBox;
+            btnPause.Text = p.PauseButton;
+            btnHide.Text = p.HideButton;
+            btnGo.Text = p.GoButton;
+
+            SetStatusText(p.Status_Ready);
         }
     }
 }

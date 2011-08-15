@@ -86,6 +86,7 @@
     <Compile Include="Hash\SHA1.cs" />
     <Compile Include="Localization\ExceptionForm.Generated.cs" />
     <Compile Include="Localization\General.Generated.cs" />
+    <Compile Include="Localization\Language.cs" />
     <Compile Include="Localization\Language.Generated.cs" />
     <Compile Include="Localization\MainForm.Generated.cs" />
     <Compile Include="Localization\PreferencesForm.Generated.cs" />

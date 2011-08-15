@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using ilSFV.Localization;
 using ilSFV.Model.Settings;
 
 namespace ilSFV
@@ -31,6 +32,9 @@ namespace ilSFV
 				TopMost = true;
 
 			// General
+            cboLanguage.Items.Clear();
+            cboLanguage.Items.AddRange(Language.GetLanguages());
+            cboLanguage.SelectedIndexChanged += cboLanguage_SelectedIndexChanged;
 			cboLanguage.SelectedIndex = cboLanguage.Items.IndexOf(Program.Settings.General.Language);
 			if (cboLanguage.SelectedIndex == -1)
 				cboLanguage.SelectedIndex = 0;
@@ -100,6 +104,26 @@ namespace ilSFV
 			UpdateChkCreateForEachSubDirEnabled();
 			UpdateCommentsTextBoxesEnabled();
 		}
+
+        private void cboLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Language.Load(cboLanguage.Text);
+
+            var p = Language.PreferencesForm;
+
+            Text = p.Title;
+
+            tpGeneral.Text = p.General;
+            tpChecking.Text = p.Checking;
+            tpCreating.Text = p.Creating;
+            tpComments.Text = p.Comments;
+            tpAbout.Text = p.About;
+
+            // TODO
+
+            btnOK.Text = Language.General.OKButton;
+            btnCancel.Text = Language.General.CancelButton;
+        }
 
 		private void UpdateCommentsTextBoxesEnabled()
 		{
