@@ -295,7 +295,7 @@ namespace ilSFV
         {
             if (e is FileNotFoundException && e.Message.Contains("System.Core"))
             {
-                DialogResult res = MessageBox.Show("This application requires .NET 3.5. Would you like to download it now?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                DialogResult res = MessageBox.Show(Language.Startup.RequireNET35_Message, Language.General.Error, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (res == DialogResult.OK)
                 {
                     Process.Start("http://www.microsoft.com/downloads/details.aspx?familyid=AB99342F-5D1A-413D-8319-81DA479AB0D7&displaylang=en");
@@ -342,14 +342,36 @@ namespace ilSFV
         public static SqlCeConnection GetOpenCacheConnection()
         {
             if (_cacheConn.State != System.Data.ConnectionState.Open)
-                _cacheConn.Open();
+            {
+                try
+                {
+                    _cacheConn.Open();
+                }
+                catch (SqlCeInvalidDatabaseFormatException)
+                {
+                    SqlCeEngine engine = new SqlCeEngine(_cacheConn.ConnectionString);
+                    engine.Upgrade();
+                    _cacheConn.Open();
+                }
+            }
             return _cacheConn;
         }
 
         public static SqlCeConnection GetOpenSettingsConnection()
         {
             if (_settingsConn.State != System.Data.ConnectionState.Open)
-                _settingsConn.Open();
+            {
+                try
+                {
+                    _settingsConn.Open();
+                }
+                catch (SqlCeInvalidDatabaseFormatException)
+                {
+                    SqlCeEngine engine = new SqlCeEngine(_settingsConn.ConnectionString);
+                    engine.Upgrade();
+                    _settingsConn.Open();
+                }
+            }
             return _settingsConn;
         }
 
