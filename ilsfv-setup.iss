@@ -41,7 +41,7 @@ Source: ".\ilSFV\bin\Debug\complete_ok.wav"; DestDir: "{app}"; Flags: ignorevers
 Source: ".\ilSFV\bin\Debug\complete_error.wav"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\System.Data.SqlServerCe.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\languages\english.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\languages\deutsche.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\deutsch.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\languages\français.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\languages\italiano.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
