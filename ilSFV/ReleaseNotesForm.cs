@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ilSFV.Localization;
 
 namespace ilSFV
 {
@@ -8,11 +9,9 @@ namespace ilSFV
 		public ReleaseNotesForm()
 		{
 			InitializeComponent();
-		}
 
-		private void btnClose_Click(object sender, EventArgs e)
-		{
-			Close();
+            Text = Language.ReleaseNotesForm.Title;
+            btnOK.Text = Language.General.OKButton;
 		}
 	}
 }

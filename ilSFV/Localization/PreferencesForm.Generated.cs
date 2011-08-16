@@ -42,7 +42,7 @@ namespace ilSFV.Localization
         public string FlashWindowWhenDone { get; set; }
 
         ///<summary>Automatically scroll file list</summary>
-        public string AutomaticallyScrollFileList { get; set; }
+        public string AutoScrollFileList { get; set; }
 
         ///<summary>Recursive creation/checking</summary>
         public string RecursiveCreationChecking { get; set; }

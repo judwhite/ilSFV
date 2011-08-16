@@ -4,6 +4,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Net;
 using System.Reflection;
+using ilSFV.Localization;
 
 namespace ilSFV
 {
@@ -29,9 +30,12 @@ namespace ilSFV
 				TopMost = true;
 			}
 
+            var lang = Language.ExceptionForm;
+            Text = lang.Title;
+
 			if (occuredDuringStartup)
 			{
-				txtErrorMessage.Text = "This error occurred during startup.\r\n\r\n" + message;
+				txtErrorMessage.Text = string.Format("{0}\r\n\r\n{1}", lang.ErrorOccurredDuringStartup, message);
 			}
 			else
 			{
@@ -57,11 +61,13 @@ namespace ilSFV
 
 		private void btnReportBug_Click(object sender, EventArgs e)
 		{
+            var lang = Language.ExceptionForm;
+
 			string email = null;
-			DialogResult res = MessageBox.Show("Would you like a response when the bug is fixed?", "Submit bug", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			DialogResult res = MessageBox.Show(lang.WouldYouLikeAResponse_Message, lang.WouldYouLikeAResponse_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (res == DialogResult.Yes)
 			{
-				GetInputForm.ShowForm("Submit bug", "How can we contact you? (email, website, etc)", out email);
+				GetInputForm.ShowForm(lang.HowCanWeContactYou_Title, lang.HowCanWeContactYou_Message, out email);
 			}
 
 			try
@@ -72,14 +78,14 @@ namespace ilSFV
 
 				Cursor.Current = Cursors.Default;
 
-				MessageBox.Show("Thank you.  This bug has been successfully submitted.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show(lang.SubmitBugSuccessful_Message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 				Close();
 			}
 			catch (Exception ex)
 			{
 				Cursor.Current = Cursors.Default;
-				MessageBox.Show(ex.Message, "Error submitting bug", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MessageBox.Show(ex.Message, lang.SubmitBugError_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 		}
 

@@ -14,14 +14,7 @@ namespace ilSFV
 		{
 			InitializeComponent();
 
-			Version version = Assembly.GetExecutingAssembly().GetName().Version;
-			int major = version.Major;
-			int minor = version.Minor;
-			int build = version.Build;
-			string releaseDate = ((AssemblyDescriptionAttribute)Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false)[0]).Description;
-
-			lblVersion.Text = string.Format("version {0}.{1}.{2}", major, minor, build);
-			lblReleaseDate.Text = releaseDate;
+            SetLanguage();
 
 			if (showAbout)
 				tabControl1.SelectedTab = tpAbout;
@@ -109,18 +102,94 @@ namespace ilSFV
         {
             Language.Load(cboLanguage.Text);
 
+            SetLanguage();
+        }
+
+        private void SetLanguage()
+        {
             var p = Language.PreferencesForm;
 
+            // Title
             Text = p.Title;
 
+            // General
             tpGeneral.Text = p.General;
+            lblLanguage.Text = p.Language;
+            lblCacheSizeLabel.Text = p.CacheSize;
+            lblRecords.Text = p.Records;
+            btnClearCache.Text = p.ClearCacheButton;
+            chkAlwaysOnTop.Text = p.AlwaysOnTop;
+            chkRememberWindowPlacement.Text = p.RememberWindowPlacement;
+            chkReuseWindow.Text = p.ReuseWindowSingleInstance;
+            chkCheckForUpdates.Text = p.CheckForUpdateEvery;
+            lblDays.Text = p.Days;
+            chkIsRecentFilesSaved.Text = p.ShowRecentFilesInFileMenu;
+            chkFlashWindowWhenDone.Text = p.FlashWindowWhenDone;
+            chkAutoScrollFileList.Text = p.AutoScrollFileList;
+            chkRecursive.Text = p.RecursiveCreationChecking;
+            chkUseLowPriorityOnHide.Text = p.UseLowPriorityOnHide;
+
+            // Checking
             tpChecking.Text = p.Checking;
+            chkAutoFindRenames.Text = p.AutoFindRenamesWhenSetComplete;
+            chkUseRecycleBin.Text = p.UseRecycleBin;
+            chkRenameBadFiles.Text = p.RenameBadFiles;
+            chkCreateMissingMarkers.Text = p.CreateMissingFileMarkers;
+            chkCleanupBadMissing.Text = p.CleanupBadMissing;
+            chkDeleteFailedFiles.Text = p.DeleteFailedFiles;
+            chkAutoCloseWhenDoneChecking.Text = p.AutoCloseWhenDone_Checking;
+            chkAutoCloseWhenDoneCheckingOnlyAllOK.Text = p.OnlyWhenAllOK;
+            chkAutomaticallyVerify.Text = p.AutoVerify;
+            chkPlaySoundOnAllOK.Text = p.PlaySoundWhenAllOK;
+            chkPlaySoundOnAllOK_OnlyIfInactive.Text = p.OnlyWhenNotInForeground;
+            chkPlaySoundOnError.Text = p.PlaySoundWhenBadMissing;
+            grpRenaming.Text = p.Renaming;
+            rbRenameToMatchSet.Text = p.ToMatchNamesInSetFile;
+            rbRenameToLowercase.Text = p.ToLowercase;
+            rbRenameNone.Text = p.None;
+
+            // Creating
             tpCreating.Text = p.Creating;
+            lblExcludeFilesofType.Text = p.ExcludeFilesOfType;
+            chkSortFiles.Text = p.SortFiles;
+            chkSFV32Compatibility.Text = p.SFV32Compatibility;
+            chkMD5SumCompatibility.Text = p.MD5SumCompatibility;
+            chkCreateForEachSubDir.Text = p.CreateFileForEachSubdir;
+            chkPromptForFileName.Text = p.PromptForFileName;
+            chkAutoCloseWhenDoneCreating.Text = p.AutoCloseWhenDone_Creating;
+
+            // Comments
             tpComments.Text = p.Comments;
+            chkWriteComments.Text = p.WriteCommentsCheckBox;
+            lblCommentsHeader.Text = p.Header;
+            lblCommentsFileList.Text = p.FileList;
+            lblCommentsFooter.Text = p.Footer;
+            btnCommentShowVariables.Text = p.ShowVariablesButton;
+            
+            // About
             tpAbout.Text = p.About;
+            lblMadeInTributeTohkSFV.Text = p.MadeInTributeTohkSFV;
+            btnWeb.Text = p.WebButton;
 
-            // TODO
+            Version version = Assembly.GetExecutingAssembly().GetName().Version;
+            int major = version.Major;
+            int minor = version.Minor;
+            int build = version.Build;
+            DateTime releaseDate = new DateTime(2000, 1, 1).AddDays(build);
 
+            lblVersion.Text = string.Format("{0} {1}.{2}.{3}", p.Version, major, minor, build);
+            lblReleaseDate.Text = string.Format("{0} {1:yyyy-MM-dd}", p.Released, releaseDate);
+
+            grpUsageStatistics.Text = p.UsageStatistics;
+            lblFilesChecked.Text = p.FilesChecked;
+            lblSetsChecked.Text = p.SetsChecked;
+            lblMBChecked.Text = p.MBChecked;
+            lblGoodFiles.Text = p.GoodFiles;
+            lblTimeSpent.Text = p.TimeSpent;
+            btnResetUsageStats.Text = p.ResetButton;
+            btnReleaseNotes.Text = p.ReleaseNotesButton;
+
+            // OK/Cancel buttons
             btnOK.Text = Language.General.OKButton;
             btnCancel.Text = Language.General.CancelButton;
         }
@@ -259,7 +328,7 @@ namespace ilSFV
 			Cache.Clear();
 			Cursor.Current = Cursors.Default;
 
-			MessageBox.Show("Cache cleared.", "Clear Cache", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(Language.PreferencesForm.CacheCleared_Message, Language.PreferencesForm.CacheCleared_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void chkCheckForUpdates_CheckedChanged(object sender, EventArgs e)
@@ -289,16 +358,16 @@ namespace ilSFV
 
 		private void btnCommentShowVariables_Click(object sender, EventArgs e)
 		{
-			StringBuilder sb = new StringBuilder();
+			/*StringBuilder sb = new StringBuilder();
 			sb.AppendLine("Header/Footer:");
 			sb.AppendLine("{0} : Checksum file create date/time");
 			sb.AppendLine();
 			sb.AppendLine("File list:");
 			sb.AppendLine("{0} : File size in bytes");
 			sb.AppendLine("{1} : File last write time");
-			sb.AppendLine("{2} : File name (relative path)");
+			sb.AppendLine("{2} : File name (relative path)");*/
 
-			MessageBox.Show(sb.ToString(), "Comment variables", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(Language.PreferencesForm.ShowVariables_Message, Language.PreferencesForm.ShowVariables_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void chkWriteComments_CheckedChanged(object sender, EventArgs e)

@@ -2766,6 +2766,7 @@ export results to text file
         {
             var p = Language.MainForm;
 
+            // File
             mnuFile.Text = p.Menu_File;
             miNewSFV.Text = p.Menu_File_NewSFVFile;
             miNewMD5.Text = p.Menu_File_NewMD5File;
@@ -2775,27 +2776,49 @@ export results to text file
             miCheckForUpdates.Text = p.Menu_File_CheckForUpdates;
             miExit.Text = p.Menu_File_Exit;
 
+            // Legend
             mnuLegend.Text = p.Menu_Legend;
             miFileOK.Text = p.Menu_Legend_FileOK;
             miFileBad.Text = p.Menu_Legend_FileBad;
             miFileNotFound.Text = p.Menu_Legend_FileNotFound;
             miFileUntested.Text = p.Menu_Legend_FileUntestedUnknown;
 
-            // TODO
+            // Tools
+            mnuTools.Text = p.Menu_Tools;
+            miFindRenamedFiles.Text = p.Menu_Tools_FindRenamedFiles;
+            miUseCachedResults.Text = p.Menu_Tools_UseCachedResults;
+            miFindDuplicateFiles.Text = p.Menu_Tools_FindDeleteDuplicateFilesUsingChecksum;
+            miTruncateFileNames.Text = p.Menu_Tools_TruncateFileNames;
+            miRegisterFileTypes.Text = p.Menu_Tools_RegisterFileTypes;
 
+            // View
+            mnuView.Text = p.Menu_View;
+            miHideGood.Text = p.Menu_View_HideGood;
+            miCommentResultPane.Text = p.Menu_View_CommentResultPane;
+
+            // Help
+            mnuHelp.Text = p.Menu_Help;
+            miAbout.Text = p.Menu_Help_About;
+
+            // Headers
             colFilename.Text = p.FileNameColumnHeader;
             tpComments.Text = p.CommentsTabHeader;
 
+            // Status bar labels
             lblSets.Text = p.SetsLabel;
             lblParts.Text = p.PartsLabel;
             lblGood.Text = p.GoodLabel;
             lblBad.Text = Language.MainForm.BadLabel;
             lblMissing.Text = p.MissingLabel;
 
+            // Buttons
             chkHideGood.Text = p.HideGoodCheckBox;
             btnPause.Text = p.PauseButton;
             btnHide.Text = p.HideButton;
             btnGo.Text = p.GoButton;
+
+            // Dialogs
+            folderBrowserDialog1.Description = p.FolderBrowseDialog_Title;
 
             SetStatusText(p.Status_Ready);
         }
