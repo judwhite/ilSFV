@@ -1,6 +1,6 @@
 ; ilSFV
 ; Deutsche Übersetzung
-; by YOUR NAME HERE (this translation is unfinished, search for "= *" to find untranslated text)
+; von Stefan S.
 ;
 ; Notes:
 ;   Lines starting with ; are a comment and are ignored
@@ -11,54 +11,54 @@
 
 ### General
 
-Language                                          = Deutsche
+Language                                          = Deutsch
 OKButton                                          = &OK
 CancelButton                                      = &Abbrechen
-CloseButton                                       = *&Close
-Error                                             = Error
+CloseButton                                       = S&chliessen
+Error                                             = Fehler
 
 ### Startup
 
-RequireNET35_Message                              = *This application requires .NET 3.5. Would you like to download it now?
+RequireNET35_Message                              = Diese Anwendung benötigt .NET 3.5. Möchten Sie es jetzt herunterladen?
 
 ### Main Form
 
 Menu_File                                         = &Datei
-Menu_File_NewSFVFile                              = Neu &SFV Datei...
-Menu_File_NewMD5File                              = Neu &MD5 Datei...
-Menu_File_NewSHA1File                             = Neu SH&A-1 Datei...
+Menu_File_NewSFVFile                              = Neue &SFV Datei...
+Menu_File_NewMD5File                              = Neue &MD5 Datei...
+Menu_File_NewSHA1File                             = Neue SH&A-1 Datei...
 Menu_File_Open                                    = &Öffnen...
-Menu_File_Preferences                             = &Eigenschaften...
-Menu_File_CheckForUpdates                         = *Check For &Updates
+Menu_File_Preferences                             = &Einstellungen...
+Menu_File_CheckForUpdates                         = Auf &Updates prüfen
 Menu_File_Exit                                    = Beenden
 
 Menu_Legend                                       = &Legende
 Menu_Legend_FileOK                                = Datei in Ordnung
-Menu_Legend_FileBad                               = Datei korrumpiert
+Menu_Legend_FileBad                               = Datei korrupt
 Menu_Legend_FileNotFound                          = Datei nicht gefunden
 Menu_Legend_FileUntestedUnknown                   = Ungetestet-Unbekannt
 
 Menu_Tools                                        = &Werkzeuge
 Menu_Tools_FindRenamedFiles                       = Finde &umbenannte Dateien
-Menu_Tools_UseCachedResults                       = Benutzte zwischengespeicherte Resultate
-Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = *Find/Delete Duplicate Files Using Checksum...
-Menu_Tools_TruncateFileNames                      = *&Truncate File Names...
-Menu_Tools_RegisterFileTypes                      = *Register File Types
+Menu_Tools_UseCachedResults                       = Benutze gespei&cherte Ergebnisse
+Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = Finde/Lösche doppelte Dateien mit Hilfe der Prüfsumme...
+Menu_Tools_TruncateFileNames                      = *&Kürze Dateinamen...
+Menu_Tools_RegisterFileTypes                      = Dateitypen registrieren
 
-Menu_View                                         = &Sicht
-Menu_View_HideGood                                = &Fehlerfreie verstecken
+Menu_View                                         = An&sicht
+Menu_View_HideGood                                = &Gute verbergen
 Menu_View_CommentResultPane                       = &Kommentar-/Resultatfeld
 
 Menu_Help                                         = &Hilfe
 Menu_Help_About                                   = &Über
 
 FileNameColumnHeader                              = Dateiname
-CommentsTabHeader                                 = Kommentar
+CommentsTabHeader                                 = Kommentare
 
 SetsLabel                                         = Sets:
 PartsLabel                                        = Teile:
-GoodLabel                                         = Fehlerfrei:
-BadLabel                                          = Korrumpiert:
+GoodLabel                                         = Gut:
+BadLabel                                          = Korrupt:
 MissingLabel                                      = Fehlend:
 
 HideGoodCheckBox                                  = Gute verbergen
@@ -68,167 +68,167 @@ HideButton                                        = &Verstecken
 GoButton                                          = &Los
 StopButton                                        = &Anhalten
 
-UpdateAvailable_Message                           = *A new version of ilSFV ({0}.{1}.{2}) is available.\n\nWould you like to download it now?
-UpdateAvailable_Title                             = *Update Available
-NoUpdateAvailable_Message                         = *You have the latest version.
-NoUpdateAvailable_Title                           = *Check For Updates
+UpdateAvailable_Message                           = Eine neue Version von ilSFV ({0}.{1}.{2}) ist verfügbar.\n\nMöchten Sie sie jetzt herunterladen?
+UpdateAvailable_Title                             = Update verfügbar
+NoUpdateAvailable_Message                         = Sie haben die aktuellste Version.
+NoUpdateAvailable_Title                           = Auf Updates prüfen
 
-FileNotFound_Message                              = *File '{0}' does not exist.
+FileNotFound_Message                              = Datei '{0}' existiert nicht.
 FileNotFound_Title                                = Datei nicht gefunden
 
-FileContentsNotRecognized                         = *File '{0}' contents not recognized as {1} verification file.\n\n{2}
+FileContentsNotRecognized                         = Datei '{0}' Inhalt nicht erkannt als {1} Verifizierungsdatei.\n\n{2}
 
-Status_Ready                                      = *Ready.
-Status_Paused                                     = *Paused.
-Status_Renaming                                   = *Renaming '{0}' to '{1}'...
-Status_GettingFileList                            = *Getting file list...
-Status_PreSorting                                 = *Pre-sorting...
-Status_GettingFileInfo                            = *Getting file info...
-Status_GettingFileInfoPercentage                  = *Getting file info ({0}%)...
-Status_GettingFileListForDirectory                = *Getting file list for {0}...
-Status_LoadingFile                                = *Loading {0}...
-Status_LoadingFilePercentage                      = *Loading {0} ({1}%)...
+Status_Ready                                      = Bereit.
+Status_Paused                                     = Pausiert.
+Status_Renaming                                   = Umbenennen '{0}' nach '{1}'...
+Status_GettingFileList                            = Erhalte Dateiliste...
+Status_PreSorting                                 = Vorsortieren...
+Status_GettingFileInfo                            = Erhalte Dateiinfo...
+Status_GettingFileInfoPercentage                  = Erhalte Dateiinfo ({0}%)...
+Status_GettingFileListForDirectory                = Erhalte Dateiliste für {0}...
+Status_LoadingFile                                = Lädt {0}...
+Status_LoadingFilePercentage                      = Lädt {0} ({1}%)...
 Status_Working                                    = Arbeitet...
 Status_WorkingPercentage                          = Arbeitet... ({0}%)
-Status_UpdatingCache                              = *Updating cache...
-Status_ETA                                        = *{0}% | ETA: {1} | Elapsed: {2}
-Status_LookingForLongFileNames                    = *Looking for long file names...
-Status_FinishedUnder10Minutes                     = *Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).
-Status_Finished10MinutesOrMore                    = *Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
+Status_UpdatingCache                              = Aktualisiere Cache...
+Status_ETA                                        = {0}% | ETA: {1} | Verstrichen: {2}
+Status_LookingForLongFileNames                    = Suche nach langen Dateinamen...
+Status_FinishedUnder10Minutes                     = Abgeschlossen: {0}% Vollständig - {1:#,0.0} MB in {2:#,0.0} Sekunden ({3:#,0.0} MB/s).
+Status_Finished10MinutesOrMore                    = Abgeschlossen: {0}% Vollständig - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
 
-SystemTray_DoneVerifying                          = *Done verifying ({0}% OK).
-SystemTray_DoneCreating                           = *Done creating checksum files.
+SystemTray_DoneVerifying                          = Überprüfung beendet ({0}% OK).
+SystemTray_DoneCreating                           = Prüfsummendatei erfolgreich erstellt.
 
-Status_FindingRenamesInFile                       = *Finding renames in {0}...
-FindRenamedFiles_Message                          = *{0:#,0} renamed file(s) found.
-FindRenamedFiles_Title                            = *Find Renamed Files
+Status_FindingRenamesInFile                       = Suche Umbenannte in {0}...
+FindRenamedFiles_Message                          = {0:#,0} Umbenannte Datei(en) gefunden.
+FindRenamedFiles_Title                            = Umbenannte Dateien finden
 
-OverwriteFile_Message                             = Die Datei existiert bereits, willst du sie überschreiben?\n\n{0}
-OverwriteFile_Title                               = Bestätigung benötigt
-OverwriteMultipleFiles_Message                    = *{0:#,0} existing checksum file(s) will be overwritten. Continue?
-OverwriteMultipleFiles_Title                      = Bestätigung benötigt
+OverwriteFile_Message                             = Die Datei existiert bereits, möchten Sie sie überschreiben?\n\n{0}
+OverwriteFile_Title                               = Bestätigung nötig
+OverwriteMultipleFiles_Message                    = {0:#,0} Existierende Prüfsummen-Datei(en) werden überschrieben. Fortfahren?
+OverwriteMultipleFiles_Title                      = Bestätigung nötig
 
-RegisterFileTypesError_Message                    = *{0}\n\nTry running as Administrator.
-RegisterFileTypesError_Title                      = *Register File Types
+RegisterFileTypesError_Message                    = {0}\n\nVersuchen Sie es mit Administratorrechten.
+RegisterFileTypesError_Title                      = Dateitypen registrieren
 
-CopyFileNamesContextMenu                          = *Copy File Name(s)
-CopyPathAndFileNamesContextMenu                   = *Copy Path + File Name(s)
-CopyCurrentChecksumContextMenu                    = Kopiere augenblickliche Kontrollsumme ({0})
-CopyOriginalChecksumContextMenu                   = Kopiere original Kontrollsumme ({0})
+CopyFileNamesContextMenu                          = Dateiname(n) kopieren
+CopyPathAndFileNamesContextMenu                   = Pfad + Dateiname(n) kopieren
+CopyCurrentChecksumContextMenu                    = Aktuelle Prüfsumme kopieren ({0})
+CopyOriginalChecksumContextMenu                   = Originale Prüfsumme kopieren ({0})
 
-TruncateFileNames_MaxLength                       = *Max Length
-TruncateFileNames_MinimumLengthIs12               = *Minimum length is 12.
-TruncateFileNames_FilesRenamed_Message            = *{0:#,0} file(s) renamed.
+TruncateFileNames_MaxLength                       = Maximale Länge
+TruncateFileNames_MinimumLengthIs12               = Minimale Länge ist 12.
+TruncateFileNames_FilesRenamed_Message            = {0:#,0} Datei(en) umbenannt.
 
-FolderBrowseDialog_Title                          = Wähle einen Ordner aus
+FolderBrowseDialog_Title                          = Wähle einen Ordner
 
 ### Preferences Form
 
-Title                                             = ilSFV Eigenschaften
+Title                                             = ilSFV Einstellungen
 
-General                                           = General
+General                                           = Generell
 Language                                          = Sprache
-CacheSize                                         = Cache Größe
-Records                                           = Aufzeichnungen:
-ClearCacheButton                                  = *Clear Cache
+CacheSize                                         = Cache-Größe
+Records                                           = Rekorde:
+ClearCacheButton                                  = Leeren
 AlwaysOnTop                                       = Immer im Vordergrund
-RememberWindowPlacement                           = Fensterstellung beibehalten
-ReuseWindowSingleInstance                         = Fenster wiederverwenden
-CheckForUpdateEvery                               = *Check for updates every
-Days                                              = *days
-ShowRecentFilesInFileMenu                         = *Show recent files in File menu
+RememberWindowPlacement                           = Fenster-Position merken
+ReuseWindowSingleInstance                         = Fenster erneut nutzen (Single-Instanz)
+CheckForUpdateEvery                               = Prüfe auf Updates alle
+Days                                              = Tage
+ShowRecentFilesInFileMenu                         = Letzte Dateien im Dateimenü anzeigen
 FlashWindowWhenDone                               = Fenster blinkt wenn komplett
-AutoScrollFileList                                = Automatisches scrollen der Liste
-RecursiveCreationChecking                         = Rekursive Erstellung/Überproüfung
-UseLowPriorityOnHide                              = *Use low priority on hide
-CacheCleared_Message                              = *Cache cleared.
-CacheCleared_Title                                = *Clear Cache
+AutoScrollFileList                                = Dateiliste automatisch scrollen
+RecursiveCreationChecking                         = Rekursives Erstellen/Prüfen
+UseLowPriorityOnHide                              = Niedrigere Priorität wenn versteckt
+CacheCleared_Message                              = Cache geleert.
+CacheCleared_Title                                = Cache leeren
 
-Checking                                          = Überprüfen
-AutoFindRenamesWhenSetComplete                    = Automatisches finden von Umbennenungen wenn Set unvollständig
-UseRecycleBin                                     = Papierkorb benutzten wenn Dateien gelöscht werden
-RenameBadFiles                                    = Umbenennen korrumpierter Dateien -> .bad
-CreateMissingFileMarkers                          = Erstelle .missing Dateiendungen
+Checking                                          = Prüfen
+AutoFindRenamesWhenSetComplete                    = Umbenannte Dateien automatisch finden wenn Set abgeschlossen
+UseRecycleBin                                     = Papierkorb beim Löschen von Dateien nutzen
+RenameBadFiles                                    = Unbrauchbare Dateien umbenennen -> .bad
+CreateMissingFileMarkers                          = Erstelle .missing Dateimarkierungen
 CleanupBadMissing                                 = Aufräumen .bad/.missing
-DeleteFailedFiles                                 = Lösche korrumpierte Dateien
+DeleteFailedFiles                                 = Lösche korrupte Dateien
 AutoCloseWhenDone_Checking                        = Automatisch schließen wenn fertig
 OnlyWhenAllOK                                     = Nur wenn 100% in Ordnung
-AutoVerify                                        = *Automatically verify
-PlaySoundWhenAllOK                                = *Play sound when 100% OK
-OnlyWhenNotInForeground                           = *Only when not in foreground
-PlaySoundWhenBadMissing                           = *Play sound when bad/missing
-Renaming                                          = Umbennenen
-ToMatchNamesInSetFile                             = keine Entsprechungen
-ToLowercase                                       = zur Senkung
-None                                              = kein
+AutoVerify                                        = Automatisch überprüfen
+PlaySoundWhenAllOK                                = Sound abspielen wenn 100% OK
+OnlyWhenNotInForeground                           = Nur wenn nicht im Vordergrund
+PlaySoundWhenBadMissing                           = Sound abspielen bei bad/missing
+Renaming                                          = Umbenennen
+ToMatchNamesInSetFile                             = Passende Namen zum Set
+ToLowercase                                       = kleingeschrieben
+None                                              = nichts
 
 Creating                                          = Erstellen
-ExcludeFilesOfType                                = Dateitypen ausschließen
+ExcludeFilesOfType                                = Dateitypen ausschliessen
 SortFiles                                         = Dateien sortieren
-SFV32Compatibility                                = SFV32 Kompatibilität
-MD5SumCompatibility                               = md5sum Kompatibilität
-CreateFileForEachSubdir                           = *Create file for each subdirectory
-PromptForFileName                                 = Frage nach Name
+SFV32Compatibility                                = SFV32 Kompatibiliät
+MD5SumCompatibility                               = md5sum Kompatibilät
+CreateFileForEachSubdir                           = Erstelle Datei für jedes Unterverzeichnis
+PromptForFileName                                 = Zum Dateinamen auffordern
 AutoCloseWhenDone_Creating                        = Automatisch schließen wenn fertig
 
-Comments                                          = *Comments
-WriteCommentsCheckBox                             = *Write comments
-Header                                            = *Header
-FileList                                          = *File list
-Footer                                            = *Footer
-ShowVariablesButton                               = *Show variables
-ShowVariables_Message                             = *Header/Footer:\n{0} : Checksum file create date/time\n\nFile list:\n{0} : File size in bytes\n{1} : File last write time\n{2} : File name (relative path)
-ShowVariables_Title                               = *Comment variables
+Comments                                          = Kommentare
+WriteCommentsCheckBox                             = Kommentare schreiben
+Header                                            = Kopfzeile
+FileList                                          = Dateiliste
+Footer                                            = Fußzeile
+ShowVariablesButton                               = Variablen anzeigen
+ShowVariables_Message                             = Kopfzeile/Fußzeile:\n{0} : Prüfsummendatei erstellt Datum/Zeit\n\nDateiliste:\n{0} : Dateigröße in bytes\n{1} : Datei letzte Erstellungszeit\n{2} : Dateiname (relativer Pfad)
+ShowVariables_Title                               = Kommentar-Variablen
 
 About                                             = Über
-MadeInTributeTohkSFV                              = *made in tribute to hkSFV
+MadeInTributeTohkSFV                              = erstellt als Hommage für hkSFV
 WebButton                                         = Web
-Version                                           = version
+Version                                           = Version
 Released                                          = erschienen
-UsageStatistics                                   = Nutzungssatistiken
-FilesChecked                                      = Dateien überprüft
-SetsChecked                                       = Sets überprüft
-MBChecked                                         = MB überprüft
-GoodFiles                                         = Fehlerfrei
-TimeSpent                                         = Zeit benötigt
-ResetButton                                       = *Reset
-ReleaseNotesButton                                = *Release Notes
+UsageStatistics                                   = Nutz-Statistiken
+FilesChecked                                      = Dateien geprüft
+SetsChecked                                       = Sets geprüft
+MBChecked                                         = MB geprüft
+GoodFiles                                         = Gute Dateien
+TimeSpent                                         = Benötigte Zeit
+ResetButton                                       = Zurücksetzen
+ReleaseNotesButton                                = Versionshinweise
 
 ### Release Notes Form
 
-Title                                             = *Release Notes
+Title                                             = Versionshinweise
 
 ### Remove Duplicates Form
 
-Title                                             = *Find and Delete Duplicate Files
-DuplicatesColumnHeader                            = *Duplicates
-CountColumnHeader                                 = *Count
-SelectFileToKeep                                  = *Select file to keep
-FileNameColumnHeader                              = *File name
-OptionalSelectDirsToDeleteAllDuplicatesFrom       = *Optional: Select directories to delete all duplicates from
-DirectoryColumnHeader                             = *Directory
-DeleteDuplicatesButton                            = *&Delete Duplicates
-SourceFileDoesNotExist_Message                    = *'{0}' does not exist.
-SourceFileDoesNotExist_Title                      = *File not found
-ConfirmSourceFile_Message                         = *Are you sure you want to use '{0}' as the source file?
-ConfirmSourceFile_Title                           = *Remove duplicates
-ConfirmDelete_Message                             = *Are you sure want to delete all {0:#,0} duplicate(s) in '{1}'?
-ConfirmDelete_Message_FileListHeader              = *The following items will be deleted:
-ConfirmDelete_Title                               = *Delete duplicates
-RewriteChecksum_Message                           = *Would you like to rewrite the checksum file without the {0:#,0} deleted files?\n\nNote: Comments will be removed.
-RewriteChecksum_Title                             = *Rewrite Checksum File
+Title                                             = Finde und lösche doppelte Dateien
+DuplicatesColumnHeader                            = Duplikate
+CountColumnHeader                                 = Anzahl
+SelectFileToKeep                                  = Wähle Datei zum Behalten
+FileNameColumnHeader                              = Dateiname
+OptionalSelectDirsToDeleteAllDuplicatesFrom       = Optional: Wähle Verzeichnisse aus dem alle Duplikate gelöscht werden sollen
+DirectoryColumnHeader                             = Verzeichnis
+DeleteDuplicatesButton                            = Lösche &Duplikate
+SourceFileDoesNotExist_Message                    = '{0}' existiert nicht.
+SourceFileDoesNotExist_Title                      = Datei nicht gefunden
+ConfirmSourceFile_Message                         = Sicher, dass sie '{0}' als die Quell-Datei wählen möchten?
+ConfirmSourceFile_Title                           = Entferne Duplikate
+ConfirmDelete_Message                             = Sicher, dass Sie alle {0:#,0} Duplikate in '{1}' löschen möchten?
+ConfirmDelete_Message_FileListHeader              = Die folgenden Dateien werden gelöscht:
+ConfirmDelete_Title                               = Entferne Duplikate
+RewriteChecksum_Message                           = Möchten sie die Prüfsummendatei erneut schreiben ohne die {0:#,0} gelöschten Dateien?\n\nHinweis: Kommentare werden entfernt.
+RewriteChecksum_Title                             = Prüfsumme erneut schreiben
 
 ### Exception Form
 
-Title                                             = *Exception Handler
-IgnoreButton                                      = *&Ignore
-ReportBugButton                                   = *&Report bug
-ErrorMessageTab                                   = *Error Message
-StackTraceTab                                     = *Stack Trace
-ErrorOccurredDuringStartup                        = *This error occurred during startup.
-WouldYouLikeAResponse_Message                     = *Would you like a response when the bug is fixed?
-WouldYouLikeAResponse_Title                       = *Submit bug
-HowCanWeContactYou_Message                        = *How can we contact you? (email, website, etc)
-HowCanWeContactYou_Title                          = *Submit bug
-SubmitBugSuccessful_Message                       = *Thank you. This bug has been successfully submitted.
-SubmitBugError_Title                              = *Error submitting bug
+Title                                             = Exception Handler
+IgnoreButton                                      = &Ignorieren
+ReportBugButton                                   = B&ug melden
+ErrorMessageTab                                   = Fehler-Meldung
+StackTraceTab                                     = Stack Trace
+ErrorOccurredDuringStartup                        = Dieser Fehler ereignete sich beim Start.
+WouldYouLikeAResponse_Message                     = Möchten Sie eine Antwort erhalten sobald der Bug behoben wurde?
+WouldYouLikeAResponse_Title                       = Bug einreichen
+HowCanWeContactYou_Message                        = Wie können wir Sie kontaktieren? (eMail, Webseite, etc.)
+HowCanWeContactYou_Title                          = Bug einreichen
+SubmitBugSuccessful_Message                       = Danke. Dieser Bug wurde erfolgreich eingereicht.
+SubmitBugError_Title                              = Fehler beim Einreichen des Bugs
