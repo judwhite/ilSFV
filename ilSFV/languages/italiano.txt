@@ -1,0 +1,234 @@
+; ilSFV
+; Italiano
+; by YOUR NAME HERE (this translation is unfinished, search for "= **" to find untranslated text)
+;
+; Notes:
+;   Lines starting with ; are a comment and are ignored
+;   ### is a section, they are meaningful and the variables underneath belong to that section. Do not translate section names.
+;   \n is a new line
+;   & is a shortcut key for menus and buttons, ex E&xit = *"Exit" with the "x" underlined
+;   Text inside braces, example {0:#,0} is variable formatting and should generally not be altered
+
+### General
+
+Language                                          = Italiano
+OKButton                                          = &OK
+CancelButton                                      = &Annulla
+CloseButton                                       = *&Close
+Error                                             = Errore
+
+### Startup
+
+RequireNET35_Message                              = *This application requires .NET 3.5. Would you like to download it now?
+
+### Main Form
+
+Menu_File                                         = &File
+Menu_File_NewSFVFile                              = Nuovo File &SFV...
+Menu_File_NewMD5File                              = Nuovo File &MD5...
+Menu_File_NewSHA1File                             = Nuovo File SH&A-1...
+Menu_File_Open                                    = &Apri...
+Menu_File_Preferences                             = &Impostazioni...
+Menu_File_CheckForUpdates                         = *Check For &Updates
+Menu_File_Exit                                    = &Esci
+
+Menu_Legend                                       = &Legenda
+Menu_Legend_FileOK                                = File OK
+Menu_Legend_FileBad                               = File Corrotto
+Menu_Legend_FileNotFound                          = File Non Trovato
+Menu_Legend_FileUntestedUnknown                   = Non verificato-Sconosciuto
+
+Menu_Tools                                        = &Strumenti
+Menu_Tools_FindRenamedFiles                       = Trova File &Rinominati
+Menu_Tools_UseCachedResults                       = Usa Risultati in &Cache
+Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = *Find/Delete Duplicate Files Using Checksum...
+Menu_Tools_TruncateFileNames                      = *&Truncate File Names...
+Menu_Tools_RegisterFileTypes                      = *Register File Types
+
+Menu_View                                         = &Visualizza
+Menu_View_HideGood                                = &Nascondi Validi
+Menu_View_CommentResultPane                       = Pannello &Commenti/Risultati
+
+Menu_Help                                         = &Aiuto
+Menu_Help_About                                   = &Informazioni
+
+FileNameColumnHeader                              = Nome
+CommentsTabHeader                                 = Commenti
+
+SetsLabel                                         = Gruppi:
+PartsLabel                                        = Parti:
+GoodLabel                                         = Valide:
+BadLabel                                          = Corrotte:
+MissingLabel                                      = Mancanti:
+
+HideGoodCheckBox                                  = Nascondi Validi
+PauseButton                                       = &Pausa
+ResumeButton                                      = &Ricomincia
+HideButton                                        = &Nascondi
+GoButton                                          = &Vai
+StopButton                                        = &Ferma
+
+UpdateAvailable_Message                           = *A new version of ilSFV ({0}.{1}.{2}) is available.\n\nWould you like to download it now?
+UpdateAvailable_Title                             = *Update Available
+NoUpdateAvailable_Message                         = *You have the latest version.
+NoUpdateAvailable_Title                           = *Check For Updates
+
+FileNotFound_Message                              = *File '{0}' does not exist.
+FileNotFound_Title                                = File non trovato
+
+FileContentsNotRecognized                         = *File '{0}' contents not recognized as {1} verification file.\n\n{2}
+
+Status_Ready                                      = *Ready.
+Status_Paused                                     = *Paused.
+Status_Renaming                                   = *Renaming '{0}' to '{1}'...
+Status_GettingFileList                            = *Getting file list...
+Status_PreSorting                                 = *Pre-sorting...
+Status_GettingFileInfo                            = *Getting file info...
+Status_GettingFileInfoPercentage                  = *Getting file info ({0}%)...
+Status_GettingFileListForDirectory                = *Getting file list for {0}...
+Status_LoadingFile                                = *Loading {0}...
+Status_LoadingFilePercentage                      = *Loading {0} ({1}%)...
+Status_Working                                    = In Esecuzione...
+Status_WorkingPercentage                          = In Esecuzione... ({0}%)
+Status_UpdatingCache                              = *Updating cache...
+Status_ETA                                        = *{0}% | ETA: {1} | Elapsed: {2}
+Status_LookingForLongFileNames                    = *Looking for long file names...
+Status_FinishedUnder10Minutes                     = *Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).
+Status_Finished10MinutesOrMore                    = *Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
+
+SystemTray_DoneVerifying                          = *Done verifying ({0}% OK).
+SystemTray_DoneCreating                           = *Done creating checksum files.
+
+Status_FindingRenamesInFile                       = *Finding renames in {0}...
+FindRenamedFiles_Message                          = *{0:#,0} renamed file(s) found.
+FindRenamedFiles_Title                            = *Find Renamed Files
+
+OverwriteFile_Message                             = Se il file esiste già, vorreste sovrascriverlo?\n\n{0}
+OverwriteFile_Title                               = Richiesta Conferma
+OverwriteMultipleFiles_Message                    = *{0:#,0} existing checksum file(s) will be overwritten. Continue?
+OverwriteMultipleFiles_Title                      = Richiesta Conferma
+
+RegisterFileTypesError_Message                    = *{0}\n\nTry running as Administrator.
+RegisterFileTypesError_Title                      = *Register File Types
+
+CopyFileNamesContextMenu                          = Copia &Nome(i) File
+CopyPathAndFileNamesContextMenu                   = Copia &Percorso + Nome(i) File
+CopyCurrentChecksumContextMenu                    = Copia Checksum Corrente ({0})
+CopyOriginalChecksumContextMenu                   = Copia Checksum Originale ({0})
+
+TruncateFileNames_MaxLength                       = *Max Length
+TruncateFileNames_MinimumLengthIs12               = *Minimum length is 12.
+TruncateFileNames_FilesRenamed_Message            = *{0:#,0} file(s) renamed.
+
+FolderBrowseDialog_Title                          = Scegli una Cartella
+
+### Preferences Form
+
+Title                                             = ilSFV Impostazioni
+
+General                                           = Generale
+Language                                          = Lingua
+CacheSize                                         = Dimensione Cache
+Records                                           = Elementi:
+ClearCacheButton                                  = *Clear Cache
+AlwaysOnTop                                       = Sempre in primo piano
+RememberWindowPlacement                           = Ricorda posizione della Finestra
+ReuseWindowSingleInstance                         = Riusa Finestra (singola instanza)
+CheckForUpdateEvery                               = *Check for updates every
+Days                                              = *days
+ShowRecentFilesInFileMenu                         = *Show recent files in File menu
+FlashWindowWhenDone                               = Lampeggia finestra al termine
+AutoScrollFileList                                = Scorri automaticamente la lista dei file
+RecursiveCreationChecking                         = Creazione/Controllo Ricorsivo
+UseLowPriorityOnHide                              = *Use low priority on hide
+CacheCleared_Message                              = *Cache cleared.
+CacheCleared_Title                                = *Clear Cache
+
+Checking                                          = Controllo
+AutoFindRenamesWhenSetComplete                    = Trova file rinominati automaticamente quando il gruppo è incompeto
+UseRecycleBin                                     = Usa il Cestino per cancellare i File
+RenameBadFiles                                    = Rinomina File corrotti -> .bad
+CreateMissingFileMarkers                          = Crea marcatori .missing per i file mancanti
+CleanupBadMissing                                 = Ripulisci corrotti/mancanti
+DeleteFailedFiles                                 = Cancella file corrotti
+AutoCloseWhenDone_Checking                        = Chiudi automaticamente alla fine
+OnlyWhenAllOK                                     = Solo quando il 100% è OK
+AutoVerify                                        = *Automatically verify
+PlaySoundWhenAllOK                                = *Play sound when 100% OK
+OnlyWhenNotInForeground                           = *Only when not in foreground
+PlaySoundWhenBadMissing                           = *Play sound when bad/missing
+Renaming                                          = Rinomina
+ToMatchNamesInSetFile                             = per rispettare i nomi nel file di gruppo
+ToLowercase                                       = in lettere minuscole
+None                                              = nessuno
+
+Creating                                          = Creazione
+ExcludeFilesOfType                                = Escludi file di tipo
+SortFiles                                         = Ordina File
+SFV32Compatibility                                = Compatibilità SFV32
+MD5SumCompatibility                               = Compatibilità md5sum
+CreateFileForEachSubdir                           = *Create file for each subdirectory
+PromptForFileName                                 = Chiedi nome del file
+AutoCloseWhenDone_Creating                        = Chiudi automaticamente alla fine
+
+Comments                                          = *Comments
+WriteCommentsCheckBox                             = *Write comments
+Header                                            = *Header
+FileList                                          = *File list
+Footer                                            = *Footer
+ShowVariablesButton                               = *Show variables
+ShowVariables_Message                             = *Header/Footer:\n{0} : Checksum file create date/time\n\nFile list:\n{0} : File size in bytes\n{1} : File last write time\n{2} : File name (relative path)
+ShowVariables_Title                               = *Comment variables
+
+About                                             = Informazioni
+MadeInTributeTohkSFV                              = *made in tribute to hkSFV
+WebButton                                         = Web
+Version                                           = versione
+Released                                          = rilasciata
+UsageStatistics                                   = Statistiche d'uso
+FilesChecked                                      = File Controllati
+SetsChecked                                       = Gruppi Controllati
+MBChecked                                         = MB Controllati
+GoodFiles                                         = File Validi
+TimeSpent                                         = Tempo Impiegato
+ResetButton                                       = *Reset
+ReleaseNotesButton                                = *Release Notes
+
+### Release Notes Form
+
+Title                                             = *Release Notes
+
+### Remove Duplicates Form
+
+Title                                             = *Find and Delete Duplicate Files
+DuplicatesColumnHeader                            = *Duplicates
+CountColumnHeader                                 = *Count
+SelectFileToKeep                                  = *Select file to keep
+FileNameColumnHeader                              = *File name
+OptionalSelectDirsToDeleteAllDuplicatesFrom       = *Optional: Select directories to delete all duplicates from
+DirectoryColumnHeader                             = *Directory
+DeleteDuplicatesButton                            = *&Delete Duplicates
+SourceFileDoesNotExist_Message                    = *'{0}' does not exist.
+SourceFileDoesNotExist_Title                      = *File not found
+ConfirmSourceFile_Message                         = *Are you sure you want to use '{0}' as the source file?
+ConfirmSourceFile_Title                           = *Remove duplicates
+ConfirmDelete_Message                             = *Are you sure want to delete all {0:#,0} duplicate(s) in '{1}'?
+ConfirmDelete_Message_FileListHeader              = *The following items will be deleted:
+ConfirmDelete_Title                               = *Delete duplicates
+RewriteChecksum_Message                           = *Would you like to rewrite the checksum file without the {0:#,0} deleted files?\n\nNote: Comments will be removed.
+RewriteChecksum_Title                             = *Rewrite Checksum File
+
+### Exception Form
+
+Title                                             = *Exception Handler
+IgnoreButton                                      = *&Ignore
+ReportBugButton                                   = *&Report bug
+ErrorMessageTab                                   = *Error Message
+StackTraceTab                                     = *Stack Trace
+ErrorOccurredDuringStartup                        = *This error occurred during startup.
+WouldYouLikeAResponse_Message                     = *Would you like a response when the bug is fixed?
+WouldYouLikeAResponse_Title                       = *Submit bug
+HowCanWeContactYou_Message                        = *How can we contact you? (email, website, etc)
+HowCanWeContactYou_Title                          = *Submit bug
+SubmitBugSuccessful_Message                       = *Thank you. This bug has been successfully submitted.
+SubmitBugError_Title                              = *Error submitting bug

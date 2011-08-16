@@ -35,7 +35,7 @@
             this.chkIsRecentFilesSaved = new System.Windows.Forms.CheckBox();
             this.chkUseLowPriorityOnHide = new System.Windows.Forms.CheckBox();
             this.txtCheckForUpdatesDays = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDays = new System.Windows.Forms.Label();
             this.btnClearCache = new System.Windows.Forms.Button();
             this.chkCheckForUpdates = new System.Windows.Forms.CheckBox();
             this.chkRecursive = new System.Windows.Forms.CheckBox();
@@ -46,7 +46,7 @@
             this.chkAlwaysOnTop = new System.Windows.Forms.CheckBox();
             this.trkCacheSize = new System.Windows.Forms.TrackBar();
             this.lblCacheRecords = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRecords = new System.Windows.Forms.Label();
             this.lblCacheSizeLabel = new System.Windows.Forms.Label();
             this.cboLanguage = new System.Windows.Forms.ComboBox();
             this.lblLanguage = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.tpCreating = new System.Windows.Forms.TabPage();
             this.chkCreateForEachSubDir = new System.Windows.Forms.CheckBox();
             this.txtExcludeFilesOfType = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblExcludeFilesofType = new System.Windows.Forms.Label();
             this.chkAutoCloseWhenDoneCreating = new System.Windows.Forms.CheckBox();
             this.chkPromptForFileName = new System.Windows.Forms.CheckBox();
             this.chkMD5SumCompatibility = new System.Windows.Forms.CheckBox();
@@ -81,30 +81,30 @@
             this.txtCommentsFooter = new System.Windows.Forms.TextBox();
             this.txtCommentsFileList = new System.Windows.Forms.TextBox();
             this.txtCommentsHeader = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCommentsFooter = new System.Windows.Forms.Label();
+            this.lblCommentsFileList = new System.Windows.Forms.Label();
+            this.lblCommentsHeader = new System.Windows.Forms.Label();
             this.chkWriteComments = new System.Windows.Forms.CheckBox();
             this.tpAbout = new System.Windows.Forms.TabPage();
             this.btnReleaseNotes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnWeb = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblMadeInTributeTohkSFV = new System.Windows.Forms.Label();
+            this.lblilSFV = new System.Windows.Forms.Label();
             this.lblReleaseDate = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.grpUsageStatistics = new System.Windows.Forms.GroupBox();
             this.btnResetUsageStats = new System.Windows.Forms.Button();
             this.txtTimeSpent = new System.Windows.Forms.TextBox();
             this.txtGoodFiles = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTimeSpent = new System.Windows.Forms.Label();
+            this.lblGoodFiles = new System.Windows.Forms.Label();
             this.txtMBChecked = new System.Windows.Forms.TextBox();
             this.txtSetsChecked = new System.Windows.Forms.TextBox();
             this.txtFilesChecked = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblMBChecked = new System.Windows.Forms.Label();
+            this.lblSetsChecked = new System.Windows.Forms.Label();
+            this.lblFilesChecked = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -137,7 +137,7 @@
             this.tpGeneral.Controls.Add(this.chkIsRecentFilesSaved);
             this.tpGeneral.Controls.Add(this.chkUseLowPriorityOnHide);
             this.tpGeneral.Controls.Add(this.txtCheckForUpdatesDays);
-            this.tpGeneral.Controls.Add(this.label2);
+            this.tpGeneral.Controls.Add(this.lblDays);
             this.tpGeneral.Controls.Add(this.btnClearCache);
             this.tpGeneral.Controls.Add(this.chkCheckForUpdates);
             this.tpGeneral.Controls.Add(this.chkRecursive);
@@ -148,7 +148,7 @@
             this.tpGeneral.Controls.Add(this.chkAlwaysOnTop);
             this.tpGeneral.Controls.Add(this.trkCacheSize);
             this.tpGeneral.Controls.Add(this.lblCacheRecords);
-            this.tpGeneral.Controls.Add(this.label1);
+            this.tpGeneral.Controls.Add(this.lblRecords);
             this.tpGeneral.Controls.Add(this.lblCacheSizeLabel);
             this.tpGeneral.Controls.Add(this.cboLanguage);
             this.tpGeneral.Controls.Add(this.lblLanguage);
@@ -173,10 +173,10 @@
             resources.ApplyResources(this.txtCheckForUpdatesDays, "txtCheckForUpdatesDays");
             this.txtCheckForUpdatesDays.Name = "txtCheckForUpdatesDays";
             // 
-            // label2
+            // lblDays
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lblDays, "lblDays");
+            this.lblDays.Name = "lblDays";
             // 
             // btnClearCache
             // 
@@ -246,10 +246,10 @@
             resources.ApplyResources(this.lblCacheRecords, "lblCacheRecords");
             this.lblCacheRecords.Name = "lblCacheRecords";
             // 
-            // label1
+            // lblRecords
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblRecords, "lblRecords");
+            this.lblRecords.Name = "lblRecords";
             // 
             // lblCacheSizeLabel
             // 
@@ -395,7 +395,7 @@
             // 
             this.tpCreating.Controls.Add(this.chkCreateForEachSubDir);
             this.tpCreating.Controls.Add(this.txtExcludeFilesOfType);
-            this.tpCreating.Controls.Add(this.label13);
+            this.tpCreating.Controls.Add(this.lblExcludeFilesofType);
             this.tpCreating.Controls.Add(this.chkAutoCloseWhenDoneCreating);
             this.tpCreating.Controls.Add(this.chkPromptForFileName);
             this.tpCreating.Controls.Add(this.chkMD5SumCompatibility);
@@ -416,10 +416,10 @@
             resources.ApplyResources(this.txtExcludeFilesOfType, "txtExcludeFilesOfType");
             this.txtExcludeFilesOfType.Name = "txtExcludeFilesOfType";
             // 
-            // label13
+            // lblExcludeFilesofType
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.lblExcludeFilesofType, "lblExcludeFilesofType");
+            this.lblExcludeFilesofType.Name = "lblExcludeFilesofType";
             // 
             // chkAutoCloseWhenDoneCreating
             // 
@@ -457,9 +457,9 @@
             this.tpComments.Controls.Add(this.txtCommentsFooter);
             this.tpComments.Controls.Add(this.txtCommentsFileList);
             this.tpComments.Controls.Add(this.txtCommentsHeader);
-            this.tpComments.Controls.Add(this.label15);
-            this.tpComments.Controls.Add(this.label4);
-            this.tpComments.Controls.Add(this.label3);
+            this.tpComments.Controls.Add(this.lblCommentsFooter);
+            this.tpComments.Controls.Add(this.lblCommentsFileList);
+            this.tpComments.Controls.Add(this.lblCommentsHeader);
             this.tpComments.Controls.Add(this.chkWriteComments);
             resources.ApplyResources(this.tpComments, "tpComments");
             this.tpComments.Name = "tpComments";
@@ -487,20 +487,20 @@
             resources.ApplyResources(this.txtCommentsHeader, "txtCommentsHeader");
             this.txtCommentsHeader.Name = "txtCommentsHeader";
             // 
-            // label15
+            // lblCommentsFooter
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.lblCommentsFooter, "lblCommentsFooter");
+            this.lblCommentsFooter.Name = "lblCommentsFooter";
             // 
-            // label4
+            // lblCommentsFileList
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblCommentsFileList, "lblCommentsFileList");
+            this.lblCommentsFileList.Name = "lblCommentsFileList";
             // 
-            // label3
+            // lblCommentsHeader
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.lblCommentsHeader, "lblCommentsHeader");
+            this.lblCommentsHeader.Name = "lblCommentsHeader";
             // 
             // chkWriteComments
             // 
@@ -514,8 +514,8 @@
             this.tpAbout.Controls.Add(this.btnReleaseNotes);
             this.tpAbout.Controls.Add(this.pictureBox1);
             this.tpAbout.Controls.Add(this.btnWeb);
-            this.tpAbout.Controls.Add(this.label14);
-            this.tpAbout.Controls.Add(this.label12);
+            this.tpAbout.Controls.Add(this.lblMadeInTributeTohkSFV);
+            this.tpAbout.Controls.Add(this.lblilSFV);
             this.tpAbout.Controls.Add(this.lblReleaseDate);
             this.tpAbout.Controls.Add(this.lblVersion);
             this.tpAbout.Controls.Add(this.grpUsageStatistics);
@@ -544,15 +544,15 @@
             this.btnWeb.UseVisualStyleBackColor = true;
             this.btnWeb.Click += new System.EventHandler(this.btnWeb_Click);
             // 
-            // label14
+            // lblMadeInTributeTohkSFV
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            resources.ApplyResources(this.lblMadeInTributeTohkSFV, "lblMadeInTributeTohkSFV");
+            this.lblMadeInTributeTohkSFV.Name = "lblMadeInTributeTohkSFV";
             // 
-            // label12
+            // lblilSFV
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.lblilSFV, "lblilSFV");
+            this.lblilSFV.Name = "lblilSFV";
             // 
             // lblReleaseDate
             // 
@@ -570,14 +570,14 @@
             this.grpUsageStatistics.Controls.Add(this.btnResetUsageStats);
             this.grpUsageStatistics.Controls.Add(this.txtTimeSpent);
             this.grpUsageStatistics.Controls.Add(this.txtGoodFiles);
-            this.grpUsageStatistics.Controls.Add(this.label8);
-            this.grpUsageStatistics.Controls.Add(this.label9);
+            this.grpUsageStatistics.Controls.Add(this.lblTimeSpent);
+            this.grpUsageStatistics.Controls.Add(this.lblGoodFiles);
             this.grpUsageStatistics.Controls.Add(this.txtMBChecked);
             this.grpUsageStatistics.Controls.Add(this.txtSetsChecked);
             this.grpUsageStatistics.Controls.Add(this.txtFilesChecked);
-            this.grpUsageStatistics.Controls.Add(this.label7);
-            this.grpUsageStatistics.Controls.Add(this.label6);
-            this.grpUsageStatistics.Controls.Add(this.label5);
+            this.grpUsageStatistics.Controls.Add(this.lblMBChecked);
+            this.grpUsageStatistics.Controls.Add(this.lblSetsChecked);
+            this.grpUsageStatistics.Controls.Add(this.lblFilesChecked);
             this.grpUsageStatistics.Name = "grpUsageStatistics";
             this.grpUsageStatistics.TabStop = false;
             // 
@@ -602,15 +602,15 @@
             this.txtGoodFiles.Name = "txtGoodFiles";
             this.txtGoodFiles.ReadOnly = true;
             // 
-            // label8
+            // lblTimeSpent
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.lblTimeSpent, "lblTimeSpent");
+            this.lblTimeSpent.Name = "lblTimeSpent";
             // 
-            // label9
+            // lblGoodFiles
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.lblGoodFiles, "lblGoodFiles");
+            this.lblGoodFiles.Name = "lblGoodFiles";
             // 
             // txtMBChecked
             // 
@@ -633,20 +633,20 @@
             this.txtFilesChecked.Name = "txtFilesChecked";
             this.txtFilesChecked.ReadOnly = true;
             // 
-            // label7
+            // lblMBChecked
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.lblMBChecked, "lblMBChecked");
+            this.lblMBChecked.Name = "lblMBChecked";
             // 
-            // label6
+            // lblSetsChecked
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.lblSetsChecked, "lblSetsChecked");
+            this.lblSetsChecked.Name = "lblSetsChecked";
             // 
-            // label5
+            // lblFilesChecked
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.lblFilesChecked, "lblFilesChecked");
+            this.lblFilesChecked.Name = "lblFilesChecked";
             // 
             // btnOK
             // 
@@ -718,7 +718,7 @@
         private System.Windows.Forms.Label lblLanguage;
 		private System.Windows.Forms.TrackBar trkCacheSize;
 		private System.Windows.Forms.Label lblCacheRecords;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRecords;
         private System.Windows.Forms.Label lblCacheSizeLabel;
         private System.Windows.Forms.CheckBox chkRecursive;
         private System.Windows.Forms.CheckBox chkAutoScrollFileList;
@@ -745,29 +745,29 @@
         private System.Windows.Forms.CheckBox chkSortFiles;
         private System.Windows.Forms.TextBox txtTimeSpent;
         private System.Windows.Forms.TextBox txtGoodFiles;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTimeSpent;
+        private System.Windows.Forms.Label lblGoodFiles;
         private System.Windows.Forms.TextBox txtMBChecked;
         private System.Windows.Forms.TextBox txtSetsChecked;
         private System.Windows.Forms.TextBox txtFilesChecked;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblMBChecked;
+        private System.Windows.Forms.Label lblSetsChecked;
+        private System.Windows.Forms.Label lblFilesChecked;
         private System.Windows.Forms.Label lblReleaseDate;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.TextBox txtExcludeFilesOfType;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblExcludeFilesofType;
         private System.Windows.Forms.Button btnWeb;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblMadeInTributeTohkSFV;
+        private System.Windows.Forms.Label lblilSFV;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
 		private System.Windows.Forms.Button btnResetUsageStats;
 		private System.Windows.Forms.CheckBox chkCheckForUpdates;
 		private System.Windows.Forms.CheckBox chkAutomaticallyVerify;
 		private System.Windows.Forms.Button btnClearCache;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblDays;
 		private System.Windows.Forms.TextBox txtCheckForUpdatesDays;
 		private System.Windows.Forms.CheckBox chkPlaySoundOnError;
 		private System.Windows.Forms.CheckBox chkPlaySoundOnAllOK;
@@ -775,9 +775,9 @@
 		private System.Windows.Forms.CheckBox chkCreateForEachSubDir;
 		private System.Windows.Forms.TabPage tpComments;
 		private System.Windows.Forms.TextBox txtCommentsHeader;
-		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lblCommentsFooter;
+		private System.Windows.Forms.Label lblCommentsFileList;
+		private System.Windows.Forms.Label lblCommentsHeader;
 		private System.Windows.Forms.CheckBox chkWriteComments;
 		private System.Windows.Forms.TextBox txtCommentsFooter;
 		private System.Windows.Forms.TextBox txtCommentsFileList;

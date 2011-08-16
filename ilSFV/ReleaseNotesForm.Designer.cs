@@ -29,21 +29,20 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReleaseNotesForm));
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.txtReleaseNotes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnClose
+            // btnOK
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(286, 259);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "&OK";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnOK.Location = new System.Drawing.Point(286, 259);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "&OK";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // txtReleaseNotes
             // 
@@ -62,12 +61,12 @@
             // 
             // ReleaseNotesForm
             // 
-            this.AcceptButton = this.btnClose;
+            this.AcceptButton = this.btnOK;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.CancelButton = this.btnClose;
+            this.CancelButton = this.btnOK;
             this.ClientSize = new System.Drawing.Size(373, 294);
             this.Controls.Add(this.txtReleaseNotes);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOK);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReleaseNotesForm";
@@ -82,7 +81,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button btnClose;
+		private System.Windows.Forms.Button btnOK;
 		private System.Windows.Forms.TextBox txtReleaseNotes;
 	}
 }
