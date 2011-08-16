@@ -707,6 +707,8 @@ export results to text file
             SaveFormSizeAndPosition();
 
             ResizeStatusBar();
+
+            progressBar1.Width = chkHideGood.Left - 16;
         }
 
         private void SaveFormSizeAndPosition()
@@ -1068,6 +1070,8 @@ export results to text file
             // Buttons and Menu Items
             btnRightPane.Text = show ? "<<" : ">>";
             miCommentResultPane.Checked = show;
+
+            progressBar1.Width = chkHideGood.Left - 16;
         }
 
         private void miHideGood_Click(object sender, EventArgs e)
@@ -2821,6 +2825,10 @@ export results to text file
             folderBrowserDialog1.Description = p.FolderBrowseDialog_Title;
 
             SetStatusText(p.Status_Ready);
+
+            Application.DoEvents();
+
+            progressBar1.Width = chkHideGood.Left - 16;
         }
     }
 }

@@ -147,11 +147,11 @@
             this.tpGeneral.Controls.Add(this.chkRememberWindowPlacement);
             this.tpGeneral.Controls.Add(this.chkAlwaysOnTop);
             this.tpGeneral.Controls.Add(this.trkCacheSize);
-            this.tpGeneral.Controls.Add(this.lblCacheRecords);
             this.tpGeneral.Controls.Add(this.lblRecords);
             this.tpGeneral.Controls.Add(this.lblCacheSizeLabel);
             this.tpGeneral.Controls.Add(this.cboLanguage);
             this.tpGeneral.Controls.Add(this.lblLanguage);
+            this.tpGeneral.Controls.Add(this.lblCacheRecords);
             resources.ApplyResources(this.tpGeneral, "tpGeneral");
             this.tpGeneral.Name = "tpGeneral";
             this.tpGeneral.UseVisualStyleBackColor = true;
@@ -301,10 +301,10 @@
             // 
             // grpRenaming
             // 
-            resources.ApplyResources(this.grpRenaming, "grpRenaming");
             this.grpRenaming.Controls.Add(this.rbRenameNone);
             this.grpRenaming.Controls.Add(this.rbRenameToLowercase);
             this.grpRenaming.Controls.Add(this.rbRenameToMatchSet);
+            resources.ApplyResources(this.grpRenaming, "grpRenaming");
             this.grpRenaming.Name = "grpRenaming";
             this.grpRenaming.TabStop = false;
             // 

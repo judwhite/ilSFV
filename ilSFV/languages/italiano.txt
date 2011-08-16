@@ -1,12 +1,12 @@
 ; ilSFV
 ; Italiano
-; by YOUR NAME HERE (this translation is unfinished, search for "= **" to find untranslated text)
+; by YOUR NAME HERE (this translation is unfinished, search for "= *" to find untranslated text)
 ;
 ; Notes:
 ;   Lines starting with ; are a comment and are ignored
 ;   ### is a section, they are meaningful and the variables underneath belong to that section. Do not translate section names.
 ;   \n is a new line
-;   & is a shortcut key for menus and buttons, ex E&xit = *"Exit" with the "x" underlined
+;   & is a shortcut key for menus and buttons, ex E&xit = "Exit" with the "x" underlined
 ;   Text inside braces, example {0:#,0} is variable formatting and should generally not be altered
 
 ### General

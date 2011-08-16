@@ -571,10 +571,10 @@
             // btnGo
             // 
             this.btnGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGo.Location = new System.Drawing.Point(536, 32);
+            this.btnGo.Location = new System.Drawing.Point(512, 32);
             this.btnGo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(50, 20);
+            this.btnGo.Size = new System.Drawing.Size(74, 20);
             this.btnGo.TabIndex = 25;
             this.btnGo.Text = "&Go";
             this.btnGo.UseVisualStyleBackColor = true;
@@ -596,10 +596,10 @@
             // 
             this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPause.Enabled = false;
-            this.btnPause.Location = new System.Drawing.Point(435, 6);
+            this.btnPause.Location = new System.Drawing.Point(399, 6);
             this.btnPause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(54, 20);
+            this.btnPause.Size = new System.Drawing.Size(74, 20);
             this.btnPause.TabIndex = 10;
             this.btnPause.Text = "&Pause";
             this.btnPause.UseVisualStyleBackColor = true;
@@ -610,7 +610,7 @@
             this.chkHideGood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkHideGood.AutoSize = true;
             this.chkHideGood.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkHideGood.Location = new System.Drawing.Point(353, 9);
+            this.chkHideGood.Location = new System.Drawing.Point(318, 9);
             this.chkHideGood.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chkHideGood.Name = "chkHideGood";
             this.chkHideGood.Size = new System.Drawing.Size(77, 17);
@@ -623,10 +623,10 @@
             // 
             this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHide.Enabled = false;
-            this.btnHide.Location = new System.Drawing.Point(495, 6);
+            this.btnHide.Location = new System.Drawing.Point(477, 6);
             this.btnHide.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(54, 20);
+            this.btnHide.Size = new System.Drawing.Size(74, 20);
             this.btnHide.TabIndex = 15;
             this.btnHide.Text = "Hide";
             this.btnHide.UseVisualStyleBackColor = true;
@@ -639,17 +639,15 @@
             this.progressBar2.Location = new System.Drawing.Point(8, 32);
             this.progressBar2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(522, 20);
+            this.progressBar2.Size = new System.Drawing.Size(500, 20);
             this.progressBar2.TabIndex = 1;
             // 
             // progressBar1
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(8, 6);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(338, 20);
+            this.progressBar1.Size = new System.Drawing.Size(306, 20);
             this.progressBar1.TabIndex = 0;
             // 
             // tabControl1
