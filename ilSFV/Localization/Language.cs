@@ -11,6 +11,19 @@ namespace ilSFV.Localization
     {
         public static event EventHandler Changed;
 
+        static Language()
+        {
+            General = new General();
+            Startup = new Startup();
+            MainForm = new MainForm();
+            PreferencesForm = new PreferencesForm();
+            ReleaseNotesForm = new ReleaseNotesForm();
+            RemoveDuplicatesForm = new RemoveDuplicatesForm();
+            ExceptionForm = new ExceptionForm();
+
+            Load("English");
+        }
+
         public static string[] GetLanguages()
         {
             var dict = GetLanguagesDictionary();
@@ -58,12 +71,16 @@ namespace ilSFV.Localization
 
         private static void LoadFile(string path)
         {
+            var dict = GetLanguagesDictionary();
+            if (path != dict["English"])
+                LoadFile(dict["English"]);
+
             const BindingFlags sbf = BindingFlags.Public | BindingFlags.Static;
             const BindingFlags bf = BindingFlags.Public | BindingFlags.Instance;
             string[] lines = File.ReadAllLines(path, Encoding.UTF8);
             Type sectionType = null;
             object section = null;
-            List<PropertyInfo> sectionProperties = new List<PropertyInfo>();
+            //List<PropertyInfo> sectionProperties = new List<PropertyInfo>();
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -75,19 +92,19 @@ namespace ilSFV.Localization
 
                 if (line.StartsWith("###"))
                 {
-                    if (sectionProperties.Count != 0)
-                    {
-                        // TODO: use English as backup.
-                    }
+                    //if (sectionProperties.Count != 0)
+                    //{
+                    //    // TODO: use English as backup.
+                    //}
 
                     string className = line.Substring(4).Replace(" ", "");
                     PropertyInfo pi = typeof(Language).GetProperty(className, sbf);
                     sectionType = pi.GetGetMethod().ReturnType;
-                    section = sectionType.GetConstructor(Type.EmptyTypes).Invoke(null);
-                    pi.GetSetMethod(true).Invoke(null, new[] { section });
+                    section = pi.GetGetMethod().Invoke(null, null);
+                    //pi.GetSetMethod(true).Invoke(null, new[] { section });
 
-                    sectionProperties.Clear();
-                    sectionProperties.AddRange(sectionType.GetProperties(bf));
+                    //sectionProperties.Clear();
+                    //sectionProperties.AddRange(sectionType.GetProperties(bf));
                 }
                 else
                 {
@@ -102,10 +119,10 @@ namespace ilSFV.Localization
                     string value = line.Substring(j).TrimStart(new[] { ' ', '=' }).Trim().Replace("\\n", "\n");
 
                     PropertyInfo pi = sectionType.GetProperty(propertyName, bf);
-                    if (pi != null)
+                    if (pi != null && !string.IsNullOrEmpty(value))
                     {
-                        sectionProperties.Remove(pi);
-                        pi.GetSetMethod().Invoke(section, new[] {value});
+                        //sectionProperties.Remove(pi);
+                        pi.GetSetMethod().Invoke(section, new[] { value });
                     }
                 }
             }

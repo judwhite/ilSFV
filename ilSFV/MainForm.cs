@@ -851,8 +851,13 @@ export results to text file
                 lvwFiles.Groups.Add(group);
 
                 StringBuilder comment = new StringBuilder();
-                foreach (string line in lines)
+                for (int i = 0; i < lines.Length; i++)
                 {
+                    string line = lines[i];
+                    if (line == null)
+                        continue;
+
+                    line = line.Trim();
                     if (string.IsNullOrEmpty(line))
                         continue;
 

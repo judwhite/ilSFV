@@ -192,6 +192,11 @@ namespace ilSFV
             // OK/Cancel buttons
             btnOK.Text = Language.General.OKButton;
             btnCancel.Text = Language.General.CancelButton;
+
+            Application.DoEvents();
+            txtCheckForUpdatesDays.Left = chkCheckForUpdates.Left + chkCheckForUpdates.Width + 2;
+            Application.DoEvents();
+            lblDays.Left = txtCheckForUpdatesDays.Left + txtCheckForUpdatesDays.Width + 4;
         }
 
 		private void UpdateCommentsTextBoxesEnabled()
