@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{D463AB63-D949-4FB1-B586-968FBBE529D2}
 AppName=ilSFV
-AppVerName=ilSFV 1.0.9
+AppVerName=ilSFV 1.10
 AppPublisher=Jud White
 AppPublisherURL=http://www.cdtag.com/ilsfv
 AppSupportURL=http://www.cdtag.com/ilsfv
@@ -31,16 +31,19 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: ".\ilSFV\bin\Debug\ilSFV.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\cache.sdf"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\settings.sdf"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlceca35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlcecompact35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlceer35EN.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlceme35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlceoledb35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlceqp35.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ilSFV\bin\Debug\sqlcese35.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceca40.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlcecompact40.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceer40EN.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceme40.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlceqp40.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\sqlcese40.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\complete_ok.wav"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\complete_error.wav"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\System.Data.SqlServerCe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\english.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\deutsche.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\français.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\italiano.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
