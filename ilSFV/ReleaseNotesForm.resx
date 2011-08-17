@@ -132,7 +132,7 @@ NEW:
 - Upgrade to SQL CE 4.0
 
 BUG FIXES:
-- Fixed issue with trailing space on file lines
+- Fixed issue with reading files with trailing space on lines
 
 ilSFV 1.0.8 released 2011-02-26
 
