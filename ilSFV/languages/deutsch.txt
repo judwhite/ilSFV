@@ -165,8 +165,8 @@ None                                              = nichts
 Creating                                          = Erstellen
 ExcludeFilesOfType                                = Dateitypen ausschliessen
 SortFiles                                         = Dateien sortieren
-SFV32Compatibility                                = SFV32 Kompatibiliät
-MD5SumCompatibility                               = md5sum Kompatibilät
+SFV32Compatibility                                = SFV32 Kompatibilität
+MD5SumCompatibility                               = md5sum Kompatibilität
 CreateFileForEachSubdir                           = Erstelle Datei für jedes Unterverzeichnis
 PromptForFileName                                 = Zum Dateinamen auffordern
 AutoCloseWhenDone_Creating                        = Automatisch schließen wenn fertig
@@ -191,7 +191,7 @@ SetsChecked                                       = Sets geprüft
 MBChecked                                         = MB geprüft
 GoodFiles                                         = Gute Dateien
 TimeSpent                                         = Benötigte Zeit
-ResetButton                                       = Zurücksetzen
+ResetButton                                       = Reset
 ReleaseNotesButton                                = Versionshinweise
 
 ### Release Notes Form
