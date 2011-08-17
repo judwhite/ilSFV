@@ -124,11 +124,15 @@
     <value>True</value>
   </metadata>
   <data name="txtReleaseNotes.Text" xml:space="preserve">
-    <value>ilSFV 1.10 released 2011-08-??
+    <value>ilSFV 1.10 released 2011-08-16
 
 NEW:
-- Option to disable recent files list
 - Multi language support
+- Option to disable recent files list
+- Upgrade to SQL CE 4.0
+
+BUG FIXES:
+- Fixed issue with trailing space on file lines
 
 ilSFV 1.0.8 released 2011-02-26
 

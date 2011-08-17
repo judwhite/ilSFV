@@ -145,7 +145,7 @@ export results to text file
             int minor = version.Minor;
             int build = version.Build;
 
-            Text = string.Format("ilSFV {0}.{1}.{2}", major, minor, build);
+            Text = string.Format("ilSFV {0}.{1}", major, minor, build);
 
             ResizeStatusBar();
 

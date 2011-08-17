@@ -177,7 +177,7 @@ namespace ilSFV
             int build = version.Build;
             DateTime releaseDate = new DateTime(2000, 1, 1).AddDays(build);
 
-            lblVersion.Text = string.Format("{0} {1}.{2}.{3}", p.Version, major, minor, build);
+            lblVersion.Text = string.Format("{0} {1}.{2}", p.Version, major, minor, build);
             lblReleaseDate.Text = string.Format("{0} {1:yyyy-MM-dd}", p.Released, releaseDate);
 
             grpUsageStatistics.Text = p.UsageStatistics;
