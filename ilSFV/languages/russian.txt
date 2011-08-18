@@ -1,0 +1,234 @@
+; ilSFV
+; Russian translation
+; by unknown ;) no@sp.am
+;
+; Notes:
+;   Lines starting with ; are a comment and are ignored
+;   ### is a section, they are meaningful and the variables underneath belong to that section. Do not translate section names.
+;   \n is a new line
+;   & is a shortcut key for menus and buttons, ex E&xit = "Exit" with the "x" underlined
+;   Text inside braces, example {0:#,0} is variable formatting and should generally not be altered
+
+### General
+
+Language                                          = Русский
+OKButton                                          = &OK
+CancelButton                                      = &Отмена
+CloseButton                                       = &Закрыть
+Error                                             = Ошибка
+
+### Startup
+
+RequireNET35_Message                              = Данному приложению требуется Microsoft Framework .NET 3.5. Загрузить его сейчас?
+
+### Main Form
+
+Menu_File                                         = &Файл
+Menu_File_NewSFVFile                              = Новый &SFV Файл...
+Menu_File_NewMD5File                              = Новый &MD5 Файл...
+Menu_File_NewSHA1File                             = Новый SH&A-1 Файл...
+Menu_File_Open                                    = &Открыть...
+Menu_File_Preferences                             = &Настройки...
+Menu_File_CheckForUpdates                         = Проверить О&бновления
+Menu_File_Exit                                    = В&ыход
+
+Menu_Legend                                       = Обо&значения
+Menu_Legend_FileOK                                = Хороший Файл
+Menu_Legend_FileBad                               = Плохой Файл
+Menu_Legend_FileNotFound                          = Файл Не Найден
+Menu_Legend_FileUntestedUnknown                   = Непроверен-Неизвестен
+
+Menu_Tools                                        = &Утилиты
+Menu_Tools_FindRenamedFiles                       = Найти &Переименованные Файлы
+Menu_Tools_UseCachedResults                       = Исп. Результаты &Кэширования
+Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = Найти/Удалить Дубликаты Файлов, Используя чексумм-файл...
+Menu_Tools_TruncateFileNames                      = &Обрезать Имена Файлов...
+Menu_Tools_RegisterFileTypes                      = Зарегистрировать Файловые Ассоциации
+
+Menu_View                                         = &Просмотр
+Menu_View_HideGood                                = &Скрыть Хорошие
+Menu_View_CommentResultPane                       = Панель &Комментариев/Результатов
+
+Menu_Help                                         = &Помощь
+Menu_Help_About                                   = &О программе
+
+FileNameColumnHeader                              = Имя файла
+CommentsTabHeader                                 = Комментарии
+
+SetsLabel                                         = Наборы:
+PartsLabel                                        = Части:
+GoodLabel                                         = Хорошие:
+BadLabel                                          = Плохие:
+MissingLabel                                      = Отсутствуют:
+
+HideGoodCheckBox                                  = Скрыть Хорошие
+PauseButton                                       = &Пауза
+ResumeButton                                      = &Продолжить
+HideButton                                        = Скрыть
+GoButton                                          = &Старт
+StopButton                                        = &Стоп
+
+UpdateAvailable_Message                           = Доступна новая версия ilSFV ({0}.{1}.{2})! \n\nЗагрузить прямо сейчас?
+UpdateAvailable_Title                             = Доступно Обновление
+NoUpdateAvailable_Message                         = Вы используете последнюю версию.
+NoUpdateAvailable_Title                           = Проверить обновления
+
+FileNotFound_Message                              = Файл '{0}' не существует.
+FileNotFound_Title                                = Файл не найден
+
+FileContentsNotRecognized                         = Содержимое Файла '{0}' не распознано как {1} файл верификации.\n\n{2}
+
+Status_Ready                                      = Готово.
+Status_Paused                                     = Остановка.
+Status_Renaming                                   = Переименование '{0}' в '{1}'...
+Status_GettingFileList                            = Получение списка файлов...
+Status_PreSorting                                 = Предварительная Сортировка...
+Status_GettingFileInfo                            = Получение информации о файле...
+Status_GettingFileInfoPercentage                  = Получение информации о файле ({0}%)...
+Status_GettingFileListForDirectory                = Получение списка файлов для {0}...
+Status_LoadingFile                                = Загрузка {0}...
+Status_LoadingFilePercentage                      = Загрузка {0} ({1}%)...
+Status_Working                                    = Выполняется...
+Status_WorkingPercentage                          = Выполнено... ({0}%)
+Status_UpdatingCache                              = Обновление Кэша...
+Status_ETA                                        = {0}% | Осталось: {1} | Прошло: {2}
+Status_LookingForLongFileNames                    = Поиск длинных имен файлов...
+Status_FinishedUnder10Minutes                     = Завершено: {0}% Выполняется - {1:#,0.0} MB за {2:#,0.0} секунд ({3:#,0.0} MB/s).
+Status_Finished10MinutesOrMore                    = Завершено: {0}% Выполняется - {1:#,0.0} MB за {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
+
+SystemTray_DoneVerifying                          = Верификация закончена ({0}% OK).
+SystemTray_DoneCreating                           = Создание чексумм-файлов закончено.
+
+Status_FindingRenamesInFile                       = Поиск переименованных файлов в {0}...
+FindRenamedFiles_Message                          = {0:#,0} переименованных файла(ов) найдено.
+FindRenamedFiles_Title                            = Найти Переименованные Файлы
+
+OverwriteFile_Message                             = Файл уже существует, перезаписать?\n\n{0}
+OverwriteFile_Title                               = Необходимо Подтверждение
+OverwriteMultipleFiles_Message                    = {0:#,0} существующие чексумм-файлы будут перезаписаны. Продолжить?
+OverwriteMultipleFiles_Title                      = Необходимо Подтверждение
+
+RegisterFileTypesError_Message                    = {0}\n\nПопробуйте запустить программу от Администратора и повторите действие.
+RegisterFileTypesError_Title                      = Установить Файловые Ассоциации
+
+CopyFileNamesContextMenu                          = Копировать Имя Файла(ов)
+CopyPathAndFileNamesContextMenu                   = Копировать Путь + Имя Файла(ов)
+CopyCurrentChecksumContextMenu                    = Копировать Имя Текущего Чексумм-Файла ({0})
+CopyOriginalChecksumContextMenu                   = Копировать Имя Оригинального Чексумм-Файла ({0})
+
+TruncateFileNames_MaxLength                       = Максимальная Длина
+TruncateFileNames_MinimumLengthIs12               = Минимальная Длина - 12.
+TruncateFileNames_FilesRenamed_Message            = {0:#,0} файла(ов) переименовано.
+
+FolderBrowseDialog_Title                          = Выберите Папку
+
+### Preferences Form
+
+Title                                             = Настройки ilSFV 
+
+General                                           = Общее
+Language                                          = Язык
+CacheSize                                         = Размер Кэша
+Records                                           = Записи:
+ClearCacheButton                                  = Очистить Кэш
+AlwaysOnTop                                       = Всегда наверху
+RememberWindowPlacement                           = Запомнить позицию окна
+ReuseWindowSingleInstance                         = Не позволять запускать несколько копий программы
+CheckForUpdateEvery                               = Проверять обновления каждый(ые)
+Days                                              = дня(дней)
+ShowRecentFilesInFileMenu                         = Показывать недавно использованные файлы в меню Файл
+FlashWindowWhenDone                               = Мигающее окно после завершения
+AutoScrollFileList                                = Автоматически прокручивать список файлов
+RecursiveCreationChecking                         = Рекурсивное создание/проверка
+UseLowPriorityOnHide                              = Использовать низкий приоритет при скрытии окна
+CacheCleared_Message                              = Кэш очищен.
+CacheCleared_Title                                = Очистить Кэш
+
+Checking                                          = Проверка
+AutoFindRenamesWhenSetComplete                    = Автоматически находить переименованные файлы, если имеется полный набор файлов
+UseRecycleBin                                     = Использовать Корзину при удалении файлов
+RenameBadFiles                                    = Переименовывать плохие файлы в .bad
+CreateMissingFileMarkers                          = Создавать маркеры для отсутствующих файлов -  .missing
+CleanupBadMissing                                 = Очищать плохие/отсутствующие файлы
+DeleteFailedFiles                                 = Удалять файлы, которые не удается проверить
+AutoCloseWhenDone_Checking                        = Автоматически закрывать приложение после завершения
+OnlyWhenAllOK                                     = Только если проверка прошла с результатом 100%
+AutoVerify                                        = Автоматически проверять
+PlaySoundWhenAllOK                                = Проигрывать звук, если 100%-ый результат проверки
+OnlyWhenNotInForeground                           = Только если приложение работает в фоновом режиме
+PlaySoundWhenBadMissing                           = Проигрывать звук, если обнаружены плохие/отсутствующие файлы
+Renaming                                          = Переименование
+ToMatchNamesInSetFile                             = строго именам из наборного файла
+ToLowercase                                       = преобразовывать в нижний регистр
+None                                              = нет
+
+Creating                                          = Создание
+ExcludeFilesOfType                                = Исключить типы файлов
+SortFiles                                         = Сортировать файлы 
+SFV32Compatibility                                = SFV32 совместимость
+MD5SumCompatibility                               = md5sum совместимость
+CreateFileForEachSubdir                           = Создавать файл-чексумму для каждой под-директории
+PromptForFileName                                 = Показывать диалог выбора имени файла
+AutoCloseWhenDone_Creating                        = Автоматически закрывать приложение после завершения процесса
+
+Comments                                          = Комментарии
+WriteCommentsCheckBox                             = Записывать комментарии
+Header                                            = Верхний колонтитул
+FileList                                          = Список файлов
+Footer                                            = Нижний колонтитул
+ShowVariablesButton                               = Показывать переменные
+ShowVariables_Message                             = Верхний/Нижний колонтитул:\n{0} : Дата/время создания чексумм-файла\n\nСписок файлов:\n{0} : Размер файла в байтах\n{1} : Дата модификации файла\n{2} : Имя файла (относительный путь)
+ShowVariables_Title                               = Переменные, используемые в комментариях
+
+About                                             = О программе
+MadeInTributeTohkSFV                              = сделана как дань почета hkSFV
+WebButton                                         = Веб-сайт
+Version                                           = версия
+Released                                          = выпущена
+UsageStatistics                                   = Статистика использования
+FilesChecked                                      = Файлов проверено
+SetsChecked                                       = Чексумм-файлов проверено
+MBChecked                                         = MB проверено
+GoodFiles                                         = Хороших Файлов
+TimeSpent                                         = Потрачено времени
+ResetButton                                       = Сбросить
+ReleaseNotesButton                                = Примечания к выпуску
+
+### Release Notes Form
+
+Title                                             = Примечания к выпуску
+
+### Remove Duplicates Form
+
+Title                                             = Найти и удалить дубликаты файлов
+DuplicatesColumnHeader                            = Дубликаты
+CountColumnHeader                                 = Подсчет
+SelectFileToKeep                                  = Выберите файл, который хотите оставить
+FileNameColumnHeader                              = Имя файла
+OptionalSelectDirsToDeleteAllDuplicatesFrom       = Дополнительно: Выберите директории, в которых необходимо удалить все дубликаты
+DirectoryColumnHeader                             = Директория
+DeleteDuplicatesButton                            = &Удалить дубликаты
+SourceFileDoesNotExist_Message                    = '{0}' не существует.
+SourceFileDoesNotExist_Title                      = Файл не найден
+ConfirmSourceFile_Message                         = Вы уверены, что хотите использовать '{0}' в качестве исходного файла?
+ConfirmSourceFile_Title                           = Удалить дубликаты
+ConfirmDelete_Message                             = Вы уверены, что хотите УДАЛИТЬ ВСЕ {0:#,0} дубликаты в '{1}'?
+ConfirmDelete_Message_FileListHeader              = Следующие файлы будут удалены:
+ConfirmDelete_Title                               = Удалить дубликаты
+RewriteChecksum_Message                           = Вы хотите перезаписать чексумм-файл без {0:#,0} удаленных файлов?\n\nВнимание: комментарии будут удалены.
+RewriteChecksum_Title                             = Перезаписать чексумм-файл
+
+### Exception Form
+
+Title                                             = Обработчик ошибок
+IgnoreButton                                      = &Игнорировать
+ReportBugButton                                   = &Отправить отчет об ошибке
+ErrorMessageTab                                   = Сообщение об ошибке
+StackTraceTab                                     = Трассировка стэка
+ErrorOccurredDuringStartup                        = Эта ошибка возникла во время загрузки.
+WouldYouLikeAResponse_Message                     = Вы хотите получить уведомление, когда ошибка будет исправлена?
+WouldYouLikeAResponse_Title                       = Отправить отчет об ошибке
+HowCanWeContactYou_Message                        = Как мы можем с вами связаться? (e-mail, веб-сайт и т.д.)
+HowCanWeContactYou_Title                          = Отправить отчет об ошибке
+SubmitBugSuccessful_Message                       = Спасибо!. Отчет об ошибке был успешно отправлен.
+SubmitBugError_Title                              = Возникла ошибка при отправке отчета об ошибке.

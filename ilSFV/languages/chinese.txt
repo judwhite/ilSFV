@@ -1,0 +1,234 @@
+; ilSFV
+; English translation
+; by Jud White - jwhite@cdtag.com
+;
+; Notes:
+;   Lines starting with ; are a comment and are ignored
+;   ### is a section, they are meaningful and the variables underneath belong to that section. Do not translate section names.
+;   \n is a new line
+;   & is a shortcut key for menus and buttons, ex E&xit = "Exit" with the "x" underlined
+;   Text inside braces, example {0:#,0} is variable formatting and should generally not be altered
+
+### General
+
+Language                                          = 中文
+OKButton                                          = &完成
+CancelButton                                      = &取消
+CloseButton                                       = &關閉
+Error                                             = 錯誤
+
+### Startup
+
+RequireNET35_Message                              = This application requires .NET 3.5. Would you like to download it now?
+
+### Main Form
+
+Menu_File                                         = &File
+Menu_File_NewSFVFile                              = New &SFV File...
+Menu_File_NewMD5File                              = New &MD5 File...
+Menu_File_NewSHA1File                             = New SH&A-1 File...
+Menu_File_Open                                    = &Open...
+Menu_File_Preferences                             = &Preferences...
+Menu_File_CheckForUpdates                         = Check For &Updates
+Menu_File_Exit                                    = E&xit
+
+Menu_Legend                                       = &Legend
+Menu_Legend_FileOK                                = File OK
+Menu_Legend_FileBad                               = File Bad
+Menu_Legend_FileNotFound                          = File Not Found
+Menu_Legend_FileUntestedUnknown                   = Untested-Unknown
+
+Menu_Tools                                        = &Tools
+Menu_Tools_FindRenamedFiles                       = Find &Renamed Files
+Menu_Tools_UseCachedResults                       = Use &Cached Results
+Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = Find/Delete Duplicate Files Using Checksum...
+Menu_Tools_TruncateFileNames                      = &Truncate File Names...
+Menu_Tools_RegisterFileTypes                      = Register File Types
+
+Menu_View                                         = &View
+Menu_View_HideGood                                = &Hide Good
+Menu_View_CommentResultPane                       = &Comment/Result Pane
+
+Menu_Help                                         = &Help
+Menu_Help_About                                   = &About
+
+FileNameColumnHeader                              = File name
+CommentsTabHeader                                 = Comments
+
+SetsLabel                                         = Sets:
+PartsLabel                                        = Parts:
+GoodLabel                                         = Good:
+BadLabel                                          = Bad:
+MissingLabel                                      = Missing:
+
+HideGoodCheckBox                                  = Hide Good
+PauseButton                                       = &Pause
+ResumeButton                                      = &Resume
+HideButton                                        = Hide
+GoButton                                          = &Go
+StopButton                                        = &Stop
+
+UpdateAvailable_Message                           = A new version of ilSFV ({0}.{1}.{2}) is available.\n\nWould you like to download it now?
+UpdateAvailable_Title                             = Update Available
+NoUpdateAvailable_Message                         = You have the latest version.
+NoUpdateAvailable_Title                           = Check For Updates
+
+FileNotFound_Message                              = File '{0}' does not exist.
+FileNotFound_Title                                = File not found
+
+FileContentsNotRecognized                         = File '{0}' contents not recognized as {1} verification file.\n\n{2}
+
+Status_Ready                                      = Ready.
+Status_Paused                                     = Paused.
+Status_Renaming                                   = Renaming '{0}' to '{1}'...
+Status_GettingFileList                            = Getting file list...
+Status_PreSorting                                 = Pre-sorting...
+Status_GettingFileInfo                            = Getting file info...
+Status_GettingFileInfoPercentage                  = Getting file info ({0}%)...
+Status_GettingFileListForDirectory                = Getting file list for {0}...
+Status_LoadingFile                                = Loading {0}...
+Status_LoadingFilePercentage                      = Loading {0} ({1}%)...
+Status_Working                                    = Working...
+Status_WorkingPercentage                          = Working... ({0}%)
+Status_UpdatingCache                              = Updating cache...
+Status_ETA                                        = {0}% | ETA: {1} | Elapsed: {2}
+Status_LookingForLongFileNames                    = Looking for long file names...
+Status_FinishedUnder10Minutes                     = Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).
+Status_Finished10MinutesOrMore                    = Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
+
+SystemTray_DoneVerifying                          = Done verifying ({0}% OK).
+SystemTray_DoneCreating                           = Done creating checksum files.
+
+Status_FindingRenamesInFile                       = Finding renames in {0}...
+FindRenamedFiles_Message                          = {0:#,0} renamed file(s) found.
+FindRenamedFiles_Title                            = Find Renamed Files
+
+OverwriteFile_Message                             = The file already exists, would you like to overwrite it?\n\n{0}
+OverwriteFile_Title                               = Confirmation Needed
+OverwriteMultipleFiles_Message                    = {0:#,0} existing checksum file(s) will be overwritten. Continue?
+OverwriteMultipleFiles_Title                      = Confirmation Needed
+
+RegisterFileTypesError_Message                    = {0}\n\nTry running as Administrator.
+RegisterFileTypesError_Title                      = Register File Types
+
+CopyFileNamesContextMenu                          = Copy File Name(s)
+CopyPathAndFileNamesContextMenu                   = Copy Path + File Name(s)
+CopyCurrentChecksumContextMenu                    = Copy Current Checksum ({0})
+CopyOriginalChecksumContextMenu                   = Copy Original Checksum ({0})
+
+TruncateFileNames_MaxLength                       = Max Length
+TruncateFileNames_MinimumLengthIs12               = Minimum length is 12.
+TruncateFileNames_FilesRenamed_Message            = {0:#,0} file(s) renamed.
+
+FolderBrowseDialog_Title                          = Select a Folder
+
+### Preferences Form
+
+Title                                             = ilSFV Preferences
+
+General                                           = General
+Language                                          = Language
+CacheSize                                         = Cache Size
+Records                                           = Records:
+ClearCacheButton                                  = Clear Cache
+AlwaysOnTop                                       = Always on top
+RememberWindowPlacement                           = Remember window placement
+ReuseWindowSingleInstance                         = Reuse window (single instance)
+CheckForUpdateEvery                               = Check for updates every
+Days                                              = days
+ShowRecentFilesInFileMenu                         = Show recent files in File menu
+FlashWindowWhenDone                               = Flash window when done
+AutoScrollFileList                                = Automatically scroll file list
+RecursiveCreationChecking                         = Recursive creation/checking
+UseLowPriorityOnHide                              = Use low priority on hide
+CacheCleared_Message                              = Cache cleared.
+CacheCleared_Title                                = Clear Cache
+
+Checking                                          = Checking
+AutoFindRenamesWhenSetComplete                    = Automatically find renames when set is complete
+UseRecycleBin                                     = Use Recycle Bin when deleting files
+RenameBadFiles                                    = Rename bad files -> .bad
+CreateMissingFileMarkers                          = Create .missing file markers
+CleanupBadMissing                                 = Cleanup bad/missing
+DeleteFailedFiles                                 = Delete failed files
+AutoCloseWhenDone_Checking                        = Automatically close when done
+OnlyWhenAllOK                                     = Only when 100% OK
+AutoVerify                                        = Automatically verify
+PlaySoundWhenAllOK                                = Play sound when 100% OK
+OnlyWhenNotInForeground                           = Only when not in foreground
+PlaySoundWhenBadMissing                           = Play sound when bad/missing
+Renaming                                          = Renaming
+ToMatchNamesInSetFile                             = to match names in set file
+ToLowercase                                       = to lowercase
+None                                              = none
+
+Creating                                          = Creating
+ExcludeFilesOfType                                = Exclude files of type
+SortFiles                                         = Sort files
+SFV32Compatibility                                = SFV32 Compatibility
+MD5SumCompatibility                               = md5sum Compatibility
+CreateFileForEachSubdir                           = Create file for each subdirectory
+PromptForFileName                                 = Prompt for filename
+AutoCloseWhenDone_Creating                        = Automatically close when done
+
+Comments                                          = Comments
+WriteCommentsCheckBox                             = Write comments
+Header                                            = Header
+FileList                                          = File list
+Footer                                            = Footer
+ShowVariablesButton                               = Show variables
+ShowVariables_Message                             = Header/Footer:\n{0} : Checksum file create date/time\n\nFile list:\n{0} : File size in bytes\n{1} : File last write time\n{2} : File name (relative path)
+ShowVariables_Title                               = Comment variables
+
+About                                             = About
+MadeInTributeTohkSFV                              = made in tribute to hkSFV
+WebButton                                         = Web
+Version                                           = version
+Released                                          = released
+UsageStatistics                                   = Usage Statistics
+FilesChecked                                      = Files Checked
+SetsChecked                                       = Sets Checked
+MBChecked                                         = MB Checked
+GoodFiles                                         = Good Files
+TimeSpent                                         = Time Spent
+ResetButton                                       = Reset
+ReleaseNotesButton                                = Release Notes
+
+### Release Notes Form
+
+Title                                             = Release Notes
+
+### Remove Duplicates Form
+
+Title                                             = Find and Delete Duplicate Files
+DuplicatesColumnHeader                            = Duplicates
+CountColumnHeader                                 = Count
+SelectFileToKeep                                  = Select file to keep
+FileNameColumnHeader                              = File name
+OptionalSelectDirsToDeleteAllDuplicatesFrom       = Optional: Select directories to delete all duplicates from
+DirectoryColumnHeader                             = Directory
+DeleteDuplicatesButton                            = &Delete Duplicates
+SourceFileDoesNotExist_Message                    = '{0}' does not exist.
+SourceFileDoesNotExist_Title                      = File not found
+ConfirmSourceFile_Message                         = Are you sure you want to use '{0}' as the source file?
+ConfirmSourceFile_Title                           = Remove duplicates
+ConfirmDelete_Message                             = Are you sure want to delete all {0:#,0} duplicate(s) in '{1}'?
+ConfirmDelete_Message_FileListHeader              = The following items will be deleted:
+ConfirmDelete_Title                               = Delete duplicates
+RewriteChecksum_Message                           = Would you like to rewrite the checksum file without the {0:#,0} deleted files?\n\nNote: Comments will be removed.
+RewriteChecksum_Title                             = Rewrite Checksum File
+
+### Exception Form
+
+Title                                             = Exception Handler
+IgnoreButton                                      = &Ignore
+ReportBugButton                                   = &Report bug
+ErrorMessageTab                                   = Error Message
+StackTraceTab                                     = Stack Trace
+ErrorOccurredDuringStartup                        = This error occurred during startup.
+WouldYouLikeAResponse_Message                     = Would you like a response when the bug is fixed?
+WouldYouLikeAResponse_Title                       = Submit bug
+HowCanWeContactYou_Message                        = How can we contact you? (email, website, etc)
+HowCanWeContactYou_Title                          = Submit bug
+SubmitBugSuccessful_Message                       = Thank you. This bug has been successfully submitted.
+SubmitBugError_Title                              = Error submitting bug

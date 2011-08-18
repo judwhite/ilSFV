@@ -44,6 +44,8 @@ Source: ".\ilSFV\bin\Debug\languages\english.txt"; DestDir: "{app}\languages"; F
 Source: ".\ilSFV\bin\Debug\languages\deutsch.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\languages\français.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 Source: ".\ilSFV\bin\Debug\languages\italiano.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\chinese.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
+Source: ".\ilSFV\bin\Debug\languages\russian.txt"; DestDir: "{app}\languages"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
