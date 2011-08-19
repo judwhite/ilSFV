@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using ilSFV.Localization;
 
 namespace ilSFV
 {
@@ -7,6 +8,9 @@ namespace ilSFV
 		private GetInputForm()
 		{
 			InitializeComponent();
+
+            btnOK.Text = Language.General.OKButton;
+            btnCancel.Text = Language.General.CancelButton;
 		}
 
 		public static bool ShowForm(string windowText, string labelText, out string userInput)

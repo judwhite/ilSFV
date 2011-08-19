@@ -32,6 +32,11 @@ namespace ilSFV
 
             var lang = Language.ExceptionForm;
             Text = lang.Title;
+            tabPage1.Text = lang.ErrorMessageTab;
+            tabPage2.Text = lang.StackTraceTab;
+            btnReportBug.Text = lang.ReportBugButton;
+            btnIgnore.Text = lang.IgnoreButton;
+            //lblMainLabel.Text = lang. woops - missing this one
 
 			if (occuredDuringStartup)
 			{

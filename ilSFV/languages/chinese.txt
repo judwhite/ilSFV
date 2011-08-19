@@ -1,6 +1,6 @@
 ; ilSFV
-; English translation
-; by Jud White - jwhite@cdtag.com
+; Chinese translation
+; by 陳彥甫 -  alfu1215@gmail.com
 ;
 ; Notes:
 ;   Lines starting with ; are a comment and are ignored
@@ -16,219 +16,222 @@ OKButton                                          = &完成
 CancelButton                                      = &取消
 CloseButton                                       = &關閉
 Error                                             = 錯誤
+YesButton                                         = 正確
+NoButton                                          = 錯誤
 
 ### Startup
 
-RequireNET35_Message                              = This application requires .NET 3.5. Would you like to download it now?
+RequireNET35_Message                              = 這個應用程式需要.NET 3.5. 你想要現在下載嗎?
 
 ### Main Form
 
-Menu_File                                         = &File
-Menu_File_NewSFVFile                              = New &SFV File...
-Menu_File_NewMD5File                              = New &MD5 File...
-Menu_File_NewSHA1File                             = New SH&A-1 File...
-Menu_File_Open                                    = &Open...
-Menu_File_Preferences                             = &Preferences...
-Menu_File_CheckForUpdates                         = Check For &Updates
-Menu_File_Exit                                    = E&xit
+Menu_File                                         = &檔案
+Menu_File_NewSFVFile                              = 開啓新的 &SFV 檔案...
+Menu_File_NewMD5File                              = 開啓新的 &MD5 檔案...
+Menu_File_NewSHA1File                             = 開啓新的 SH&A-1 檔案...
+Menu_File_Open                                    = &開啓...
+Menu_File_Preferences                             = &偏好設定
+Menu_File_CheckForUpdates                         = 檢查 &更新
+Menu_File_Exit                                    = 關閉離開
 
-Menu_Legend                                       = &Legend
-Menu_Legend_FileOK                                = File OK
-Menu_Legend_FileBad                               = File Bad
-Menu_Legend_FileNotFound                          = File Not Found
-Menu_Legend_FileUntestedUnknown                   = Untested-Unknown
+Menu_Legend                                       = &圖示
+Menu_Legend_FileOK                                = 檔案正確
+Menu_Legend_FileBad                               = 檔案錯誤
+Menu_Legend_FileNotFound                          = 檔案不存在
+Menu_Legend_FileUntestedUnknown                   = 未測試過的-未知的
 
-Menu_Tools                                        = &Tools
-Menu_Tools_FindRenamedFiles                       = Find &Renamed Files
-Menu_Tools_UseCachedResults                       = Use &Cached Results
-Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = Find/Delete Duplicate Files Using Checksum...
-Menu_Tools_TruncateFileNames                      = &Truncate File Names...
-Menu_Tools_RegisterFileTypes                      = Register File Types
+Menu_Tools                                        = &工具
+Menu_Tools_FindRenamedFiles                       = 搜尋 &重新命名 檔案
+Menu_Tools_UseCachedResults                       = 使用 &暫存的 結果
+Menu_Tools_FindDeleteDuplicateFilesUsingChecksum  = 使用校驗來搜尋/刪除重複的檔案...
+Menu_Tools_TruncateFileNames                      = &截短檔案名稱...
+Menu_Tools_RegisterFileTypes                      = 註冊檔案類型
 
-Menu_View                                         = &View
-Menu_View_HideGood                                = &Hide Good
-Menu_View_CommentResultPane                       = &Comment/Result Pane
+Menu_View                                         = &檢視
+Menu_View_HideGood                                = &隱藏正確
+Menu_View_CommentResultPane                       = &註解/結果視窗
 
-Menu_Help                                         = &Help
-Menu_Help_About                                   = &About
+Menu_Help                                         = &幫助
+Menu_Help_About                                   = &關於
 
-FileNameColumnHeader                              = File name
-CommentsTabHeader                                 = Comments
+FileNameColumnHeader                              = 檔案名稱
+CommentsTabHeader                                 = 註解
 
-SetsLabel                                         = Sets:
-PartsLabel                                        = Parts:
-GoodLabel                                         = Good:
-BadLabel                                          = Bad:
-MissingLabel                                      = Missing:
+SetsLabel                                         = 集合系列:
+PartsLabel                                        = 部份組成:
+GoodLabel                                         = 正確:
+BadLabel                                          = 錯誤:
+MissingLabel                                      = 遺失:
 
-HideGoodCheckBox                                  = Hide Good
-PauseButton                                       = &Pause
-ResumeButton                                      = &Resume
-HideButton                                        = Hide
-GoButton                                          = &Go
-StopButton                                        = &Stop
+HideGoodCheckBox                                  = 隱藏正確
+PauseButton                                       = &暫停
+ResumeButton                                      = &回覆
+HideButton                                        = 隱藏
+GoButton                                          = &啓動
+StopButton                                        = &停止
 
-UpdateAvailable_Message                           = A new version of ilSFV ({0}.{1}.{2}) is available.\n\nWould you like to download it now?
-UpdateAvailable_Title                             = Update Available
-NoUpdateAvailable_Message                         = You have the latest version.
-NoUpdateAvailable_Title                           = Check For Updates
+UpdateAvailable_Message                           = 新版本的ilSFV ({0}.{1}.{2})已經準備完成了.\n\n你想要現在下載嗎?
+UpdateAvailable_Title                             = 新的更新項目已準備好了
+NoUpdateAvailable_Message                         = 版本已是最新至的版本.
+NoUpdateAvailable_Title                           = 檢查是否有更新項目
 
-FileNotFound_Message                              = File '{0}' does not exist.
-FileNotFound_Title                                = File not found
+FileNotFound_Message                              = 檔案 '{0}' 不存在.
+FileNotFound_Title                                = 檔案不存在
 
-FileContentsNotRecognized                         = File '{0}' contents not recognized as {1} verification file.\n\n{2}
+FileContentsNotRecognized                         = 檔案 '{0}' 內容不辨認為 {1} 為認證檔案.\n\n{2}
 
-Status_Ready                                      = Ready.
-Status_Paused                                     = Paused.
-Status_Renaming                                   = Renaming '{0}' to '{1}'...
-Status_GettingFileList                            = Getting file list...
-Status_PreSorting                                 = Pre-sorting...
-Status_GettingFileInfo                            = Getting file info...
-Status_GettingFileInfoPercentage                  = Getting file info ({0}%)...
-Status_GettingFileListForDirectory                = Getting file list for {0}...
-Status_LoadingFile                                = Loading {0}...
-Status_LoadingFilePercentage                      = Loading {0} ({1}%)...
-Status_Working                                    = Working...
-Status_WorkingPercentage                          = Working... ({0}%)
-Status_UpdatingCache                              = Updating cache...
-Status_ETA                                        = {0}% | ETA: {1} | Elapsed: {2}
-Status_LookingForLongFileNames                    = Looking for long file names...
-Status_FinishedUnder10Minutes                     = Finished: {0}% Complete - {1:#,0.0} MB in {2:#,0.0} seconds ({3:#,0.0} MB/s).
-Status_Finished10MinutesOrMore                    = Finished: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
+Status_Ready                                      = 準備好.
+Status_Paused                                     = 暫停.
+Status_Renaming                                   = 從新命名從 '{0}' 到 '{1}'...
+Status_GettingFileList                            = 正在取得檔案項目…
+Status_PreSorting                                 = 預先排序...
+Status_GettingFileInfo                            = 正在取得檔案資訊...
+Status_GettingFileInfoPercentage                  = 正在取得檔案資訊 ({0}%)...
+Status_GettingFileListForDirectory                = 正在取得檔案項目 {0}...
+Status_LoadingFile                                = 下載 {0}...
+Status_LoadingFilePercentage                      = 下載 {0} ({1}%)...
+Status_Working                                    = 執行中...
+Status_WorkingPercentage                          = 執行中... ({0}%)
+Status_UpdatingCache                              = 更新暫存...
+Status_ETA                                        = 預計完成時間: {1} | 經過的時間: {2}
+Status_LookingForLongFileNames                    = 尋找長的檔案名稱...
+Status_FinishedUnder10Minutes                     = 完成進度: {0}% 完成 - {1:#,0.0} MB in {2:#,0.0} 秒 ({3:#,0.0} MB/s).
+Status_Finished10MinutesOrMore                    = 完成進度: {0}% Complete - {1:#,0.0} MB in {2:00}:{3:00}:{4:00} ({5:#,0.0} MB/s).
 
-SystemTray_DoneVerifying                          = Done verifying ({0}% OK).
-SystemTray_DoneCreating                           = Done creating checksum files.
+SystemTray_DoneVerifying                          = 完成確認中 ({0}% OK).
+SystemTray_DoneCreating                           = 完成建立校驗檔案.
 
-Status_FindingRenamesInFile                       = Finding renames in {0}...
-FindRenamedFiles_Message                          = {0:#,0} renamed file(s) found.
-FindRenamedFiles_Title                            = Find Renamed Files
+Status_FindingRenamesInFile                       = 正在尋找重新命名的檔案 {0}...
+FindRenamedFiles_Message                          = {0:#,0} 找到重新命名的檔案.
+FindRenamedFiles_Title                            = 正在尋找重新命名的檔案
 
-OverwriteFile_Message                             = The file already exists, would you like to overwrite it?\n\n{0}
-OverwriteFile_Title                               = Confirmation Needed
-OverwriteMultipleFiles_Message                    = {0:#,0} existing checksum file(s) will be overwritten. Continue?
-OverwriteMultipleFiles_Title                      = Confirmation Needed
+OverwriteFile_Message                             = 檔案已經存在, 你要覆蓋取代它嗎?\n\n{0}
+OverwriteFile_Title                               = 需要許可確認
+OverwriteMultipleFiles_Message                    = {0:#,0} 現有的檔案會被覆蓋取代. 要繼續嗎?
+OverwriteMultipleFiles_Title                      = 需要許可確認
 
-RegisterFileTypesError_Message                    = {0}\n\nTry running as Administrator.
-RegisterFileTypesError_Title                      = Register File Types
+RegisterFileTypesError_Message                    = {0}\n\n 試著在管理員身分下執行
+RegisterFileTypesError_Title                      = 註冊檔案類型
 
-CopyFileNamesContextMenu                          = Copy File Name(s)
-CopyPathAndFileNamesContextMenu                   = Copy Path + File Name(s)
-CopyCurrentChecksumContextMenu                    = Copy Current Checksum ({0})
-CopyOriginalChecksumContextMenu                   = Copy Original Checksum ({0})
+CopyFileNamesContextMenu                          = 複製檔案名稱
+CopyPathAndFileNamesContextMenu                   = 複製檔案名稱 + 路徑
+CopyCurrentChecksumContextMenu                    = 複製目前的校驗項目
+CopyOriginalChecksumContextMenu                   = 複製原有的校驗項目
 
-TruncateFileNames_MaxLength                       = Max Length
-TruncateFileNames_MinimumLengthIs12               = Minimum length is 12.
-TruncateFileNames_FilesRenamed_Message            = {0:#,0} file(s) renamed.
+TruncateFileNames_MaxLength                       = 最大長度
+TruncateFileNames_MinimumLengthIs12               = 最小長度是12.
+TruncateFileNames_FilesRenamed_Message            = {0:#,0} 檔案重新命名.
 
-FolderBrowseDialog_Title                          = Select a Folder
+FolderBrowseDialog_Title                          = 選擇檔案夾
 
 ### Preferences Form
 
-Title                                             = ilSFV Preferences
+Title                                             = ilSFV偏好設定
 
-General                                           = General
-Language                                          = Language
-CacheSize                                         = Cache Size
-Records                                           = Records:
-ClearCacheButton                                  = Clear Cache
-AlwaysOnTop                                       = Always on top
-RememberWindowPlacement                           = Remember window placement
-ReuseWindowSingleInstance                         = Reuse window (single instance)
-CheckForUpdateEvery                               = Check for updates every
-Days                                              = days
-ShowRecentFilesInFileMenu                         = Show recent files in File menu
-FlashWindowWhenDone                               = Flash window when done
-AutoScrollFileList                                = Automatically scroll file list
-RecursiveCreationChecking                         = Recursive creation/checking
-UseLowPriorityOnHide                              = Use low priority on hide
-CacheCleared_Message                              = Cache cleared.
-CacheCleared_Title                                = Clear Cache
+General                                           = 一般
+Language                                          = 語言
+CacheSize                                         = 暫存容量
+Records                                           = 紀錄:
+ClearCacheButton                                  = 清除暫存
+AlwaysOnTop                                       = 永遠在最上層
+RememberWindowPlacement                           = 記住視窗位置
+ReuseWindowSingleInstance                         = 重複利用視窗 (單一物件)
+CheckForUpdateEvery                               = 檢查是否有更新項目
+Days                                              = 天數
+ShowRecentFilesInFileMenu                         = 在選單裡顯示最近的檔案
+FlashWindowWhenDone                               = 當完成後閃現視窗
+AutoScrollFileList                                = 自動捲動檔案項目
+RecursiveCreationChecking                         = 遞歸 建立/檢查
+UseLowPriorityOnHide                              = 在隱藏下使用低的優先級
+CacheCleared_Message                              = 已經清除暫存.
+CacheCleared_Title                                = 清除暫存
 
-Checking                                          = Checking
-AutoFindRenamesWhenSetComplete                    = Automatically find renames when set is complete
-UseRecycleBin                                     = Use Recycle Bin when deleting files
-RenameBadFiles                                    = Rename bad files -> .bad
-CreateMissingFileMarkers                          = Create .missing file markers
-CleanupBadMissing                                 = Cleanup bad/missing
-DeleteFailedFiles                                 = Delete failed files
-AutoCloseWhenDone_Checking                        = Automatically close when done
-OnlyWhenAllOK                                     = Only when 100% OK
-AutoVerify                                        = Automatically verify
-PlaySoundWhenAllOK                                = Play sound when 100% OK
-OnlyWhenNotInForeground                           = Only when not in foreground
-PlaySoundWhenBadMissing                           = Play sound when bad/missing
-Renaming                                          = Renaming
-ToMatchNamesInSetFile                             = to match names in set file
-ToLowercase                                       = to lowercase
-None                                              = none
+Checking                                          = 正在確認中
+AutoFindRenamesWhenSetComplete                    = 當系列集合完成時自動去尋找重新命名的檔案
+UseRecycleBin                                     = 當正在刪除使用資源回收桶
+RenameBadFiles                                    = 重新命名壞的檔案 -> .壞的
+CreateMissingFileMarkers                          = 建立  .遺失的檔案標記
+CleanupBadMissing                                 = 清除 壞的/遺失的
+DeleteFailedFiles                                 = 刪除失敗的檔案
+AutoCloseWhenDone_Checking                        = 當完成時自動關閉
+OnlyWhenAllOK                                     = 只有在100%完成情況下
+AutoVerify                                        = 自動校正
+PlaySoundWhenAllOK                                = 在100%完成情況下播放聲音
+OnlyWhenNotInForeground                           = 只有在不是前景情況下
+PlaySoundWhenBadMissing                           = 當壞的/遺失的情況下播放聲音
+Renaming                                          = 重新命名
+ToMatchNamesInSetFile                             = 在集合系列裡為了要相配名字
+ToLowercase                                       = 為了小寫字母
+None                                              = 沒有
 
-Creating                                          = Creating
-ExcludeFilesOfType                                = Exclude files of type
-SortFiles                                         = Sort files
-SFV32Compatibility                                = SFV32 Compatibility
-MD5SumCompatibility                               = md5sum Compatibility
-CreateFileForEachSubdir                           = Create file for each subdirectory
-PromptForFileName                                 = Prompt for filename
-AutoCloseWhenDone_Creating                        = Automatically close when done
+Creating                                          = 正在建立中
+ExcludeFilesOfType                                = 排除檔案類別
+SortFiles                                         = 分類檔案
+SFV32Compatibility                                = SFV32相容性
+MD5SumCompatibility                               = md5sum相容性
+CreateFileForEachSubdir                           = 為了每個子目錄建立檔案
+PromptForFileName                                 = 為了檔案名稱提示
+AutoCloseWhenDone_Creating                        = 當完成時自動關閉
 
-Comments                                          = Comments
-WriteCommentsCheckBox                             = Write comments
-Header                                            = Header
-FileList                                          = File list
-Footer                                            = Footer
-ShowVariablesButton                               = Show variables
-ShowVariables_Message                             = Header/Footer:\n{0} : Checksum file create date/time\n\nFile list:\n{0} : File size in bytes\n{1} : File last write time\n{2} : File name (relative path)
-ShowVariables_Title                               = Comment variables
+Comments                                          = 註解
+WriteCommentsCheckBox                             = 寫註解
+Header                                            = 標題
+FileList                                          = 檔案項目
+Footer                                            = 註腳
+ShowVariablesButton                               = 顯示變數
+ShowVariables_Message                             = 標題/註腳:\n{0} : 校驗檔案建立日期/時間\n\n檔案項目:\n{0} : 檔案大小單位為bytes\n{1} : 檔案最後產生時間\n{2} : 檔案名稱 (相對路徑)
+ShowVariables_Title                               = 註解變數
 
-About                                             = About
-MadeInTributeTohkSFV                              = made in tribute to hkSFV
-WebButton                                         = Web
-Version                                           = version
-Released                                          = released
-UsageStatistics                                   = Usage Statistics
-FilesChecked                                      = Files Checked
-SetsChecked                                       = Sets Checked
-MBChecked                                         = MB Checked
-GoodFiles                                         = Good Files
-TimeSpent                                         = Time Spent
-ResetButton                                       = Reset
-ReleaseNotesButton                                = Release Notes
+About                                             = 關於
+MadeInTributeTohkSFV                              = 產生於hkSFV
+WebButton                                         = 網路
+Version                                           = 版本
+Released                                          = 發佈的
+UsageStatistics                                   = 使用量統計
+FilesChecked                                      = 檔案確認
+SetsChecked                                       = 系列確認
+MBChecked                                         = Megabyte確認
+GoodFiles                                         = 好的檔案
+TimeSpent                                         = 使用的時間
+ResetButton                                       = 復原
+ReleaseNotesButton                                = 發佈紀錄
 
 ### Release Notes Form
 
-Title                                             = Release Notes
+Title                                             = 發佈註釋
 
 ### Remove Duplicates Form
 
-Title                                             = Find and Delete Duplicate Files
-DuplicatesColumnHeader                            = Duplicates
-CountColumnHeader                                 = Count
-SelectFileToKeep                                  = Select file to keep
-FileNameColumnHeader                              = File name
-OptionalSelectDirsToDeleteAllDuplicatesFrom       = Optional: Select directories to delete all duplicates from
-DirectoryColumnHeader                             = Directory
-DeleteDuplicatesButton                            = &Delete Duplicates
-SourceFileDoesNotExist_Message                    = '{0}' does not exist.
-SourceFileDoesNotExist_Title                      = File not found
-ConfirmSourceFile_Message                         = Are you sure you want to use '{0}' as the source file?
-ConfirmSourceFile_Title                           = Remove duplicates
-ConfirmDelete_Message                             = Are you sure want to delete all {0:#,0} duplicate(s) in '{1}'?
-ConfirmDelete_Message_FileListHeader              = The following items will be deleted:
-ConfirmDelete_Title                               = Delete duplicates
-RewriteChecksum_Message                           = Would you like to rewrite the checksum file without the {0:#,0} deleted files?\n\nNote: Comments will be removed.
-RewriteChecksum_Title                             = Rewrite Checksum File
+Title                                             = 尋找和刪除重複的檔案
+DuplicatesColumnHeader                            = 重複的檔案
+CountColumnHeader                                 = 數
+SelectFileToKeep                                  = 選擇檔案來保存
+FileNameColumnHeader                              = 檔案名稱
+OptionalSelectDirsToDeleteAllDuplicatesFrom       = 自選的: 選擇路徑來刪除所有的重複檔案
+DirectoryColumnHeader                             = 路徑
+DeleteDuplicatesButton                            = &刪除重複的檔案
+SourceFileDoesNotExist_Message                    = '{0}' 不存在.
+SourceFileDoesNotExist_Title                      = 檔案不存在
+ConfirmSourceFile_Message                         = 你確定你要使用 '{0}' 來當作你的原始檔案?
+ConfirmSourceFile_Title                           = 移除重複檔案
+ConfirmDelete_Message                             = 你確定你要刪除所有的 {0:#,0} 重複檔案 在 '{1}'?
+ConfirmDelete_Message_FileListHeader              = 在以下項目將會被刪除:
+ConfirmDelete_Title                               = 刪除重複檔案
+RewriteChecksum_Message                           = 你想要重新寫入校驗檔案而不刪除 {0:#,0} 檔案?\n\n 註釋: 註解會被刪除.
+RewriteChecksum_Title                             = 重新寫入校驗檔案
 
 ### Exception Form
 
-Title                                             = Exception Handler
-IgnoreButton                                      = &Ignore
-ReportBugButton                                   = &Report bug
-ErrorMessageTab                                   = Error Message
-StackTraceTab                                     = Stack Trace
-ErrorOccurredDuringStartup                        = This error occurred during startup.
-WouldYouLikeAResponse_Message                     = Would you like a response when the bug is fixed?
-WouldYouLikeAResponse_Title                       = Submit bug
-HowCanWeContactYou_Message                        = How can we contact you? (email, website, etc)
-HowCanWeContactYou_Title                          = Submit bug
-SubmitBugSuccessful_Message                       = Thank you. This bug has been successfully submitted.
-SubmitBugError_Title                              = Error submitting bug
+Title                                             = 例外的處理程序
+IgnoreButton                                      = &忽略
+ReportBugButton                                   = &提報程式錯誤
+ErrorMessageTab                                   = 錯誤訊息
+StackTraceTab                                     = 累積追蹤
+ErrorOccurredDuringStartup                        = 這個錯誤發生在啓動過程.
+WouldYouLikeAResponse_Message                     = 你想要收到回覆訊息當這個程式錯誤已被更正?
+WouldYouLikeAResponse_Title                       = 傳送程式錯誤
+HowCanWeContactYou_Message                        = 我們要如何和你連絡? (電子郵件, 網站, 等等)
+HowCanWeContactYou_Title                          = 傳送程式錯誤
+SubmitBugSuccessful_Message                       = 謝謝. 這個程式錯誤已經被成功傳送了.
+SubmitBugError_Title                              = 不正確傳送程式錯誤
+AnErrorHasOccurred                                = 錯誤已發生
