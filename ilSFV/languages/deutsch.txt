@@ -16,6 +16,8 @@ OKButton                                          = &OK
 CancelButton                                      = &Abbrechen
 CloseButton                                       = S&chliessen
 Error                                             = Fehler
+YesButton                                         = Yes
+NoButton                                          = No
 
 ### Startup
 
@@ -232,3 +234,4 @@ HowCanWeContactYou_Message                        = Wie können wir Sie kontakti
 HowCanWeContactYou_Title                          = Bug einreichen
 SubmitBugSuccessful_Message                       = Danke. Dieser Bug wurde erfolgreich eingereicht.
 SubmitBugError_Title                              = Fehler beim Einreichen des Bugs
+AnErrorHasOccurred                                = An error has occurred.

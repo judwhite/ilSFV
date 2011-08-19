@@ -16,6 +16,8 @@ OKButton                                          = &OK
 CancelButton                                      = &Annulla
 CloseButton                                       = *&Close
 Error                                             = Errore
+YesButton                                         = *Yes
+NoButton                                          = *No
 
 ### Startup
 
@@ -232,3 +234,4 @@ HowCanWeContactYou_Message                        = *How can we contact you? (em
 HowCanWeContactYou_Title                          = *Submit bug
 SubmitBugSuccessful_Message                       = *Thank you. This bug has been successfully submitted.
 SubmitBugError_Title                              = *Error submitting bug
+AnErrorHasOccurred                                = *An error has occurred.

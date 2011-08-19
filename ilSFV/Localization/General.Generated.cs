@@ -16,5 +16,11 @@ namespace ilSFV.Localization
 
         ///<summary>Error</summary>
         public string Error { get; set; }
+
+        ///<summary>Yes</summary>
+        public string YesButton { get; set; }
+
+        ///<summary>No</summary>
+        public string NoButton { get; set; }
     }
 }

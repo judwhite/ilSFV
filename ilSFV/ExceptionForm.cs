@@ -36,7 +36,7 @@ namespace ilSFV
             tabPage2.Text = lang.StackTraceTab;
             btnReportBug.Text = lang.ReportBugButton;
             btnIgnore.Text = lang.IgnoreButton;
-            //lblMainLabel.Text = lang. woops - missing this one
+            lblMainLabel.Text = lang.AnErrorHasOccurred;
 
 			if (occuredDuringStartup)
 			{

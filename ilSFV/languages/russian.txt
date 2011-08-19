@@ -16,6 +16,8 @@ OKButton                                          = &OK
 CancelButton                                      = &Отмена
 CloseButton                                       = &Закрыть
 Error                                             = Ошибка
+YesButton                                         = Yes
+NoButton                                          = No
 
 ### Startup
 
@@ -232,3 +234,4 @@ HowCanWeContactYou_Message                        = Как мы можем с в
 HowCanWeContactYou_Title                          = Отправить отчет об ошибке
 SubmitBugSuccessful_Message                       = Спасибо!. Отчет об ошибке был успешно отправлен.
 SubmitBugError_Title                              = Возникла ошибка при отправке отчета об ошибке.
+AnErrorHasOccurred                                = An error has occurred.

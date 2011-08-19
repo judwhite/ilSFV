@@ -37,5 +37,8 @@ namespace ilSFV.Localization
 
         ///<summary>Error submitting bug</summary>
         public string SubmitBugError_Title { get; set; }
+
+        ///<summary>An error has occurred.</summary>
+        public string AnErrorHasOccurred { get; set; }
     }
 }

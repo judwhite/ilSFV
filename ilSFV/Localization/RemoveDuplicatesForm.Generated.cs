@@ -44,7 +44,7 @@ namespace ilSFV.Localization
         ///<summary>The following items will be deleted:</summary>
         public string ConfirmDelete_Message_FileListHeader { get; set; }
 
-        ///<summary>Remove duplicates</summary>
+        ///<summary>Delete duplicates</summary>
         public string ConfirmDelete_Title { get; set; }
 
         ///<summary>Would you like to rewrite the checksum file without the {0:#,0} deleted files?\n\nNote: Comments will be removed.</summary>
