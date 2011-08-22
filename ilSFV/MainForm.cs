@@ -2269,6 +2269,8 @@ export results to text file
             Thread.CurrentThread.Priority = ThreadPriority.Normal;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             Activate();
+            if (WindowState == FormWindowState.Minimized)
+                WindowState = Program.Settings.General.FormWindowState;
         }
 
         private bool _pause;
