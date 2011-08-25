@@ -116,7 +116,7 @@ namespace ilSFV.Localization
                             break;
                         propertyName += line[j];
                     }
-                    string value = line.Substring(j).TrimStart(new[] { ' ', '=' }).Trim().Replace("\\n", "\n");
+                    string value = line.Substring(j).TrimStart(new[] { ' ', '=' }).Trim().Replace("\\n", Environment.NewLine);
 
                     PropertyInfo pi = sectionType.GetProperty(propertyName, bf);
                     if (pi != null && !string.IsNullOrEmpty(value))

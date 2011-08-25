@@ -86,6 +86,7 @@
       <DependentUpon>GetInputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Hash\SHA1.cs" />
+    <Compile Include="InvalidChecksumFileException.cs" />
     <Compile Include="Localization\ExceptionForm.Generated.cs" />
     <Compile Include="Localization\General.Generated.cs" />
     <Compile Include="Localization\Language.cs" />

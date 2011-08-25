@@ -166,6 +166,12 @@ namespace ilSFV
                         createMutex.ReleaseMutex();
                 }
             }
+            catch (PlatformNotSupportedException)
+            {
+                // TODO: Localize
+                MessageBox.Show("This program requires Windows XP SP3, Windows Vista SP2, Windows 7 or later.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             catch (Exception ex)
             {
                 ShowException(ex);

@@ -878,17 +878,18 @@ export results to text file
                             if (line.StartsWith("MD5 ("))
                             {
                                 int idx = line.LastIndexOf(' ');
+                                if (idx == -1)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 chkFileName = line.Substring(5, idx - 5 - 3);
                                 chkMD5 = line.Substring(idx + 1, line.Length - idx - 1);
                                 if (chkMD5.Length != 32)
-                                {
-                                    string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                    throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "MD5", allText));
-                                }
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                             }
                             else
                             {
                                 int idx = line.IndexOf(' ');
+                                if (idx == -1)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
 
                                 if (idx == 32)
                                 {
@@ -898,13 +899,12 @@ export results to text file
                                 else
                                 {
                                     idx = line.LastIndexOf(' ');
+                                    if (idx == -1)
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                     chkFileName = line.Substring(0, idx);
                                     chkMD5 = line.Substring(idx + 1, line.Length - idx - 1);
                                     if (chkMD5.Length != 32)
-                                    {
-                                        string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                        throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "MD5", allText));
-                                    }
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 }
                             }
 
@@ -922,17 +922,18 @@ export results to text file
                             if (line.StartsWith("SHA1 ("))
                             {
                                 int idx = line.LastIndexOf(' ');
+                                if (idx == -1)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 chkFileName = line.Substring(6, idx - 6 - 3);
                                 chkSHA1 = line.Substring(idx + 1, line.Length - idx - 1);
                                 if (chkSHA1.Length != 40)
-                                {
-                                    string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                    throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SHA-1", allText));
-                                }
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                             }
                             else
                             {
                                 int idx = line.IndexOf(' ');
+                                if (idx == -1)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
 
                                 if (idx == 40)
                                 {
@@ -942,13 +943,12 @@ export results to text file
                                 else
                                 {
                                     idx = line.LastIndexOf(' ');
+                                    if (idx == -1)
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                     chkFileName = line.Substring(0, idx);
                                     chkSHA1 = line.Substring(idx + 1, line.Length - idx - 1);
                                     if (chkSHA1.Length != 40)
-                                    {
-                                        string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                        throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SHA-1", allText));
-                                    }
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 }
                             }
 
@@ -961,6 +961,8 @@ export results to text file
                         else if (set.Type == ChecksumType.SFV)
                         {
                             int idx = line.LastIndexOf(' ');
+                            if (idx == -1)
+                                throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                             string chkSFV = line.Substring(idx + 1, line.Length - idx - 1);
                             string chkFileName = line.Substring(0, idx);
 
@@ -970,10 +972,7 @@ export results to text file
                                 chkSFV = chkSFV.Substring(2);
 
                             if (chkSFV.Length != 8)
-                            {
-                                string allText = File.ReadAllText(fileName, Encoding.GetEncoding(CODE_PAGE));
-                                throw new Exception(string.Format(Language.MainForm.FileContentsNotRecognized, fileName, "SFV", allText));
-                            }
+                                throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
 
                             file.FileName = chkFileName;
                             file.OriginalChecksum = chkSFV;
