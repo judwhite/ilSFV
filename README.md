@@ -4,7 +4,7 @@
 
 SFV, MD5 and SHA-1 file verification utility. Check [Releases](https://github.com/judwhite/ilSFV/releases) for downloads.
 
-- Multi-language support (currently English, German, French, Chinese, Russian)
+- Multi-language support (currently English, German, Chinese, Russian)
 - Supports SFV, MD5, and SHA-1
 - Batch file verification
 - Create and verify checksums for files in subdirectories
