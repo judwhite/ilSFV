@@ -328,8 +328,7 @@ export results to text file
                 ListViewBeginUpdate();
                 try
                 {
-                    foreach (string set in newSets)
-                        LoadAndVerifyFile(set, Program.Settings.Check.AutoVerify, true);
+                    LoadAndVerifyFiles(newSets, Program.Settings.Check.AutoVerify, true);
                 }
                 finally
                 {
@@ -781,6 +780,32 @@ export results to text file
 
         public bool LoadAndVerifyFile(string fileName, bool doVerify, bool getFileInfo)
         {
+            IList<string> fileNames = new List<string>();
+            fileNames.Add(fileName);
+            return LoadAndVerifyFiles(fileNames, doVerify, getFileInfo);
+        }
+
+        public bool LoadAndVerifyFiles(IEnumerable<string> fileNames, bool doVerify, bool getFileInfo)
+        {
+            bool result = true;
+            IList<string> invalidFiles = new List<string>();
+            foreach (string fileName in fileNames)
+            {
+                if (!LoadAndVerifyFile(fileName, doVerify, getFileInfo, invalidFiles)) 
+                    result = false;
+            }
+            if (invalidFiles.Count > 0)
+            {
+                string invalidFilesStr = String.Join(Environment.NewLine, invalidFiles.ToArray());
+                throw new InvalidOperationException("The following checksum files are either corrupt or contain invalid data:" +
+                    Environment.NewLine + Environment.NewLine + invalidFilesStr);
+            }
+
+            return result;
+        }
+
+        private bool LoadAndVerifyFile(string fileName, bool doVerify, bool getFileInfo, IList<string> invalidFiles)
+        {
             if (Directory.Exists(fileName))
             {
                 List<string> verifyFiles = new List<string>();
@@ -799,7 +824,7 @@ export results to text file
                 try
                 {
                     foreach (string verifyFile in verifyFiles)
-                        LoadAndVerifyFile(verifyFile, doVerify, getFileInfo);
+                        LoadAndVerifyFile(verifyFile, doVerify, getFileInfo, invalidFiles);
                 }
                 finally
                 {
@@ -838,217 +863,226 @@ export results to text file
             ListViewBeginUpdate();
             try
             {
-                if (!_workingOnList)
+                try
                 {
-                    lvwFiles.Items.Clear();
-                    lvwFiles.Groups.Clear();
-                    Application.DoEvents();
-                }
-
-                string[] lines = File.ReadAllLines(fileName, Encoding.GetEncoding(CODE_PAGE));
-
-                ListViewGroup group = new ListViewGroup(lvwFiles.Groups.Count.ToString(), Path.GetFileName(fileName));
-                lvwFiles.Groups.Add(group);
-
-                StringBuilder comment = new StringBuilder();
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    string line = lines[i];
-                    if (line == null)
-                        continue;
-
-                    line = line.Trim();
-                    if (string.IsNullOrEmpty(line))
-                        continue;
-
-                    if (line.StartsWith(";") ||
-                        (line.StartsWith("#") && (set.Type == ChecksumType.MD5 || set.Type == ChecksumType.SHA1)))
+                    if (!_workingOnList)
                     {
-                        comment.AppendLine(line.Substring(1, line.Length - 1));
+                        lvwFiles.Items.Clear();
+                        lvwFiles.Groups.Clear();
+                        Application.DoEvents();
                     }
-                    else
+
+                    string[] lines = File.ReadAllLines(fileName, Encoding.GetEncoding(CODE_PAGE));
+
+                    ListViewGroup group = new ListViewGroup(lvwFiles.Groups.Count.ToString(), Path.GetFileName(fileName));
+                    lvwFiles.Groups.Add(group);
+
+                    StringBuilder comment = new StringBuilder();
+                    for (int i = 0; i < lines.Length; i++)
                     {
-                        ChecksumFile file = new ChecksumFile(set);
+                        string line = lines[i];
+                        if (line == null)
+                            continue;
 
-                        if (set.Type == ChecksumType.MD5)
+                        line = line.Trim();
+                        if (string.IsNullOrEmpty(line))
+                            continue;
+
+                        if (line.StartsWith(";") ||
+                            (line.StartsWith("#") && (set.Type == ChecksumType.MD5 || set.Type == ChecksumType.SHA1)))
                         {
-                            string chkMD5;
-                            string chkFileName;
+                            comment.AppendLine(line.Substring(1, line.Length - 1));
+                        }
+                        else
+                        {
+                            ChecksumFile file = new ChecksumFile(set);
 
-                            if (line.StartsWith("MD5 ("))
+                            if (set.Type == ChecksumType.MD5)
                             {
-                                int idx = line.LastIndexOf(' ');
-                                if (idx == -1)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                                chkFileName = line.Substring(5, idx - 5 - 3);
-                                chkMD5 = line.Substring(idx + 1, line.Length - idx - 1);
-                                if (chkMD5.Length != 32)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                            }
-                            else
-                            {
-                                int idx = line.IndexOf(' ');
-                                if (idx == -1)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                string chkMD5;
+                                string chkFileName;
 
-                                if (idx == 32)
+                                if (line.StartsWith("MD5 ("))
                                 {
-                                    chkMD5 = line.Substring(0, idx);
-                                    chkFileName = line.Substring(idx + 1, line.Length - idx - 1);
-                                }
-                                else
-                                {
-                                    idx = line.LastIndexOf(' ');
+                                    int idx = line.LastIndexOf(' ');
                                     if (idx == -1)
                                         throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                                    chkFileName = line.Substring(0, idx);
+                                    chkFileName = line.Substring(5, idx - 5 - 3);
                                     chkMD5 = line.Substring(idx + 1, line.Length - idx - 1);
                                     if (chkMD5.Length != 32)
                                         throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 }
-                            }
-
-                            if (chkFileName.StartsWith("*")) // md5sum
-                                chkFileName = chkFileName.Substring(1);
-
-                            file.FileName = chkFileName;
-                            file.OriginalChecksum = chkMD5;
-                        }
-                        else if (set.Type == ChecksumType.SHA1)
-                        {
-                            string chkSHA1;
-                            string chkFileName;
-
-                            if (line.StartsWith("SHA1 ("))
-                            {
-                                int idx = line.LastIndexOf(' ');
-                                if (idx == -1)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                                chkFileName = line.Substring(6, idx - 6 - 3);
-                                chkSHA1 = line.Substring(idx + 1, line.Length - idx - 1);
-                                if (chkSHA1.Length != 40)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                            }
-                            else
-                            {
-                                int idx = line.IndexOf(' ');
-                                if (idx == -1)
-                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-
-                                if (idx == 40)
-                                {
-                                    chkSHA1 = line.Substring(0, idx);
-                                    chkFileName = line.Substring(idx + 1, line.Length - idx - 1);
-                                }
                                 else
                                 {
-                                    idx = line.LastIndexOf(' ');
+                                    int idx = line.IndexOf(' ');
                                     if (idx == -1)
                                         throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                                    chkFileName = line.Substring(0, idx);
+
+                                    if (idx == 32)
+                                    {
+                                        chkMD5 = line.Substring(0, idx);
+                                        chkFileName = line.Substring(idx + 1, line.Length - idx - 1);
+                                    }
+                                    else
+                                    {
+                                        idx = line.LastIndexOf(' ');
+                                        if (idx == -1)
+                                            throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                        chkFileName = line.Substring(0, idx);
+                                        chkMD5 = line.Substring(idx + 1, line.Length - idx - 1);
+                                        if (chkMD5.Length != 32)
+                                            throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                    }
+                                }
+
+                                if (chkFileName.StartsWith("*")) // md5sum
+                                    chkFileName = chkFileName.Substring(1);
+
+                                file.FileName = chkFileName;
+                                file.OriginalChecksum = chkMD5;
+                            }
+                            else if (set.Type == ChecksumType.SHA1)
+                            {
+                                string chkSHA1;
+                                string chkFileName;
+
+                                if (line.StartsWith("SHA1 ("))
+                                {
+                                    int idx = line.LastIndexOf(' ');
+                                    if (idx == -1)
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                    chkFileName = line.Substring(6, idx - 6 - 3);
                                     chkSHA1 = line.Substring(idx + 1, line.Length - idx - 1);
                                     if (chkSHA1.Length != 40)
                                         throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
                                 }
+                                else
+                                {
+                                    int idx = line.IndexOf(' ');
+                                    if (idx == -1)
+                                        throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+
+                                    if (idx == 40)
+                                    {
+                                        chkSHA1 = line.Substring(0, idx);
+                                        chkFileName = line.Substring(idx + 1, line.Length - idx - 1);
+                                    }
+                                    else
+                                    {
+                                        idx = line.LastIndexOf(' ');
+                                        if (idx == -1)
+                                            throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                        chkFileName = line.Substring(0, idx);
+                                        chkSHA1 = line.Substring(idx + 1, line.Length - idx - 1);
+                                        if (chkSHA1.Length != 40)
+                                            throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                    }
+                                }
+
+                                if (chkFileName.StartsWith("*")) // md5sum
+                                    chkFileName = chkFileName.Substring(1);
+
+                                file.FileName = chkFileName;
+                                file.OriginalChecksum = chkSHA1;
+                            }
+                            else if (set.Type == ChecksumType.SFV)
+                            {
+                                int idx = line.LastIndexOf(' ');
+                                if (idx == -1)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+                                string chkSFV = line.Substring(idx + 1, line.Length - idx - 1);
+                                string chkFileName = line.Substring(0, idx);
+
+                                if (chkSFV.StartsWith("$")) // remove leading $
+                                    chkSFV = chkSFV.Substring(1);
+                                if (chkSFV.StartsWith("0x") || chkSFV.StartsWith("0X")) // remove leading 0x
+                                    chkSFV = chkSFV.Substring(2);
+
+                                if (chkSFV.Length != 8)
+                                    throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
+
+                                file.FileName = chkFileName;
+                                file.OriginalChecksum = chkSFV;
+                            }
+                            else
+                            {
+                                throw new Exception(string.Format("{0} not implemented", set.Type));
                             }
 
-                            if (chkFileName.StartsWith("*")) // md5sum
-                                chkFileName = chkFileName.Substring(1);
+                            file.FileName = file.FileName.Replace('/', '\\');
 
-                            file.FileName = chkFileName;
-                            file.OriginalChecksum = chkSHA1;
+                            // NOTE: Looks like hkSFV ignores this setting for checking
+                            //if (!Program.Settings.General.Recursive && file.FileName.Contains('\\'))
+                            //	continue;
+
+                            set.Files.Add(file);
+
+                            ListViewItem item = new ListViewItem(new[] { file.FileName, file.Guid });
+                            item.Tag = file;
+                            item.StateImageIndex = 0;
+                            item.Group = group;
+                            lvwFiles.Items.Add(item);
                         }
-                        else if (set.Type == ChecksumType.SFV)
-                        {
-                            int idx = line.LastIndexOf(' ');
-                            if (idx == -1)
-                                throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-                            string chkSFV = line.Substring(idx + 1, line.Length - idx - 1);
-                            string chkFileName = line.Substring(0, idx);
-
-                            if (chkSFV.StartsWith("$")) // remove leading $
-                                chkSFV = chkSFV.Substring(1);
-                            if (chkSFV.StartsWith("0x") || chkSFV.StartsWith("0X")) // remove leading 0x
-                                chkSFV = chkSFV.Substring(2);
-
-                            if (chkSFV.Length != 8)
-                                throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
-
-                            file.FileName = chkFileName;
-                            file.OriginalChecksum = chkSFV;
-                        }
-                        else
-                        {
-                            throw new Exception(string.Format("{0} not implemented", set.Type));
-                        }
-
-                        file.FileName = file.FileName.Replace('/', '\\');
-
-                        // NOTE: Looks like hkSFV ignores this setting for checking
-                        //if (!Program.Settings.General.Recursive && file.FileName.Contains('\\'))
-                        //	continue;
-
-                        set.Files.Add(file);
-
-                        ListViewItem item = new ListViewItem(new[] { file.FileName, file.Guid });
-                        item.Tag = file;
-                        item.StateImageIndex = 0;
-                        item.Group = group;
-                        lvwFiles.Items.Add(item);
                     }
+                    set.Comments = comment.ToString();
+                    if (lvwFiles.Items.Count != 0)
+                        lvwFiles.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
-                set.Comments = comment.ToString();
-                if (lvwFiles.Items.Count != 0)
-                    lvwFiles.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
-            }
-            finally
-            {
-                ListViewEndUpdate();
-            }
-
-            if (!_workingOnList)
-            {
-                _totalSizeOfSets = 0;
-                _files_parts = 0;
-                _sets.Clear();
-            }
-
-            if (getFileInfo)
-            {
-                int lastPercent = 0;
-                set.TotalSize = 0;
-                for (int i = 0; i < set.Files.Count; i++)
+                finally
                 {
-                    int percent = (i * 100 / set.Files.Count);
+                    ListViewEndUpdate();
+                }
 
-                    if (percent / 5 > lastPercent / 5)
+                if (!_workingOnList)
+                {
+                    _totalSizeOfSets = 0;
+                    _files_parts = 0;
+                    _sets.Clear();
+                }
+
+                if (getFileInfo)
+                {
+                    int lastPercent = 0;
+                    set.TotalSize = 0;
+                    for (int i = 0; i < set.Files.Count; i++)
                     {
-                        SetStatusText(string.Format(Language.MainForm.Status_LoadingFilePercentage, set.VerificationFileName, (percent / 5) * 5));
-                        Application.DoEvents();
+                        int percent = (i * 100 / set.Files.Count);
 
-                        lastPercent = percent;
-                    }
+                        if (percent / 5 > lastPercent / 5)
+                        {
+                            SetStatusText(string.Format(Language.MainForm.Status_LoadingFilePercentage, set.VerificationFileName, (percent / 5) * 5));
+                            Application.DoEvents();
 
-                    ChecksumFile file = set.Files[i];
+                            lastPercent = percent;
+                        }
 
-                    string fullFileName = Path.Combine(set.Directory, file.FileName);
+                        ChecksumFile file = set.Files[i];
 
-                    if (File.Exists(fullFileName))
-                    {
-                        FileInfo fileInfo = TryGetNewFileInfo(fullFileName);
-                        file.FileInfo = fileInfo;
-                        set.TotalSize += fileInfo.Length;
+                        string fullFileName = Path.Combine(set.Directory, file.FileName);
+
+                        if (File.Exists(fullFileName))
+                        {
+                            FileInfo fileInfo = TryGetNewFileInfo(fullFileName);
+                            file.FileInfo = fileInfo;
+                            set.TotalSize += fileInfo.Length;
+                        }
                     }
                 }
+
+                _totalSizeOfSets += set.TotalSize;
+                _files_parts += set.Files.Count;
+
+                _sets.Add(set);
+
+                if (!_workingOnList && doVerify)
+                    Verify();
+
             }
-
-            _totalSizeOfSets += set.TotalSize;
-            _files_parts += set.Files.Count;
-
-            _sets.Add(set);
-
-            if (!_workingOnList && doVerify)
-                Verify();
+            catch (InvalidChecksumFileException ex)
+            {
+                invalidFiles.Add(ex.FileName);
+                return false;
+            }            
 
             return true;
         }
@@ -2385,8 +2419,7 @@ export results to text file
                 ListViewBeginUpdate();
                 try
                 {
-                    foreach (string path in files)
-                        LoadAndVerifyFile(path, Program.Settings.Check.AutoVerify, true);
+                    LoadAndVerifyFiles(files, Program.Settings.Check.AutoVerify, true);
                 }
                 finally
                 {
@@ -2407,8 +2440,7 @@ export results to text file
                         _files_parts = 0;
                         _sets.Clear();
 
-                        foreach (string path in files)
-                            LoadAndVerifyFile(path, false, true);
+                        LoadAndVerifyFiles(files, false, true);
                     }
                     finally
                     {
