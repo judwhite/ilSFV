@@ -12,7 +12,7 @@ namespace ilSFV.Hash
     {
         private static readonly uint[] _lookup32Unsafe = CreateLookup32Unsafe();
         private static readonly uint* _lookup32UnsafeP = (uint*)GCHandle.Alloc(_lookup32Unsafe, GCHandleType.Pinned).AddrOfPinnedObject();
-        private const int BUFFER_SIZE = 8192;
+        private const int BUFFER_SIZE = 8192 * 4;
 
         /// <summary>
         /// Returns the CRC32 Checksum of a specified file as a string.
