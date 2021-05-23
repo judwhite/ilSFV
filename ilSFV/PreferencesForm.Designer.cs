@@ -45,15 +45,16 @@
             this.chkRememberWindowPlacement = new System.Windows.Forms.CheckBox();
             this.chkAlwaysOnTop = new System.Windows.Forms.CheckBox();
             this.trkCacheSize = new System.Windows.Forms.TrackBar();
-            this.lblCacheRecords = new System.Windows.Forms.Label();
             this.lblRecords = new System.Windows.Forms.Label();
             this.lblCacheSizeLabel = new System.Windows.Forms.Label();
             this.cboLanguage = new System.Windows.Forms.ComboBox();
             this.lblLanguage = new System.Windows.Forms.Label();
+            this.lblCacheRecords = new System.Windows.Forms.Label();
             this.tpChecking = new System.Windows.Forms.TabPage();
             this.chkPlaySoundOnError = new System.Windows.Forms.CheckBox();
             this.chkAutomaticallyVerify = new System.Windows.Forms.CheckBox();
             this.grpRenaming = new System.Windows.Forms.GroupBox();
+            this.rbRenamePreserveCapitalization = new System.Windows.Forms.RadioButton();
             this.rbRenameNone = new System.Windows.Forms.RadioButton();
             this.rbRenameToLowercase = new System.Windows.Forms.RadioButton();
             this.rbRenameToMatchSet = new System.Windows.Forms.RadioButton();
@@ -241,11 +242,6 @@
             this.trkCacheSize.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkCacheSize.Scroll += new System.EventHandler(this.trkCacheSize_Scroll);
             // 
-            // lblCacheRecords
-            // 
-            resources.ApplyResources(this.lblCacheRecords, "lblCacheRecords");
-            this.lblCacheRecords.Name = "lblCacheRecords";
-            // 
             // lblRecords
             // 
             resources.ApplyResources(this.lblRecords, "lblRecords");
@@ -267,6 +263,11 @@
             // 
             resources.ApplyResources(this.lblLanguage, "lblLanguage");
             this.lblLanguage.Name = "lblLanguage";
+            // 
+            // lblCacheRecords
+            // 
+            resources.ApplyResources(this.lblCacheRecords, "lblCacheRecords");
+            this.lblCacheRecords.Name = "lblCacheRecords";
             // 
             // tpChecking
             // 
@@ -301,12 +302,20 @@
             // 
             // grpRenaming
             // 
+            this.grpRenaming.Controls.Add(this.rbRenamePreserveCapitalization);
             this.grpRenaming.Controls.Add(this.rbRenameNone);
             this.grpRenaming.Controls.Add(this.rbRenameToLowercase);
             this.grpRenaming.Controls.Add(this.rbRenameToMatchSet);
             resources.ApplyResources(this.grpRenaming, "grpRenaming");
             this.grpRenaming.Name = "grpRenaming";
             this.grpRenaming.TabStop = false;
+            // 
+            // rbRenamePreserveCapitalization
+            // 
+            resources.ApplyResources(this.rbRenamePreserveCapitalization, "rbRenamePreserveCapitalization");
+            this.rbRenamePreserveCapitalization.Name = "rbRenamePreserveCapitalization";
+            this.rbRenamePreserveCapitalization.TabStop = true;
+            this.rbRenamePreserveCapitalization.UseVisualStyleBackColor = true;
             // 
             // rbRenameNone
             // 
@@ -785,5 +794,6 @@
 		private System.Windows.Forms.CheckBox chkUseLowPriorityOnHide;
 		private System.Windows.Forms.Button btnReleaseNotes;
         private System.Windows.Forms.CheckBox chkIsRecentFilesSaved;
+        private System.Windows.Forms.RadioButton rbRenamePreserveCapitalization;
     }
 }
