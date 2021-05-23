@@ -82,6 +82,7 @@ PlaySoundError = @PlaySoundError
 	{
 		None,
 		MatchSet,
-		Lowercase
+		Lowercase,
+		PreserveCapitalizaton
 	}
 }
