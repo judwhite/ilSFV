@@ -5,6 +5,7 @@ using System.Data.SqlServerCe;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -15,6 +16,8 @@ using ilSFV.Localization;
 using ilSFV.Model.Settings;
 using ilSFV.Model.Workset;
 using ilSFV.Tools;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Timer = System.Windows.Forms.Timer;
 
 namespace ilSFV
@@ -366,20 +369,34 @@ export results to text file
             if (verbose)
                 Cursor.Current = Cursors.WaitCursor;
 
-            string content = Encoding.ASCII.GetString(Http.Get("http://cdtag.com/ilsfv/version.txt"));
-            string[] strparts = content.Split(new[] { ';', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            int[] parts = strparts.Select(p => p.Length < 5 ? int.Parse(p) : -1).ToArray();
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             int major = version.Major;
             int minor = version.Minor;
             int build = version.Build;
 
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; // Tls12
+            WebClient client = new WebClient();
+            client.Headers.Add("user-agent", string.Format("ilSFV v{0}.{1}.{2}", major, minor, build));
+            string json = client.DownloadString("http://api.github.com/repos/judwhite/ilSFV/releases");
+            JArray releases = JsonConvert.DeserializeObject<JArray>(json);
+            JToken lastRelease = releases.Where(r => !r.Value<bool>("draft") && !r.Value<bool>("prerelease"))
+                .OrderByDescending(o => o.Value<string>("published_at")).FirstOrDefault();
+
+            Program.Settings.General.LastUpdateCheck = DateTime.Now;
+
+            if (lastRelease == null)
+                return;
+
+            // "name": "v1.10.0",
+            string[] strparts = lastRelease.Value<string>("name").Split(new[] { '.', 'v' }, StringSplitOptions.RemoveEmptyEntries);
+            int[] parts = strparts.Select(p => int.TryParse(p, out _) ? int.Parse(p) : -1).ToArray();
+
             if (verbose)
                 Cursor.Current = Cursors.Default;
 
-            if (major < parts[0] ||
-                (major == parts[0] && minor < parts[1]) ||
-                (major == parts[0] && minor == parts[1] && build < parts[2]))
+            if ((parts.Length >= 1 && major < parts[0]) ||
+                (parts.Length >= 2 && major == parts[0] && minor < parts[1]) ||
+                (parts.Length >= 3 && major == parts[0] && minor == parts[1] && build < parts[2]))
             {
                 DialogResult res = MessageBox.Show(
                     string.Format(Language.MainForm.UpdateAvailable_Message, parts[0], parts[1], parts[2]),
@@ -390,7 +407,8 @@ export results to text file
 
                 if (res == DialogResult.Yes)
                 {
-                    Process.Start(strparts[3]);
+                    // "html_url": "https://github.com/judwhite/ilSFV/releases/tag/v1.10.0",
+                    Process.Start(lastRelease.Value<string>("html_url"));
                 }
             }
             else
@@ -400,8 +418,6 @@ export results to text file
                     MessageBox.Show(Language.MainForm.NoUpdateAvailable_Message, Language.MainForm.NoUpdateAvailable_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
-            Program.Settings.General.LastUpdateCheck = DateTime.Now;
         }
 
         /// <summary>
