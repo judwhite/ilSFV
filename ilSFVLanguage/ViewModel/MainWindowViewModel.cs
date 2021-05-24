@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Text;
@@ -17,8 +18,15 @@ namespace ilSFVLanguage.ViewModel
 
         public MainWindowViewModel()
         {
-            _englishFilePath = @"C:\Projects\github\ilSFV\ilSFV\languages\english.txt";
-            _outputPath = @"C:\Projects\github\ilSFV\ilSFV\Localization";
+            string path = @"C:\Projects\github\";
+
+            string runningdir = AppDomain.CurrentDomain.BaseDirectory;
+            int index = runningdir.IndexOf("ilSFV\\ilSFVLanguage");
+            if (index > -1)
+                path = runningdir.Substring(0, index);
+
+            _englishFilePath = path + @"ilSFV\ilSFV\languages\english.txt";
+            _outputPath = path + @"ilSFV\ilSFV\Localization";
             _generateCommand = new DelegateCommand(Generate);
         }
 
