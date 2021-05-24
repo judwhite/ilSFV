@@ -150,7 +150,8 @@ namespace ilSFV
             grpRenaming.Text = p.Renaming;
             rbRenameToMatchSet.Text = p.ToMatchNamesInSetFile;
             rbRenameToLowercase.Text = p.ToLowercase;
-            rbRenameNone.Text = p.None;
+			rbRenamePreserveCapitalization.Text = p.PreserveCapitalization;
+			rbRenameNone.Text = p.None;
 
             // Creating
             tpCreating.Text = p.Creating;
