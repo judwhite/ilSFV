@@ -162,6 +162,7 @@ PlaySoundWhenBadMissing                           = *Play sound when bad/missing
 Renaming                                          = Rinomina
 ToMatchNamesInSetFile                             = per rispettare i nomi nel file di gruppo
 ToLowercase                                       = in lettere minuscole
+PreserveCapitalization                            = ottenere capitalizzazione
 None                                              = nessuno
 
 Creating                                          = Creazione

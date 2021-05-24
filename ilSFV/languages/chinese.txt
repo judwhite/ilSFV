@@ -162,6 +162,7 @@ PlaySoundWhenBadMissing                           = 當壞的/遺失的情況下
 Renaming                                          = 重新命名
 ToMatchNamesInSetFile                             = 在集合系列裡為了要相配名字
 ToLowercase                                       = 為了小寫字母
+PreserveCapitalization                            = 保留大写
 None                                              = 沒有
 
 Creating                                          = 正在建立中

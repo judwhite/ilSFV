@@ -162,6 +162,7 @@ PlaySoundWhenBadMissing                           = Play sound when bad/missing
 Renaming                                          = Renaming
 ToMatchNamesInSetFile                             = to match names in set file
 ToLowercase                                       = to lowercase
+PreserveCapitalization                            = preserve capitalization
 None                                              = none
 
 Creating                                          = Creating
