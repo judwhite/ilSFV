@@ -162,6 +162,7 @@ PlaySoundWhenBadMissing                           = Sound abspielen bei bad/miss
 Renaming                                          = Umbenennen
 ToMatchNamesInSetFile                             = Passende Namen zum Set
 ToLowercase                                       = kleingeschrieben
+PreserveCapitalization                            = erhalten Kapitalisierung
 None                                              = nichts
 
 Creating                                          = Erstellen

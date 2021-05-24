@@ -67,6 +67,10 @@ namespace ilSFV
 					rbRenameToMatchSet.Checked = true;
 					break;
 
+				case CheckRenaming.PreserveCapitalizaton:
+					rbRenamePreserveCapitalization.Checked = true;
+					break;
+
 				default:
 					rbRenameNone.Checked = true;
 					break;
@@ -146,7 +150,8 @@ namespace ilSFV
             grpRenaming.Text = p.Renaming;
             rbRenameToMatchSet.Text = p.ToMatchNamesInSetFile;
             rbRenameToLowercase.Text = p.ToLowercase;
-            rbRenameNone.Text = p.None;
+			rbRenamePreserveCapitalization.Text = p.PreserveCapitalization;
+			rbRenameNone.Text = p.None;
 
             // Creating
             tpCreating.Text = p.Creating;
@@ -269,6 +274,8 @@ namespace ilSFV
 				Program.Settings.Check.Renaming = CheckRenaming.Lowercase;
 			else if (rbRenameToMatchSet.Checked)
 				Program.Settings.Check.Renaming = CheckRenaming.MatchSet;
+			else if (rbRenamePreserveCapitalization.Checked)
+				Program.Settings.Check.Renaming = CheckRenaming.PreserveCapitalizaton;
 			else
 				Program.Settings.Check.Renaming = CheckRenaming.None;
 

@@ -162,6 +162,7 @@ PlaySoundWhenBadMissing                           = *Play sound when bad/missing
 Renaming                                          = Renommer
 ToMatchNamesInSetFile                             = comme dans le fichier SFV
 ToLowercase                                       = en minuscules
+PreserveCapitalization                            = préserver la capitalisation
 None                                              = ne pas renommer
 
 Creating                                          = Création

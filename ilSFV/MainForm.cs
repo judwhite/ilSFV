@@ -1299,18 +1299,31 @@ export results to text file
                             // Renaming
                             if (Program.Settings.Check.Renaming != CheckRenaming.None)
                             {
-                                string realFileName = Path.GetFileName(file.FileInfo.FullName);
+                                string[] realFiles = Directory.GetFiles(file.FileInfo.Directory.FullName, file.FileInfo.Name);
+                                string realFileName = Path.GetFileName(realFiles.FirstOrDefault() ?? file.FileInfo.FullName);
                                 string newFileName = null;
 
                                 if (Program.Settings.Check.Renaming == CheckRenaming.Lowercase)
                                 {
-                                    //if (realFileName != realFileName.ToLower())
-                                    newFileName = realFileName.ToLower();
+                                    if (realFileName != realFileName.ToLower())
+                                    {
+                                        newFileName = realFileName.ToLower();
+                                    }
                                 }
                                 else if (Program.Settings.Check.Renaming == CheckRenaming.MatchSet)
                                 {
                                     string sfvFileName = Path.GetFileName(Path.Combine(set.Directory, file.FileName));
-                                    //if (string.Compare(realFileName, sfvFileName, false) != 0)
+                                    if (realFileName != sfvFileName)
+                                    {
+                                        newFileName = sfvFileName;
+                                    }
+                                }
+                                else if (Program.Settings.Check.Renaming == CheckRenaming.PreserveCapitalizaton)
+                                {
+                                    string sfvFileName = Path.GetFileName(Path.Combine(set.Directory, file.FileName));
+                                    bool realHasCapitals = realFileName != realFileName.ToLower();
+                                    bool sfvHasCapitals = sfvFileName != sfvFileName.ToLower();
+                                    if (!realHasCapitals && sfvHasCapitals)
                                     {
                                         newFileName = sfvFileName;
                                     }

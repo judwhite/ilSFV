@@ -104,6 +104,9 @@ namespace ilSFV.Localization
         ///<summary>to lowercase</summary>
         public string ToLowercase { get; set; }
 
+        ///<summary>preserve capitalization</summary>
+        public string PreserveCapitalization { get; set; }
+
         ///<summary>none</summary>
         public string None { get; set; }
 
