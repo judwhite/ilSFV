@@ -45,6 +45,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,6 +57,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -85,6 +87,7 @@
     <Compile Include="GetInputForm.Designer.cs">
       <DependentUpon>GetInputForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hash\CRC.cs" />
     <Compile Include="Hash\SHA1.cs" />
     <Compile Include="InvalidChecksumFileException.cs" />
     <Compile Include="Localization\ExceptionForm.Generated.cs" />
