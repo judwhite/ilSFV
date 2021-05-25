@@ -95,6 +95,8 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.tpQuickSFV = new System.Windows.Forms.TabPage();
+            this.txtQuickSFV = new System.Windows.Forms.TextBox();
             this.lvwFiles = new ilSFV.FastListView();
             this.colFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
@@ -106,6 +108,7 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpComments.SuspendLayout();
+            this.tpQuickSFV.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -416,9 +419,9 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = false;
-            this.lblStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(43, 19);
             this.lblStatus.Text = "Ready";
@@ -427,9 +430,9 @@
             // lblSets
             // 
             this.lblSets.AutoSize = false;
-            this.lblSets.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblSets.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblSets.Name = "lblSets";
             this.lblSets.Size = new System.Drawing.Size(31, 19);
             this.lblSets.Text = "Sets:";
@@ -438,9 +441,9 @@
             // lblParts
             // 
             this.lblParts.AutoSize = false;
-            this.lblParts.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblParts.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblParts.Name = "lblParts";
             this.lblParts.Size = new System.Drawing.Size(40, 19);
             this.lblParts.Text = "Parts:";
@@ -449,9 +452,9 @@
             // lblGood
             // 
             this.lblGood.AutoSize = false;
-            this.lblGood.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblGood.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblGood.Name = "lblGood";
             this.lblGood.Size = new System.Drawing.Size(43, 19);
             this.lblGood.Text = "Good:";
@@ -460,9 +463,9 @@
             // lblBad
             // 
             this.lblBad.AutoSize = false;
-            this.lblBad.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblBad.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblBad.Name = "lblBad";
             this.lblBad.Size = new System.Drawing.Size(34, 19);
             this.lblBad.Text = "Bad:";
@@ -471,9 +474,9 @@
             // lblMissing
             // 
             this.lblMissing.AutoSize = false;
-            this.lblMissing.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
-                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.lblMissing.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.lblMissing.Name = "lblMissing";
             this.lblMissing.Size = new System.Drawing.Size(55, 19);
             this.lblMissing.Text = "Missing:";
@@ -634,8 +637,8 @@
             // 
             // progressBar2
             // 
-            this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar2.Location = new System.Drawing.Point(8, 32);
             this.progressBar2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar2.Name = "progressBar2";
@@ -653,6 +656,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpComments);
+            this.tabControl1.Controls.Add(this.tpQuickSFV);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -702,6 +706,33 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // tpQuickSFV
+            // 
+            this.tpQuickSFV.Controls.Add(this.txtQuickSFV);
+            this.tpQuickSFV.Location = new System.Drawing.Point(4, 25);
+            this.tpQuickSFV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tpQuickSFV.Name = "tpQuickSFV";
+            this.tpQuickSFV.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tpQuickSFV.Size = new System.Drawing.Size(582, 531);
+            this.tpQuickSFV.TabIndex = 1;
+            this.tpQuickSFV.Text = "QuickSFV database analysis";
+            this.tpQuickSFV.UseVisualStyleBackColor = true;
+            // 
+            // txtQuickSFV
+            // 
+            this.txtQuickSFV.BackColor = System.Drawing.SystemColors.Window;
+            this.txtQuickSFV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtQuickSFV.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuickSFV.Location = new System.Drawing.Point(2, 3);
+            this.txtQuickSFV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtQuickSFV.Multiline = true;
+            this.txtQuickSFV.Name = "txtQuickSFV";
+            this.txtQuickSFV.ReadOnly = true;
+            this.txtQuickSFV.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtQuickSFV.Size = new System.Drawing.Size(578, 525);
+            this.txtQuickSFV.TabIndex = 1;
+            this.txtQuickSFV.WordWrap = false;
             // 
             // lvwFiles
             // 
@@ -763,6 +794,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tpComments.ResumeLayout(false);
             this.tpComments.PerformLayout();
+            this.tpQuickSFV.ResumeLayout(false);
+            this.tpQuickSFV.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -837,6 +870,8 @@
 		private System.Windows.Forms.ToolStripMenuItem miFindDuplicateFiles;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem miTruncateFileNames;
+        private System.Windows.Forms.TabPage tpQuickSFV;
+        private System.Windows.Forms.TextBox txtQuickSFV;
     }
 }
 
