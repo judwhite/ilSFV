@@ -10,6 +10,7 @@ namespace ilSFV.Model.Workset
 		public long TotalSize { get; set; }
 		public ChecksumType Type { get; set; }
 		public string Comments { get; set; }
+		public string QuickSfvAnalysis { get; set; }
 
 		public ChecksumSet(string fileName, string directory, ChecksumType setType)
 		{
