@@ -970,6 +970,8 @@ export results to text file
                                 chkSFV = chkSFV.Substring(1);
                             if (chkSFV.StartsWith("0x") || chkSFV.StartsWith("0X")) // remove leading 0x
                                 chkSFV = chkSFV.Substring(2);
+                            if (chkSFV.Length < 8) // cksfv v1.1 does not write the leading zeros
+                                chkSFV = chkSFV.PadLeft(8, '0');
 
                             if (chkSFV.Length != 8)
                                 throw new InvalidChecksumFileException(fileName, set.Type, lines, i, CODE_PAGE);
