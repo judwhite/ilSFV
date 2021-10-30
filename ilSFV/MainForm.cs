@@ -2836,5 +2836,22 @@ export results to text file
 
             progressBar1.Width = chkHideGood.Left - 16;
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                if (_workingOnList)
+                {
+                    _queueStop = true;
+                }
+                else
+                {
+                    this.Close();
+                }
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
