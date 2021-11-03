@@ -377,7 +377,7 @@ export results to text file
             ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; // Tls12
             WebClient client = new WebClient();
             client.Headers.Add("user-agent", string.Format("ilSFV v{0}.{1}.{2}", major, minor, build));
-            string json = client.DownloadString("http://api.github.com/repos/judwhite/ilSFV/releases");
+            string json = client.DownloadString("https://api.github.com/repos/judwhite/ilSFV/releases");
             JArray releases = JsonConvert.DeserializeObject<JArray>(json);
             JToken lastRelease = releases.Where(r => !r.Value<bool>("draft") && !r.Value<bool>("prerelease"))
                 .OrderByDescending(o => o.Value<string>("published_at")).FirstOrDefault();
