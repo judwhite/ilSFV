@@ -225,7 +225,7 @@ namespace ilSFV
 
 		private void btnWeb_Click(object sender, EventArgs e)
 		{
-			Process.Start("http://cdtag.com/ilsfv");
+			Process.Start("https://www.ilsfv.com");
 		}
 
 		private void btnOK_Click(object sender, EventArgs e)
